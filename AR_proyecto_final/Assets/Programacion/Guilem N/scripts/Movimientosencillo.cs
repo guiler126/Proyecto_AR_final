@@ -17,8 +17,8 @@ public class Movimientosencillo : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
 
-        transform.Translate(Vector3.back * (speed * verticalInput * Time.deltaTime));
-        transform.Translate(Vector3.left * (speed * horizontalInput * Time.deltaTime));
+        transform.Translate(Vector3.forward * (speed * verticalInput * Time.deltaTime));
+        transform.Translate(Vector3.right * (speed * horizontalInput * Time.deltaTime));
         
     }
 }
