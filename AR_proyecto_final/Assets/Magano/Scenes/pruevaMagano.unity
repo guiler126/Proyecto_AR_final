@@ -310,7 +310,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 413023849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4385d664a2566b74f9c3940c5a7d7a48, type: 3}
+  m_Script: {fileID: 11500000, guid: cac4768f8894382409d27d86e946f907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _characterController: {fileID: 413023850}
@@ -320,15 +320,15 @@ MonoBehaviour:
   vertical: 0
   speed: 5
   currentSpeed: 5
-  turnSmoothTime: 0.15
+  turnSmoothTime: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 1036933203}
   velocity: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
-  gravity: -9.81
-  sphereRadius: 0.16
+  gravity: 0
+  sphereRadius: 0.15
   isGrounded: 0
 --- !u!54 &413023854
 Rigidbody:
