@@ -40,11 +40,14 @@ public class PlayerController : MonoBehaviour
         //Guardo en estas variables las teclas WASD
 
         horizontal = Input.GetAxisRaw("Horizontal");
+        
         vertical = Input.GetAxisRaw("Vertical");
         
 
         //Recogemos los valores WASD en positivo y los guardo como "direction";
         direction = new Vector3(horizontal, 0f, vertical).normalized;
+        _animator.SetFloat("x", horizontal);
+        _animator.SetFloat("y", vertical);
         
         //Si el jugador está en movimiento...;
         if(direction.magnitude >= 0.1f)
@@ -61,13 +64,9 @@ public class PlayerController : MonoBehaviour
             //Movemos el player hacia el frente;
             _characterController.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
             
-            _animator.SetBool("IsMoving", true);
-            
         }
-        else
-        {
-            _animator.SetBool("IsMoving", false);
-        }
+        
+    
         
  
     
@@ -94,7 +93,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            _animator.SetTrigger("BasicShoot");
+            _animator.SetTrigger("BasicShootRight");
+            _animator.SetTrigger("BasicShootLeft");
         }
     }
 }

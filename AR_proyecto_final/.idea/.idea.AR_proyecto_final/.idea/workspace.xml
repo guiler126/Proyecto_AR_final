@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Magano/Scripts/LookAtMouse.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,6 +69,7 @@
       <workItem from="1681764834115" duration="5245000" />
       <workItem from="1681805574185" duration="2395000" />
       <workItem from="1681834246423" duration="1201000" />
+      <workItem from="1682000290847" duration="2355000" />
     </task>
     <servers />
   </component>
