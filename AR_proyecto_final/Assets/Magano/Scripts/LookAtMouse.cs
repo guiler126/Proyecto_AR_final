@@ -5,15 +5,29 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
-    private Transform m_transform;
+    public float speed;
 
-    private void Start()
+
+    private void Update()
     {
-        m_transform = this.transform;
+        LookAtCursor();
     }
 
-    private void LAMouse()
+    public void LookAtCursor()
     {
-        
+        Plane playerPlane = new Plane(Vector3.up, transform.position);
+
+        Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        float hitdist;
+
+        if (playerPlane.Raycast(ray, out hitdist))
+        {
+            Vector3 targetpoint = ray.GetPoint(hitdist);
+            
+            Quaternion targetRotation = Quaternion.LookRotation(targetpoint-transform.position);
+            
+            transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation,speed*Time.deltaTime);
+        }
     }
 }
