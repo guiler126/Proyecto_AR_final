@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class Pausa : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject panelPausa;
+
+
+
+    public void BotonPausa()
     {
-        
+        panelPausa.SetActive(true);
+        Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void BotonPlay()
     {
-        
+        panelPausa.SetActive(false);
+        Time.timeScale = 1;
     }
+
+
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            BotonPausa();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            BotonPlay();
+        }
+
+    }
+
+
+
+
+
+
+
+
 }
