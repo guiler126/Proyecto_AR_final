@@ -1,25 +1,26 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class Sistema_Oleadas : MonoBehaviour
 {
-    public static Sistema_Oleadas instance;
     
-    [Header("----- Variables -----")]
+    // Singleton
+    public static Sistema_Oleadas Instance;
     
-    [Tooltip("Ona actual")]
-    private int waveNumber = 0;
+    [Header("----- Variables -----")] 
+    public List<WaveData> waveData_list;
+
+    [Tooltip("Current Wave")]
+    public int waveNumber = 0;
     
-    [Tooltip("Nombre d'enemics total en la ona")]
-    private int totalEnemies;
+    [Tooltip("Total number of enemies in the wave")]
+    public int totalEnemies;
     
-    [Tooltip("Nombre d'enemics que el player ha eliminat")]
+    [Tooltip("Number of enemies the player has eliminated")]
     private int defeatedEnemies;
     
-    [Tooltip("Tems d'espera entre una ronda i un altre")]
+    [Tooltip("Waiting time between one round and another")]
     private float timeBetweenRounds = 30;
     
     public bool CheckEndRound()
@@ -30,11 +31,6 @@ public class Sistema_Oleadas : MonoBehaviour
         }
         
         return false;
-    }
-    
-    public int WaveNumber
-    {
-        get {return waveNumber; }
     }
     
     public int TotalEnemies
@@ -51,44 +47,46 @@ public class Sistema_Oleadas : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        Checker();
+        StartRound();
+    }
+
+    public void StartRound()
+    {
+        StartWave();
+        
+        Sistema_Spawn.Instance.active_wave = true;
+        Sistema_Spawn.Instance.StartSpawner();
     }
     
-    void Checker()
+    void StartWave()
     {
-        switch(waveNumber)
+        if (waveData_list != null && waveData_list.Count > 0)
         {
-            case 0://If waveNumber == 0
-                totalEnemies = 10;
-                break;//End switch
-            case 1:
-                totalEnemies = 18;
-                break;
-            case 2:
-                totalEnemies = 25; 
-                break;
-            case 3:
-                totalEnemies = 32;
-                break;
-            case 4:
-                totalEnemies = 45;
-                break;
-            case 5:
-                totalEnemies = 55;
-                break;
-            case 6:
-                totalEnemies = 65;
-                break;
+            totalEnemies = waveData_list[waveNumber].TotalEnemies;
+            Sistema_Spawn.Instance.current_wave = waveData_list[waveNumber];
         }
-        
-        if (CheckEndRound() && waveNumber != 6)
+
+    }
+    
+    public void Checker()
+    {
+        if (CheckEndRound() && waveNumber != waveData_list.Count)
         {
             ++waveNumber; //Increment by 1. Same as:  waveNumber = waveNumber + 1;
+            // Void activate menu upgrade
+            StartRound();
         }
     }
 }

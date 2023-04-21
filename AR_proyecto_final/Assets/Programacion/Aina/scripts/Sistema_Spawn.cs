@@ -6,71 +6,83 @@ using Random = UnityEngine.Random;
 
 public class Sistema_Spawn : MonoBehaviour
 {
+
+    // Singleton
+    public static Sistema_Spawn Instance;
     
     [Header("----- Spawn Variables -----")]
+    public PoolingItemsEnum enemyType;
+
+    public WaveData current_wave;
+    
+    public List<Transform> spawnPoints;
+    
+    private IEnumerator currentCoroutine;
+
+    public bool active_wave;
     private float spawnTimer = 0.1f;
     private float timer = 0f;
 
-    [Header("----- Enemies -----")] 
-    [SerializeField] private GameObject prefab_Enemie;
-
-    void Update ()
+    private void Awake()
     {
-        timer += Time.deltaTime;
-        if(timer >= spawnTimer)
+        if (Instance == null)
         {
-            Spawner();
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
- 
+
+
+    public void StartSpawner()
+    {
+        currentCoroutine = Coroutine_StartSpawner();
+        StartCoroutine(currentCoroutine);
+    }
+
+    IEnumerator Coroutine_StartSpawner()
+    {
+        spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
+        
+        while (active_wave)
+        {
+            timer += Time.deltaTime;
+
+            if(timer >= spawnTimer)
+            {
+                Spawner();
+            }
+            
+            yield return null;
+        }
+    }
+
     void Spawner()
     {
-        Sistema_Oleadas sistemaOleadas = FindObjectOfType<Sistema_Oleadas>();
+        Sistema_Oleadas sistemaOleadas = Sistema_Oleadas.Instance;
 
         if (sistemaOleadas.CheckEndRound())
         {
             return;
         }
         
-        switch(sistemaOleadas.WaveNumber)
+        GameObject enemy = PoolingManager.Instance.GetPooledObject((int)enemyType);
+
+        if (enemy != null)
         {
-            case 0://If waveNumber == 0
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(7f, 10f);
-                --sistemaOleadas.TotalEnemies;
-                break;//End switch
-            case 1:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(5f, 7f);
-                --sistemaOleadas.TotalEnemies;
-                break;
-            case 2:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(5f, 7f);
-                --sistemaOleadas.TotalEnemies;
-                break;
-            case 3:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(4f, 5f);
-                --sistemaOleadas.TotalEnemies;
-                break;
-            case 4:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(4f, 5f);
-                --sistemaOleadas.TotalEnemies;
-                break;
-            case 5:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(5f, 7f);
-                --sistemaOleadas.TotalEnemies;
-                break;
-            case 6:
-                Instantiate(prefab_Enemie, gameObject.transform);
-                spawnTimer = Random.Range(3f, 5f);
-                --sistemaOleadas.TotalEnemies;
-                break;
+            --sistemaOleadas.TotalEnemies;
+            
+            // Get random spawn point from the list
+            int spawnPoint_index = Random.Range(0, spawnPoints.Count);
+            enemy.transform.position = spawnPoints[spawnPoint_index].position;
+            enemy.gameObject.SetActive(true);
+            
+            spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
 
         timer = 0f;
+        sistemaOleadas.Checker();
     }
 }
