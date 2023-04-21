@@ -1,10 +1,13 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 public class enemigo : MonoBehaviour
 {
     public NavMeshAgent navMeshAgent;
     public Transform player;
+    public GameObject respawn;
+   
     
     
     void Start()
@@ -18,4 +21,6 @@ public class enemigo : MonoBehaviour
     {
         navMeshAgent.SetDestination(player.position);
     }
+
+    
 }
