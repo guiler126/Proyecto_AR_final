@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     
     public IEnumerator currentCorroutine;
 
+
+
     private void Awake()
     {
         speed = normalSpeed;
@@ -122,6 +124,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    
 
     private void Dash()
     {
