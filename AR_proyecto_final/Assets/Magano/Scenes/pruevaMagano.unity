@@ -331,8 +331,10 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   speed: 5
-  currentSpeed: 5
+  normalSpeed: 5
+  dashSpeed: 10
   turnSmoothTime: 0
+  dashTimeCooldown: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -342,6 +344,9 @@ MonoBehaviour:
   gravity: 0
   sphereRadius: 0.15
   isGrounded: 1
+  atackkRight: 0
+  isDashing: 0
+  canDash: 0
 --- !u!54 &413023854
 Rigidbody:
   m_ObjectHideFlags: 0

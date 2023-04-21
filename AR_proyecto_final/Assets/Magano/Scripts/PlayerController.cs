@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float horizontal;
     [SerializeField] private float vertical;
     [SerializeField] private float speed;
-    [SerializeField] private float currentSpeed;
+    [SerializeField] private float normalSpeed;
+    [SerializeField] private float dashSpeed;
     [SerializeField] private float turnSmoothTime;
+    [SerializeField] private float dashTimeCooldown;
     
     [Header("--- GRAVITY PARAMETERS ---")]
     [Space(10)]
@@ -27,12 +30,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity;
     [SerializeField] private float sphereRadius;
     [SerializeField] private bool isGrounded;
+    [SerializeField] private bool atackkRight;
+    [SerializeField] private bool isDashing;
+    [SerializeField] private bool canDash;
+    
+    public IEnumerator currentCorroutine;
+
+    private void Awake()
+    {
+        speed = normalSpeed;
+
+        canDash = true;
+    }
 
     private void Update()
     {
         Movement();
         CalculateGravity();
         ShootBasic();
+        Dash();
     }
 
     private void Movement()
@@ -62,7 +78,7 @@ public class PlayerController : MonoBehaviour
             //guardamos donde rota en "Y" el player por su eje "Z" (dando así que siempre donde mire el player será al frente);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             //Movemos el player hacia el frente;
-            _characterController.Move(moveDir.normalized * currentSpeed * Time.deltaTime);
+            _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
             
         }
         
@@ -93,8 +109,40 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            _animator.SetTrigger("BasicShootRight");
-            _animator.SetTrigger("BasicShootLeft");
+            atackkRight = !atackkRight;
+            
+            
+            if (atackkRight)
+            {
+                _animator.SetTrigger("BasicShootRight");
+            }
+            else
+            {
+                _animator.SetTrigger("BasicShootLeft");
+            }
         }
     }
+
+    private void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            currentCorroutine = CorroutineDash();
+            StartCoroutine(currentCorroutine);
+        }
+    }
+
+    
+    
+    IEnumerator CorroutineDash()
+    {
+        speed = dashSpeed;
+        yield return new WaitForSeconds(1f);
+        speed = normalSpeed;
+        canDash = false;
+        yield return new WaitForSeconds(3f);
+        canDash = true;
+    }
+    
+
 }
