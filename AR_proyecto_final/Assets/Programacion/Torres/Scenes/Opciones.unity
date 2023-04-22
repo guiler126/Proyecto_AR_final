@@ -487,9 +487,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 777753914}
-        m_TargetAssemblyTypeName: IrVolumen, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 777753920}
+        m_TargetAssemblyTypeName: IrBrillo, Assembly-CSharp
+        m_MethodName: irBrillo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
