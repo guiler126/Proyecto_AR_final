@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358219994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.816, y: 1.549, z: 0}
+  m_LocalPosition: {x: -0.396, y: 1.378, z: 0.827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -378,6 +378,11 @@ MonoBehaviour:
   atackkRight: 0
   isDashing: 0
   canDash: 0
+  Spawn_bullet_1: {fileID: 953731512}
+  Spawn_bullet_2: {fileID: 358219994}
+  Rigidbody_bullet: {fileID: 5975795081199214647, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
+  bullet: {fileID: 2031905198989600257, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
+  shotForce: 0
 --- !u!54 &413023854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -529,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953731512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.817, y: 1.549, z: 0}
+  m_LocalPosition: {x: 0.369, y: 1.319, z: 0.764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

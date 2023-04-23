@@ -38,6 +38,21 @@ public class PlayerController : MonoBehaviour
 
 
 
+    public GameObject Spawn_bullet_1;
+    public GameObject Spawn_bullet_2;
+
+    public Rigidbody Rigidbody_bullet;
+    
+    
+
+    public GameObject bullet;
+
+    public float shotForce = 100f ;
+   
+    
+
+
+
     private void Awake()
     {
         speed = normalSpeed;
@@ -146,6 +161,15 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         canDash = true;
     }
-    
+
+
+    public void Spawn_Bullet_Right()
+    {
+        Instantiate(bullet, Spawn_bullet_1.transform.position, Spawn_bullet_1.transform.rotation);
+    }
+    public void Spawn_Bullet_Left()
+    {
+        Instantiate(bullet, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
+    }
 
 }
