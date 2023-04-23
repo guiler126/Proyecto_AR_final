@@ -219,7 +219,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawn_bullet_left
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358219994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.396, y: 1.378, z: 0.827}
+  m_LocalPosition: {x: -0.396, y: 1.319, z: 0.764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,9 +380,12 @@ MonoBehaviour:
   canDash: 0
   Spawn_bullet_1: {fileID: 953731512}
   Spawn_bullet_2: {fileID: 358219994}
+  Spawn_bullet_SecondAttack: {fileID: 1542526250}
   Rigidbody_bullet: {fileID: 5975795081199214647, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
   bullet: {fileID: 2031905198989600257, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
-  shotForce: 0
+  bulletSecondAttack: {fileID: 8794581474793598528, guid: e1681b2bedb9b844584d5807e344fc65, type: 3}
+  bulletSpeed: 50
+  bullet_SecondAttackSpeed: 50
 --- !u!54 &413023854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -522,7 +525,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawn_bullet_right
   m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -666,3 +669,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1542526250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1542526251}
+  m_Layer: 0
+  m_Name: Spawn_bullet_SecondAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1542526251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542526250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.074, z: 0.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 413023852}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool atackkRight;
     [SerializeField] private bool isDashing;
     [SerializeField] private bool canDash;
+    [SerializeField] private bool canSecondAttack;
     
     public IEnumerator currentCorroutine;
 
@@ -40,14 +41,19 @@ public class PlayerController : MonoBehaviour
 
     public GameObject Spawn_bullet_1;
     public GameObject Spawn_bullet_2;
+    
+    
+    public GameObject Spawn_bullet_SecondAttack;
 
     public Rigidbody Rigidbody_bullet;
     
     
 
     public GameObject bullet;
+    public GameObject bulletSecondAttack;
 
-    public float shotForce = 100f ;
+    public float bulletSpeed = 50f;
+    public float bullet_SecondAttackSpeed = 50f;
    
     
 
@@ -58,6 +64,8 @@ public class PlayerController : MonoBehaviour
         speed = normalSpeed;
 
         canDash = true;
+
+        canSecondAttack = true;
     }
 
     private void Update()
@@ -66,6 +74,7 @@ public class PlayerController : MonoBehaviour
         CalculateGravity();
         ShootBasic();
         Dash();
+        SecondAttack();
     }
 
     private void Movement()
@@ -164,12 +173,38 @@ public class PlayerController : MonoBehaviour
 
 
     public void Spawn_Bullet_Right()
-    {
-        Instantiate(bullet, Spawn_bullet_1.transform.position, Spawn_bullet_1.transform.rotation);
+    { 
+        GameObject newBullet = Instantiate(bullet, Spawn_bullet_1.transform.position, Spawn_bullet_1.transform.rotation);
+        
+        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+        
+        Destroy(newBullet, 4f);
     }
     public void Spawn_Bullet_Left()
     {
-        Instantiate(bullet, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
+        GameObject newBullet =  Instantiate(bullet, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
+        
+        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+        
+        Destroy(newBullet, 4f);
+    }
+
+
+    public void SecondAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            _animator.SetTrigger("SecondAttack");
+        }
+    }
+
+    public void SpawnSecondAttack()
+    {
+        GameObject newBulletSecondAttack =  Instantiate(bulletSecondAttack, Spawn_bullet_SecondAttack.transform.position, Spawn_bullet_SecondAttack.transform.rotation);
+        
+        newBulletSecondAttack.GetComponent<Rigidbody>().AddForce(transform.forward * bullet_SecondAttackSpeed, ForceMode.Impulse);
+        
+        Destroy(newBulletSecondAttack, 2f);
     }
 
 }
