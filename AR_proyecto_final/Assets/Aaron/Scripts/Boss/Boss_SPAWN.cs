@@ -11,13 +11,15 @@ public class Boss_SPAWN : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            Debug.Log("hOLA");
             Activo = true;
             Boss.SetActive(true);
             //GetComponent<Animator>().SetBool("EstoyCorriendo", true);
 
         }
+
     }
 
    

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Boss_Controleler : MonoBehaviour
 {
-    private int HP = 100;
+    public int HP = 100;
     //public Animator animator;
     //public Slider healthbar;
     
@@ -61,11 +61,17 @@ public class Boss_Controleler : MonoBehaviour
         
         }
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            TakeDamage();
+
+        }
+
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage()
     {
-        HP -= damageAmount;
+        HP -= DamageAmount;
         if (HP <= 0)
         {
             //FindObjectOfType<AudioManager>().PlaySound("DragonDeath");
