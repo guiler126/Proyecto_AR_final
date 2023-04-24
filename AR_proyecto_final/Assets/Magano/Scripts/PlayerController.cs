@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float normalSpeed;
     [SerializeField] private float dashSpeed;
+    [SerializeField] private float SecondaryAttackSpeed;
     [SerializeField] private float turnSmoothTime;
     [SerializeField] private float dashTimeCooldown;
     
@@ -35,28 +36,34 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canDash;
     [SerializeField] private bool canSecondAttack;
     
+    
     public IEnumerator currentCorroutine;
 
-
-
+    [Space]
+    [Header("---- Sapwns Attacks ----")]
     public GameObject Spawn_bullet_1;
     public GameObject Spawn_bullet_2;
-    
-    
     public GameObject Spawn_bullet_SecondAttack;
-
-    public Rigidbody Rigidbody_bullet;
     
     
-
+    [Space]
+    [Header("---- Prefabs Attacks ----")]
     public GameObject bullet;
     public GameObject bulletSecondAttack;
 
+    [Space]
+    [Header("---- CONFIG ATTACKS ----")]
     public float bulletSpeed = 50f;
     public float bullet_SecondAttackSpeed = 50f;
-   
-    
+    public bool canUseSecundaryAttack;
+    public float timeBetweenSecondaryAttack;
+    public float currentTimeLastSecundaryAttack;
 
+    [Space]
+    [Header("---- STATS HEALTH PLAYER ----")]
+    public int health = 5;
+    public bool isDie;
+    
 
 
     private void Awake()
@@ -65,16 +72,25 @@ public class PlayerController : MonoBehaviour
 
         canDash = true;
 
-        canSecondAttack = true;
+        canUseSecundaryAttack = true;
+        
+        
+        isDie = false;
+
+
     }
 
     private void Update()
     {
-        Movement();
-        CalculateGravity();
-        ShootBasic();
-        Dash();
-        SecondAttack();
+        if (!isDie)
+        {
+            Movement();
+            ShootBasic();
+            Dash();
+            SecondAttack();
+            TakeDamage();
+        }
+        
     }
 
     private void Movement()
@@ -110,8 +126,6 @@ public class PlayerController : MonoBehaviour
         
     
         
- 
-    
     }
     private void CalculateGravity()
     {
@@ -164,7 +178,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator CorroutineDash()
     {
         speed = dashSpeed;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         speed = normalSpeed;
         canDash = false;
         yield return new WaitForSeconds(3f);
@@ -194,8 +208,32 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            _animator.SetTrigger("SecondAttack");
+            if (canUseSecundaryAttack)
+            {
+                _animator.SetTrigger("SecondAttack");
+                canUseSecundaryAttack = false;
+                StartCoroutine(ReloadSecondaryAttack());
+            }
         }
+    }
+
+
+    private IEnumerator ReloadSecondaryAttack()
+    {
+        currentTimeLastSecundaryAttack = 0;
+        
+        while (!canUseSecundaryAttack)
+        {
+            currentTimeLastSecundaryAttack += Time.deltaTime;
+
+            if (currentTimeLastSecundaryAttack >= timeBetweenSecondaryAttack)
+            {
+                canUseSecundaryAttack = true;
+            }
+
+            yield return null;
+        }
+        
     }
 
     public void SpawnSecondAttack()
@@ -207,4 +245,33 @@ public class PlayerController : MonoBehaviour
         Destroy(newBulletSecondAttack, 2f);
     }
 
+    public void TakeDamage()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            health--;
+        }
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        _animator.SetTrigger("Die");
+        
+        isDie = true;
+
+        if (isDie == true)
+        {
+            LookAtMouse.instance.enabled = false;
+        }
+        else
+        {
+            isDie = false;
+            LookAtMouse.instance.enabled = true;
+        }
+    }
 }

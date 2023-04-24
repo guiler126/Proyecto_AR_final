@@ -7,10 +7,17 @@ public class LookAtMouse : MonoBehaviour
 {
     public float speed;
 
+    public static LookAtMouse instance;
+
 
     private void Update()
     {
         LookAtCursor();
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     public void LookAtCursor()

@@ -363,29 +363,35 @@ MonoBehaviour:
   vertical: 0
   speed: 5
   normalSpeed: 5
-  dashSpeed: 10
+  dashSpeed: 15
+  SecondaryAttackSpeed: 1
   turnSmoothTime: 0
   dashTimeCooldown: 5
   groundMask:
     serializedVersion: 2
-    m_Bits: 8
-  groundCheck: {fileID: 1036933203}
+    m_Bits: 0
+  groundCheck: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   gravity: 0
-  sphereRadius: 0.15
+  sphereRadius: 0
   isGrounded: 1
   atackkRight: 0
   isDashing: 0
   canDash: 0
+  canSecondAttack: 0
   Spawn_bullet_1: {fileID: 953731512}
   Spawn_bullet_2: {fileID: 358219994}
   Spawn_bullet_SecondAttack: {fileID: 1542526250}
-  Rigidbody_bullet: {fileID: 5975795081199214647, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
   bullet: {fileID: 2031905198989600257, guid: 391ce039ef55a024580a68d57ee4a7a5, type: 3}
   bulletSecondAttack: {fileID: 8794581474793598528, guid: e1681b2bedb9b844584d5807e344fc65, type: 3}
   bulletSpeed: 50
   bullet_SecondAttackSpeed: 50
+  canUseSecundaryAttack: 0
+  timeBetweenSecondaryAttack: 5
+  currentTimeLastSecundaryAttack: 0
+  health: 5
+  isDie: 0
 --- !u!54 &413023854
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -400,7 +406,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &413023855
 MonoBehaviour:
