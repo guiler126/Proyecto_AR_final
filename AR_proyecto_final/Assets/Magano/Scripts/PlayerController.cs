@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public static PlayerController instance;
+    
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Animator _animator;
@@ -20,7 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float SecondaryAttackSpeed;
     [SerializeField] private float turnSmoothTime;
-    [SerializeField] private float dashTimeCooldown;
+    
     
     [Header("--- GRAVITY PARAMETERS ---")]
     [Space(10)]
@@ -32,9 +36,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sphereRadius;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool atackkRight;
-    [SerializeField] private bool isDashing;
     [SerializeField] private bool canDash;
-    [SerializeField] private bool canSecondAttack;
+    
     
     
     public IEnumerator currentCorroutine;
@@ -63,11 +66,21 @@ public class PlayerController : MonoBehaviour
     [Header("---- STATS HEALTH PLAYER ----")]
     public int health = 5;
     public bool isDie;
+
+    [Space]
+    [Header("---- SLIDERS ----")]
+    public UnityEngine.UI.Slider Slider_DashCooldown;
+    public UnityEngine.UI.Slider Slider_SecoundaryAttackCooldown;
     
+    
+    
+
 
 
     private void Awake()
     {
+        instance = this;
+        
         speed = normalSpeed;
 
         canDash = true;
@@ -77,6 +90,8 @@ public class PlayerController : MonoBehaviour
         
         isDie = false;
 
+        Slider_SecoundaryAttackCooldown.value = 1f;
+        Slider_DashCooldown.value = 1f;
 
     }
 
@@ -181,7 +196,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         speed = normalSpeed;
         canDash = false;
+        Slider_DashCooldown.value = 0f;
         yield return new WaitForSeconds(3f);
+        Slider_DashCooldown.value = 1f;
         canDash = true;
     }
 
@@ -211,6 +228,7 @@ public class PlayerController : MonoBehaviour
             if (canUseSecundaryAttack)
             {
                 _animator.SetTrigger("SecondAttack");
+                speed = SecondaryAttackSpeed;
                 canUseSecundaryAttack = false;
                 StartCoroutine(ReloadSecondaryAttack());
             }
@@ -221,6 +239,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator ReloadSecondaryAttack()
     {
         currentTimeLastSecundaryAttack = 0;
+        Slider_SecoundaryAttackCooldown.value = 0f;
         
         while (!canUseSecundaryAttack)
         {
@@ -229,6 +248,7 @@ public class PlayerController : MonoBehaviour
             if (currentTimeLastSecundaryAttack >= timeBetweenSecondaryAttack)
             {
                 canUseSecundaryAttack = true;
+                Slider_SecoundaryAttackCooldown.value = 1f;
             }
 
             yield return null;
@@ -241,6 +261,8 @@ public class PlayerController : MonoBehaviour
         GameObject newBulletSecondAttack =  Instantiate(bulletSecondAttack, Spawn_bullet_SecondAttack.transform.position, Spawn_bullet_SecondAttack.transform.rotation);
         
         newBulletSecondAttack.GetComponent<Rigidbody>().AddForce(transform.forward * bullet_SecondAttackSpeed, ForceMode.Impulse);
+
+        speed = normalSpeed;
         
         Destroy(newBulletSecondAttack, 2f);
     }
