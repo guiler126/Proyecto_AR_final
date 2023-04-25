@@ -2223,6 +2223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  player: {fileID: 1200465280}
+  animator: {fileID: 5866666020012836885}
   DamageAmount: 10
 --- !u!4 &5901452233903472876
 Transform:

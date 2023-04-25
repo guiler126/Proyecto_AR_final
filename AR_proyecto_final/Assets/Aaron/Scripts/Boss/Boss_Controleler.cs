@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Boss_Controleler : MonoBehaviour
 {
     public int HP = 100;
-    //public Animator animator;
+    public Transform player;
+    public Animator animator;
     //public Slider healthbar;
     
     //---DAÑO DEL PLAYER---
@@ -67,6 +68,18 @@ public class Boss_Controleler : MonoBehaviour
 
         }
 
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance < 5f)
+        {
+            animator.transform.LookAt(player);
+            Debug.Log("Estoy atacando");
+            //animator.SetBool("IsAttacking", false);
+        }
+            
+        else
+        {
+            Debug.Log("Te estas alejando");
+        }
     }
 
     public void TakeDamage()
