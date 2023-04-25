@@ -22,11 +22,19 @@ public class Boss_AI : MonoBehaviour
         if(navMeshAgent.speed >= 0.1f) 
         {
             GetComponent<Animator>().SetBool("Walk", true);
+            StartCoroutine(ChasePlayer());  
+        }
+
+        if(Boss_Controleler.instance.HP <= 0) 
+        {
+            navMeshAgent.speed = 0;
+            StopCoroutine(ChasePlayer());
         }
     }
 
-    public void ChasePlayer()
+    IEnumerator ChasePlayer()
     {
+        yield return new WaitForSeconds(2f);    
         navMeshAgent.SetDestination(player.position);
     }
 

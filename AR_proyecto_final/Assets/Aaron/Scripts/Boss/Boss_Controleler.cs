@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Boss_Controleler : MonoBehaviour
@@ -12,6 +13,17 @@ public class Boss_Controleler : MonoBehaviour
     
     //---DAÑO DEL PLAYER---
     public int DamageAmount = 10;
+
+    [Header("---Sliders/Bars---")]
+    public Slider Health_bar;
+    public Slider stamina_bar;
+
+    public static Boss_Controleler instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Update()
     {
@@ -65,19 +77,19 @@ public class Boss_Controleler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage();
-
         }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
-        if (distance < 5f)
+        if (distance < 3f)
         {
             animator.transform.LookAt(player);
+            animator.SetBool("Attack", true);
             Debug.Log("Estoy atacando");
-            //animator.SetBool("IsAttacking", false);
         }
             
-        else
+        if(distance >= 3)
         {
+            animator.SetBool("Attack", false);
             Debug.Log("Te estas alejando");
         }
     }
@@ -85,25 +97,21 @@ public class Boss_Controleler : MonoBehaviour
     public void TakeDamage()
     {
         HP -= DamageAmount;
+        Health_bar.value = HP;
+        Debug.Log("Estoy aqui");
+
         if (HP <= 0)
         {
+
             //FindObjectOfType<AudioManager>().PlaySound("DragonDeath");
-            //animator.SetTrigger("Die");
-            //GetComponent<Collider>().enabled = false;
+            animator.SetTrigger("Die");
+            GetComponent<Collider>().enabled = false;
             //SceneManager.LoadScene(3);
         }
         else
         {
             //FindObjectOfType<AudioManager>().PlaySound("DragonHit");
             //animator.SetTrigger("Damage");
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            //atacar
         }
     }
 
