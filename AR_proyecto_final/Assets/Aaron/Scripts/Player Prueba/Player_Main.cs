@@ -10,8 +10,7 @@ public class Player_Main : MonoBehaviour
     [SerializeField] private Transform feetTransform;
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private LayerMask floormask;
-    //[SerializeField] private Animator animator;
-    //[SerializeField] private Slider Healthbar;
+    [SerializeField] public Slider Health_bar;
 
 
     [Header("--- Player Attributes ---")]
@@ -20,12 +19,19 @@ public class Player_Main : MonoBehaviour
     [SerializeField] public int runspeed;
     [SerializeField] private float rotationspeed;
     [SerializeField] private float jumpforce;
-    [SerializeField] private int HP = 30;
+    [SerializeField] public int HP = 100;
     
     public Camera playerCamera;
 
     private Vector3 playermovementInput;
     private float horizontalinput;
+
+    public static Player_Main instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {

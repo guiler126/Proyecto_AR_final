@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class Boss_Controleler : MonoBehaviour
 {
+    [Header("---Parameters---")]
     public int HP = 100;
+    [Tooltip("Daño del player hacia el boss")]
+    public int DamageAmount = 10;
+    [Tooltip("Daño del Boss hacia el player")]
+    public int Boss_Damage = 10;
+
+    [Header("---Others---")]
     public Transform player;
     public Animator animator;
-    //public Slider healthbar;
     
-    //---DAÑO DEL PLAYER---
-    public int DamageAmount = 10;
 
     [Header("---Sliders/Bars---")]
     public Slider Health_bar;
@@ -47,15 +51,12 @@ public class Boss_Controleler : MonoBehaviour
 
         switch (HP) 
         { 
-            case 0:
-                {
-                    //morir
-                    break;
-                }
 
             case 30: 
                 {
                     //fase 3
+
+
                     break;
                 }
 
@@ -64,12 +65,6 @@ public class Boss_Controleler : MonoBehaviour
                     //fase 2
                     break;
                 
-                }
-
-            case 100:
-                {
-                    //normal
-                    break;
                 }
         
         }
@@ -82,8 +77,10 @@ public class Boss_Controleler : MonoBehaviour
         float distance = Vector3.Distance(player.position, animator.transform.position);
         if (distance < 3f)
         {
-            animator.transform.LookAt(player);
+            //animator.transform.LookAt(player);
             animator.SetBool("Attack", true);
+            Player_Main.instance.HP -= Boss_Damage;
+            Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
             Debug.Log("Estoy atacando");
         }
             
