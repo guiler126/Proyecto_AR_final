@@ -87,17 +87,11 @@ public class Player_Main : MonoBehaviour
     /**public void TakeDamage(int damageAmount)
     {
         HP -= damageAmount;
+        Health_bar.value = HP;
         if (HP <= 0)
         {
-            FindObjectOfType<AudioManager>().PlaySound("ArcherDeath");
-            animator.SetTrigger("die");
-            SceneManager.LoadScene(4);
-            //GetComponent<Collider>().enabled = false;
-        }
-        else
-        {
-            FindObjectOfType<AudioManager>().PlaySound("ArcherHit");
-            animator.SetTrigger("damage");
+            Debug.Log("Estoy muerto");
+            
         }
     }*/
 }

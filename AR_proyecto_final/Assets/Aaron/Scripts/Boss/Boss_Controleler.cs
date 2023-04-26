@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Boss_Controleler : MonoBehaviour
 {
@@ -79,8 +78,8 @@ public class Boss_Controleler : MonoBehaviour
         {
             //animator.transform.LookAt(player);
             animator.SetBool("Attack", true);
-            Player_Main.instance.HP -= Boss_Damage;
-            Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
+            //Player_Main.instance.HP -= Boss_Damage;
+            //Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
             Debug.Log("Estoy atacando");
         }
             
@@ -103,7 +102,7 @@ public class Boss_Controleler : MonoBehaviour
             //FindObjectOfType<AudioManager>().PlaySound("DragonDeath");
             animator.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
-            //SceneManager.LoadScene(3);
+            
         }
         else
         {
