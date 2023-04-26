@@ -61,9 +61,12 @@ public class PlayerController : MonoBehaviour
     public bool canUseSecundaryAttack;
     public float timeBetweenSecondaryAttack;
     public float currentTimeLastSecundaryAttack;
+    public bool puedo_atacar;
+
+    public bool imAttacking;
 
     [Space]
-    [Header("---- STATS HEALTH PLAYER ----")]
+    [Header("---- STATS PLAYER ----")]
     public int health = 5;
     public bool isDie;
 
@@ -93,6 +96,10 @@ public class PlayerController : MonoBehaviour
         Slider_SecoundaryAttackCooldown.value = 1f;
         Slider_DashCooldown.value = 1f;
 
+        imAttacking = false;
+
+        puedo_atacar = true;
+
     }
 
     private void Update()
@@ -104,8 +111,9 @@ public class PlayerController : MonoBehaviour
             Dash();
             SecondAttack();
             TakeDamage();
+            NoMana();
         }
-        
+         
     }
 
     private void Movement()
@@ -162,18 +170,23 @@ public class PlayerController : MonoBehaviour
 
     private void ShootBasic()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (puedo_atacar == true)
         {
-            atackkRight = !atackkRight;
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                atackkRight = !atackkRight;
             
             
-            if (atackkRight)
-            {
-                _animator.SetTrigger("BasicShootRight");
-            }
-            else
-            {
-                _animator.SetTrigger("BasicShootLeft");
+                if (atackkRight)
+                {
+                    _animator.SetTrigger("BasicShootRight");
+                    imAttacking = true;
+                }
+                else
+                {
+                    _animator.SetTrigger("BasicShootLeft");
+                    imAttacking = true;
+                }
             }
         }
     }
@@ -209,7 +222,9 @@ public class PlayerController : MonoBehaviour
         
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
-        Destroy(newBullet, 4f);
+        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        
+        Destroy(newBullet, 2f);
     }
     public void Spawn_Bullet_Left()
     {
@@ -217,20 +232,26 @@ public class PlayerController : MonoBehaviour
         
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
+        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        
         Destroy(newBullet, 4f);
     }
 
 
     public void SecondAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (puedo_atacar == true)
         {
-            if (canUseSecundaryAttack)
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                _animator.SetTrigger("SecondAttack");
-                speed = SecondaryAttackSpeed;
-                canUseSecundaryAttack = false;
-                StartCoroutine(ReloadSecondaryAttack());
+                if (canUseSecundaryAttack)
+                {
+                    _animator.SetTrigger("SecondAttack");
+                    imAttacking = true;
+                    speed = SecondaryAttackSpeed;
+                    canUseSecundaryAttack = false;
+                    StartCoroutine(ReloadSecondaryAttack());
+                }
             }
         }
     }
@@ -264,6 +285,8 @@ public class PlayerController : MonoBehaviour
 
         speed = normalSpeed;
         
+        Mana_Controller.instance.Slider_Mana.value -= 60f;
+        
         Destroy(newBulletSecondAttack, 2f);
     }
 
@@ -295,5 +318,24 @@ public class PlayerController : MonoBehaviour
             isDie = false;
             LookAtMouse.instance.enabled = true;
         }
+    }
+
+    public void ImAttacking()
+    {
+        imAttacking = false;
+    }
+    
+    public void NoMana()
+    {
+        if (Mana_Controller.instance.Slider_Mana.value <= 1)
+        {
+            puedo_atacar = false;
+        }
+        
+        if (Mana_Controller.instance.Slider_Mana.value >= 1.5f)
+        {
+            puedo_atacar = true;
+        }
+
     }
 }
