@@ -8,6 +8,9 @@ public class BasicEnemy : MonoBehaviour
     public GameObject respawn_enemigo;
     [Header("Stats")]
     public int health;
+    public Animator Animator;
+
+    public int Enemy_kill_damage = 100;
     
     private void Awake()
     {
@@ -23,8 +26,10 @@ public class BasicEnemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Animator.SetBool("Muerto", true);
             transform.position = respawn_enemigo.transform.position;
             health = 100; 
         }
     }
+    
 }

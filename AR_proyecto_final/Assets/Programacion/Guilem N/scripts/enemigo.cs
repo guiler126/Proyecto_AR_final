@@ -20,8 +20,6 @@ public class enemigo : MonoBehaviour
     void Update()
     {
         navMeshAgent.SetDestination(player.position);
-        
-        
     }
 
     public void OnTriggerEnter(Collider other)
@@ -33,12 +31,13 @@ public class enemigo : MonoBehaviour
             navMeshAgent.angularSpeed = 0f;
             navMeshAgent.acceleration = 0f;
         }
-        else
-        {
-            Animator.SetBool("Atacar", false);
-            navMeshAgent.speed = 5.5f;
-            navMeshAgent.angularSpeed = 120f;
-            navMeshAgent.acceleration = 8f;
-        }
+    }
+
+    public void Terminar_Ataque()
+    {
+        Animator.SetBool("Atacar", false);
+        navMeshAgent.speed = 5.5f;
+        navMeshAgent.angularSpeed = 120f;
+        navMeshAgent.acceleration = 8f;
     }
 }
