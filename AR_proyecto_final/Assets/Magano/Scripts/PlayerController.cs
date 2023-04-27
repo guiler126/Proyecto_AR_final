@@ -107,11 +107,11 @@ public class PlayerController : MonoBehaviour
         if (!isDie)
         {
             Movement();
-            ShootBasic();
-            Dash();
-            SecondAttack();
-            TakeDamage();
             NoMana();
+            ShootBasic();
+            SecondAttack();
+            Dash();
+            TakeDamage();
         }
          
     }
@@ -170,21 +170,27 @@ public class PlayerController : MonoBehaviour
 
     private void ShootBasic()
     {
-        if (puedo_atacar == true)
+        if (puedo_atacar)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                if (imAttacking) return;
+                    
                 atackkRight = !atackkRight;
             
-            
+                
                 if (atackkRight)
                 {
-                    _animator.SetTrigger("BasicShootRight");
+                    _animator.SetBool("BasicShootLeft", false);
+                    _animator.SetBool("BasicShootRight", true);
+                    _animator.SetBool("imAttacking", true);
                     imAttacking = true;
                 }
                 else
                 {
-                    _animator.SetTrigger("BasicShootLeft");
+                    _animator.SetBool("BasicShootRight", false);
+                    _animator.SetBool("BasicShootLeft", true);
+                    _animator.SetBool("imAttacking", true);
                     imAttacking = true;
                 }
             }
@@ -240,17 +246,21 @@ public class PlayerController : MonoBehaviour
 
     public void SecondAttack()
     {
-        if (puedo_atacar == true)
+        if (puedo_atacar)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 if (canUseSecundaryAttack)
                 {
-                    _animator.SetTrigger("SecondAttack");
+                    _animator.SetBool("SecondAttack", true);
                     imAttacking = true;
                     speed = SecondaryAttackSpeed;
                     canUseSecundaryAttack = false;
                     StartCoroutine(ReloadSecondaryAttack());
+                }
+                else
+                {
+                    _animator.SetBool("SecondAttack", false);  
                 }
             }
         }
@@ -320,9 +330,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ImAttacking()
+    public void FinishAtttack()
     {
         imAttacking = false;
+        _animator.SetBool("imAttacking", false);
+        _animator.SetBool("BasicShootRight", false);
+        _animator.SetBool("BasicShootLeft", false);
+        _animator.SetBool("SecondAttack", false);
     }
     
     public void NoMana()
@@ -332,7 +346,7 @@ public class PlayerController : MonoBehaviour
             puedo_atacar = false;
         }
         
-        if (Mana_Controller.instance.Slider_Mana.value >= 1.5f)
+        if (Mana_Controller.instance.Slider_Mana.value >= 18f)
         {
             puedo_atacar = true;
         }
