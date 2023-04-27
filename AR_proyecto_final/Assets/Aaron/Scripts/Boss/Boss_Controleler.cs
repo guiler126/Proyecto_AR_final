@@ -81,7 +81,7 @@ public class Boss_Controleler : MonoBehaviour
             case 30:
                 {
                     //fase 3
-                    //animator.SetTrigger("New_Stage");
+                    animator.SetTrigger("New_Stage");
                     //bloquear movimiento
                     Debug.Log("30");
                     break;
@@ -92,7 +92,7 @@ public class Boss_Controleler : MonoBehaviour
                     //fase 2
                     animator.SetTrigger("New_Stage");
                     //bloquear movimiento
-                    Debug.Log("60");
+                    Fase2();
                     break;
 
                 }
@@ -132,5 +132,8 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
-
+    private void Fase2()
+    {
+        Debug.Log("Estoy en fase 2");
+    }
 }
