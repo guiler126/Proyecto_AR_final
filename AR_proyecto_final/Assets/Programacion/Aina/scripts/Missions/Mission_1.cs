@@ -14,4 +14,11 @@ public class Mission_1 : Mission_Base
     public int EnemiesToEliminate => enemiesToEliminate;
     
     public float MissionTime => missionTime;
+
+    public void Mission_Base()
+    {
+        Description = $"text {enemiesToEliminate} text {missionTime}";
+        
+        //CheckMission();
+    }
 }
