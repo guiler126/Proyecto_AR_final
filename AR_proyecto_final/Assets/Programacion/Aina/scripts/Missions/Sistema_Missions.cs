@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,7 +5,6 @@ using UnityEngine;
 public class Sistema_Missions : MonoBehaviour
 {
     [Header("----- Mission Variables -----")]
-    public List <Mission_Base> missionList;
 
     [SerializeField] private TMP_Text missionText_1;
     [SerializeField] private TMP_Text missionText_2;
@@ -17,6 +15,7 @@ public class Sistema_Missions : MonoBehaviour
         switch(Sistema_Oleadas.Instance.waveNumber)
         {
             case 0:
+                SelectMissions();
                 break;
             case 1:
                 break;
@@ -25,6 +24,6 @@ public class Sistema_Missions : MonoBehaviour
 
     private void SelectMissions()
     {
-        Random.Range(0, missionList.Count);
+        //int sm = Random.Range(0, missionList.Count);
     }
 }
