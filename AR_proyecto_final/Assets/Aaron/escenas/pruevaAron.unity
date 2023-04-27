@@ -2341,6 +2341,7 @@ GameObject:
   - component: {fileID: 721096249}
   - component: {fileID: 5866666020012836886}
   - component: {fileID: 721096250}
+  - component: {fileID: 5866666020012836887}
   m_Layer: 0
   m_Name: Jason_Boss
   m_TagString: Untagged
@@ -3659,6 +3660,24 @@ MonoBehaviour:
   animator: {fileID: 5866666020012836885}
   Health_bar: {fileID: 2130055276}
   stamina_bar: {fileID: 1503128674}
+--- !u!114 &5866666020012836887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147836897493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a92ff9eac1292c41ac7975e35e86361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss_stamina: 0
+  max_stamina: 100
+  Boss_is_attacking: 0
+  stamina_Slider: {fileID: 1503128674}
+  Stamina_Drain: 20
+  Stamina_Regen: 4
 --- !u!4 &5901452233903472876
 Transform:
   m_ObjectHideFlags: 0

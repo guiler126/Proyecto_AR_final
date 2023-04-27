@@ -10,6 +10,7 @@ public class Stamina_Controller : MonoBehaviour
     public float Boss_stamina = 0f;
     [SerializeField] private float max_stamina = 100.0f;
     [SerializeField] private bool Boss_is_attacking = false;
+    [SerializeField] private Slider stamina_Slider;
 
 
 
@@ -28,7 +29,8 @@ public class Stamina_Controller : MonoBehaviour
 
     private void Start()
     {
-        //Boss_Controleler.Instance.GetComponent<Boss_Controleler>();
+        Boss_Controleler.instance.GetComponent<Boss_Controleler>();
+        Boss_is_attacking = false;
     }
 
     private void Update()
@@ -36,7 +38,8 @@ public class Stamina_Controller : MonoBehaviour
         if (!Boss_is_attacking)
         {
             Boss_is_attacking = false;
-            Boss_stamina += Stamina_Regen + Time.deltaTime;
+            Boss_stamina += Stamina_Regen * Time.deltaTime;
+            stamina_Slider.value = Boss_stamina;
             
         }
         if(!Boss_is_attacking && Boss_stamina == 100) 
@@ -52,6 +55,7 @@ public class Stamina_Controller : MonoBehaviour
     {
         Boss_is_attacking = true;
         Boss_stamina -= Stamina_Drain * Time.deltaTime;
+        stamina_Slider.value = Boss_stamina;
 
     }
 
