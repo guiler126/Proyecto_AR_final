@@ -2340,8 +2340,8 @@ GameObject:
   - component: {fileID: 5866666020012836885}
   - component: {fileID: 721096249}
   - component: {fileID: 5866666020012836886}
-  - component: {fileID: 721096250}
   - component: {fileID: 5866666020012836887}
+  - component: {fileID: 721096250}
   m_Layer: 0
   m_Name: Jason_Boss
   m_TagString: Untagged
@@ -3676,8 +3676,10 @@ MonoBehaviour:
   max_stamina: 100
   Boss_is_attacking: 0
   stamina_Slider: {fileID: 1503128674}
+  anim: {fileID: 5866666020012836885}
+  player: {fileID: 1200465280}
   Stamina_Drain: 20
-  Stamina_Regen: 4
+  Stamina_Regen: 10
 --- !u!4 &5901452233903472876
 Transform:
   m_ObjectHideFlags: 0

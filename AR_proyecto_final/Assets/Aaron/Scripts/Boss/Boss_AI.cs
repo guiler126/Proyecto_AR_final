@@ -9,33 +9,53 @@ public class Boss_AI : MonoBehaviour
     public Transform player;
     public Animator anim;
 
+    public bool initialAnimCompleted;
+
+    public static Boss_AI instance;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        instance = this;
+    }
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        initialAnimCompleted = false;
+        StartCoroutine(SpawnBoss());
     }
 
     void Update()
     {
-        if(navMeshAgent.speed >= 0.1f) 
-        {
-            GetComponent<Animator>().SetBool("Walk", true);
-            StartCoroutine(ChasePlayer());  
-        }
+        if (navMeshAgent.isStopped) return;
 
-        if(Boss_Controleler.instance.HP <= 0) 
-        {
-            navMeshAgent.speed = 0;
-            StopCoroutine(ChasePlayer());
-        }
+        if (!initialAnimCompleted) return; 
+
+       ChasePlayer();
     }
 
-    IEnumerator ChasePlayer()
+    IEnumerator SpawnBoss()
     {
         yield return new WaitForSeconds(2f);    
         navMeshAgent.SetDestination(player.position);
+        initialAnimCompleted = true;
+    }
+
+    public void ChasePlayer()
+    {
+        if (navMeshAgent.speed >= 0.1f)
+        {
+            anim.SetBool("Walk", true);
+            navMeshAgent.SetDestination(player.position);
+        }
+
+        if (Boss_Controleler.instance.HP <= 0)
+        {
+            navMeshAgent.speed = 0;
+            navMeshAgent.isStopped = true;  
+        }
     }
 
 

@@ -48,29 +48,12 @@ public class Boss_Controleler : MonoBehaviour
             //FASE 2
         }*/
 
-        switch (HP) 
-        { 
 
-            case 30: 
-                {
-                    //fase 3
-
-
-                    break;
-                }
-
-            case 60: 
-                {
-                    //fase 2
-                    break;
-                
-                }
-        
-        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage();
+            Switch();
         }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
@@ -87,6 +70,33 @@ public class Boss_Controleler : MonoBehaviour
         {
             animator.SetBool("Attack", false);
             Debug.Log("Te estas alejando");
+        }
+    }
+
+    private void Switch()
+    {
+        switch (HP)
+        {
+
+            case 30:
+                {
+                    //fase 3
+                    //animator.SetTrigger("New_Stage");
+                    //bloquear movimiento
+                    Debug.Log("30");
+                    break;
+                }
+
+            case 60:
+                {
+                    //fase 2
+                    animator.SetTrigger("New_Stage");
+                    //bloquear movimiento
+                    Debug.Log("60");
+                    break;
+
+                }
+
         }
     }
 
