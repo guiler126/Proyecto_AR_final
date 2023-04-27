@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 338, y: -30.00003}
+  m_AnchoredPosition: {x: 338, y: -30.000061}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &502995449
@@ -839,7 +839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 29.44397, y: -23.472015}
+  m_AnchoredPosition: {x: 29.44397, y: -23.471985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &699205980
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   runspeed: 20
   rotationspeed: 5
   jumpforce: 50
-  HP: 30
+  HP: 100
   playerCamera: {fileID: 613021049}
 --- !u!136 &1200465282
 CapsuleCollider:

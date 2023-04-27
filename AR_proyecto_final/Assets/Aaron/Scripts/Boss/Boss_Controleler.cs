@@ -111,5 +111,16 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
+    public void PlayerDamage(int damageAmount)
+    {
+        Player_Main.instance.HP -= damageAmount;
+        Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
+        if (Player_Main.instance.HP <= 0)
+        {
+            Debug.Log("Estoy muerto");
+
+        }
+    }
+
 
 }

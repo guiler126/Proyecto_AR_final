@@ -84,14 +84,5 @@ public class Player_Main : MonoBehaviour
         }
     }
 
-    /**public void TakeDamage(int damageAmount)
-    {
-        HP -= damageAmount;
-        Health_bar.value = HP;
-        if (HP <= 0)
-        {
-            Debug.Log("Estoy muerto");
-            
-        }
-    }*/
+   
 }
