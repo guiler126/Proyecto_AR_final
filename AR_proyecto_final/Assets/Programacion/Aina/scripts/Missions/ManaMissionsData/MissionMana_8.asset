@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32415a639bd3a7c4ea364c41d8f305a5, type: 3}
-  m_Name: MissionFixed_1
+  m_Script: {fileID: 11500000, guid: 3b77c64d42f2a1441843e4e4e701942c, type: 3}
+  m_Name: MissionMana_8
   m_EditorClassIdentifier: 
-  enemiesToEliminate: 0
-  maxTime: 0
+  minMana: 0

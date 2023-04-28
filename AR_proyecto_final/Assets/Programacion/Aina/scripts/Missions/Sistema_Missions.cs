@@ -8,8 +8,10 @@ public class Sistema_Missions : MonoBehaviour
 
     [SerializeField] private TMP_Text missionText_1;
     [SerializeField] private TMP_Text missionText_2;
-    [SerializeField] private TMP_Text missionText_3;
 
+    [SerializeField] private List<GameObject> missionList;
+    
+    
     public void Spawner()
     {        
         switch(Sistema_Oleadas.Instance.waveNumber)
@@ -24,6 +26,7 @@ public class Sistema_Missions : MonoBehaviour
 
     private void SelectMissions()
     {
-        //int sm = Random.Range(0, missionList.Count);
+        int sm = Random.Range(0, missionList.Count);
+        missionList[sm].SetActive(true);
     }
 }
