@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     public bool canUseSecundaryAttack;
     public float timeBetweenSecondaryAttack;
     public float currentTimeLastSecundaryAttack;
-    public bool puedo_atacar;
+    [FormerlySerializedAs("puedo_atacar")] public bool tengo_mana;
 
     public bool imAttacking;
 
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
         imAttacking = false;
 
-        puedo_atacar = true;
+        tengo_mana = true;
 
     }
 
@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour
 
     private void ShootBasic()
     {
-        if (puedo_atacar)
+        if (tengo_mana)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -246,7 +246,7 @@ public class PlayerController : MonoBehaviour
 
     public void SecondAttack()
     {
-        if (puedo_atacar)
+        if (tengo_mana)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
@@ -343,12 +343,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Mana_Controller.instance.Slider_Mana.value <= 1)
         {
-            puedo_atacar = false;
+            tengo_mana = false;
         }
         
         if (Mana_Controller.instance.Slider_Mana.value >= 18f)
         {
-            puedo_atacar = true;
+            tengo_mana = true;
         }
 
     }
