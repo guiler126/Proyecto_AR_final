@@ -8,8 +8,19 @@ public class enemigo : MonoBehaviour
     public Transform player;
     public GameObject respawn;
     public Animator Animator;
+    public static enemigo Instance;
+
+
+    public bool isInAttackRange;
+    public float attackRange;
+    public LayerMask playerMask;
     
     
+    public void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         Animator = GetComponent<Animator>();
@@ -19,25 +30,34 @@ public class enemigo : MonoBehaviour
 
     void Update()
     {
-        navMeshAgent.SetDestination(player.position);
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        // Miramos si el player está dentro de nuestro rango de ataque
+        isInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
+        
+        if (isInAttackRange)
         {
+            // Lógica atacar
             Animator.SetBool("Atacar", true);
             navMeshAgent.speed = 0f;
-            navMeshAgent.angularSpeed = 0f;
-            navMeshAgent.acceleration = 0f;
+            navMeshAgent.isStopped = true;
         }
-    }
+        else
+        {
+            // Lógica perseguir
+            navMeshAgent.SetDestination(player.position);
+        }
 
+    }
+    
     public void Terminar_Ataque()
     {
         Animator.SetBool("Atacar", false);
-        navMeshAgent.speed = 5.5f;
-        navMeshAgent.angularSpeed = 120f;
-        navMeshAgent.acceleration = 8f;
+        navMeshAgent.speed = 7f;
+        navMeshAgent.isStopped = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

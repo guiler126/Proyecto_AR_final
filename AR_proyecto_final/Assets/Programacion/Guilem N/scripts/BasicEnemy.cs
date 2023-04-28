@@ -26,9 +26,8 @@ public class BasicEnemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Animator.SetBool("Muerto", true);
-            transform.position = respawn_enemigo.transform.position;
-            health = 100; 
+            Animator.SetTrigger("Morrir");
+            enemigo.Instance.navMeshAgent.isStopped = true;
         }
     }
     

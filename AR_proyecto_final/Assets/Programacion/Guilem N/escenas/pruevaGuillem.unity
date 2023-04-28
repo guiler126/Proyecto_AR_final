@@ -1163,6 +1163,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 47456076}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &47456075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,6 +1279,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 60500127}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &60500126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,6 +1469,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 89237380}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &89237379
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3180,6 +3195,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 147270035}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &147270034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3291,6 +3311,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 148029398}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &148029397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,6 +3427,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 161095646}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &161095645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3540,6 +3570,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 188521461}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &188521460
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3708,6 +3743,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &201777215
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4552,6 +4592,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &274422305
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4726,6 +4771,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 287916546}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &287916545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4932,6 +4982,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 333391209}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &333391208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5971,6 +6026,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &379713914
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8074,6 +8134,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 547225419}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &547225418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8179,6 +8244,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 550627472}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &550627471
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8301,6 +8371,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 573086162}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &573086161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8529,6 +8604,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 594276716}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &594276715
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10109,6 +10189,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &623327362
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10232,6 +10317,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 43028785e5560284b8725e2ef3970a4e, type: 3}
       propertyPath: m_Name
       value: Y Bot
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43028785e5560284b8725e2ef3970a4e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 43028785e5560284b8725e2ef3970a4e, type: 3}
       propertyPath: m_IsActive
@@ -11133,6 +11222,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 657051205}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &657051204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11238,6 +11332,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 657742556}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &657742555
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13692,6 +13791,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &763863618
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13814,6 +13918,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 778427200}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &778427199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14692,54 +14801,6 @@ CapsuleCollider:
   m_Height: 1.883401
   m_Direction: 1
   m_Center: {x: 0, y: 0.8975691, z: 0}
---- !u!114 &802933599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802933591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac4768f8894382409d27d86e946f907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characterController: {fileID: 802933596}
-  mainCamera: {fileID: 26159054}
-  _animator: {fileID: 802933595}
-  horizontal: 0
-  vertical: 0
-  speed: 0
-  normalSpeed: 5
-  dashSpeed: 20
-  SecondaryAttackSpeed: 0
-  turnSmoothTime: 0
-  dashTimeCooldown: 3
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheck: {fileID: 1670987822}
-  velocity: {x: 0, y: 0, z: 0}
-  direction: {x: 0, y: 0, z: 0}
-  gravity: 0
-  sphereRadius: 0
-  isGrounded: 0
-  atackkRight: 0
-  isDashing: 0
-  canDash: 0
-  canSecondAttack: 0
-  Spawn_bullet_1: {fileID: 0}
-  Spawn_bullet_2: {fileID: 0}
-  Spawn_bullet_SecondAttack: {fileID: 0}
-  bullet: {fileID: 0}
-  bulletSecondAttack: {fileID: 0}
-  bulletSpeed: 50
-  bullet_SecondAttackSpeed: 50
-  canUseSecundaryAttack: 0
-  timeBetweenSecondaryAttack: 0
-  currentTimeLastSecundaryAttack: 0
-  health: 5
-  isDie: 0
 --- !u!114 &802933600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14752,6 +14813,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef8a2b3a0e734c48bddce0bb25989f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &802933601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802933591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a649ef47b08d154081884fde0428d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 802933596}
+  speed: 5
+  gravity: -9.81
 --- !u!1 &803474140
 GameObject:
   m_ObjectHideFlags: 0
@@ -16698,6 +16774,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 0}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &934172792
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18337,6 +18418,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 972129844}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &972129843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19164,6 +19250,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1013939320}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1013939319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19307,6 +19398,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1070974436}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &1070974435
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -22056,6 +22152,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1191788237}
+  isInAttackRange: 0
+  attackRange: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!136 &1191788236
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22079,7 +22180,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84234764}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 46c7cab27fa5e2d438324b9dfda43e83, type: 3}
   m_Controller: {fileID: 9100000, guid: c1d2c88636c335e4abc0b0b7e868376c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -23164,6 +23265,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1348138894}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &1348138893
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24027,6 +24133,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1376260074}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &1376260073
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27267,6 +27378,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1554873084}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &1554873083
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -28949,6 +29065,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1642105349}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1642105348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29060,6 +29181,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1650731245}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1650731244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30846,6 +30972,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1700699210}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1700699209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31071,6 +31202,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1713525381}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1713525380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34416,6 +34552,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1864726851}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1864726850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34719,6 +34860,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1905750963}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1905750962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34863,6 +35009,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1939335870}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1939335869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35191,6 +35342,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1971157661}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!195 &1971157660
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35308,6 +35464,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1971266978}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1971266977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35419,6 +35580,11 @@ MonoBehaviour:
   player: {fileID: 802933592}
   respawn: {fileID: 642607264}
   Animator: {fileID: 1981409797}
+  isInAttackRange: 0
+  attackRange: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1981409796
 MonoBehaviour:
   m_ObjectHideFlags: 0
