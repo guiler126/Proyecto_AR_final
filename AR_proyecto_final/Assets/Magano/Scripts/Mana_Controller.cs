@@ -10,6 +10,8 @@ public class Mana_Controller : MonoBehaviour
 
     public static Mana_Controller instance;
 
+    public float recoveryVelocity;
+
     private void Awake()
     {
         instance = this;
@@ -27,7 +29,7 @@ public class Mana_Controller : MonoBehaviour
     {
         if (Slider_Mana.value < 200f && PlayerController.instance.imAttacking == false)
         {
-            Slider_Mana.value += 0.05f;
+            Slider_Mana.value += recoveryVelocity;
         }
     }
 

@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider_Mana: {fileID: 1325654230}
+  recoveryVelocity: 0.05
 --- !u!4 &406094311
 Transform:
   m_ObjectHideFlags: 0
@@ -630,6 +631,7 @@ MonoBehaviour:
   canUseSecundaryAttack: 0
   timeBetweenSecondaryAttack: 5
   currentTimeLastSecundaryAttack: 0
+  puedo_atacar: 0
   imAttacking: 0
   health: 5
   isDie: 0
