@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     [SerializeField] private float horizontal;
     [SerializeField] private float vertical;
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     [SerializeField] private float normalSpeed;
-    [SerializeField] private float dashSpeed;
+    [SerializeField] public float dashSpeed;
     [SerializeField] private float SecondaryAttackSpeed;
     [SerializeField] private float turnSmoothTime;
     
@@ -111,7 +111,6 @@ public class PlayerController : MonoBehaviour
             ShootBasic();
             SecondAttack();
             Dash();
-            TakeDamage();
         }
          
     }
@@ -302,11 +301,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            health--;
-        }
-
+        health--;
+        
         if (health <= 0)
         {
             Die();

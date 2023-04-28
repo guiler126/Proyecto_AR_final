@@ -16,6 +16,7 @@ public class Arma : MonoBehaviour
         Debug.Log("he entrado en el trigger");
         if (other.CompareTag("Player"))
         {
+            PlayerController.instance.TakeDamage();
             
             Debug.Log("Has muerto");
             SceneManager.LoadScene("pruevaGuillem");
