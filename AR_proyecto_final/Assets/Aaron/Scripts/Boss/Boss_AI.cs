@@ -31,7 +31,7 @@ public class Boss_AI : MonoBehaviour
     {
         if (navMeshAgent.isStopped) return;
 
-        if (!initialAnimCompleted) return; 
+        if (!initialAnimCompleted) return;
 
        ChasePlayer();
     }

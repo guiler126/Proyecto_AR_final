@@ -1,59 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Boss_Controleler : MonoBehaviour
 {
     [Header("---Parameters---")]
     public int HP = 100;
+    public int MAX_HP = 100;
     [Tooltip("Daño del player hacia el boss")]
     public int DamageAmount = 10;
     [Tooltip("Daño del Boss hacia el player")]
     public int Boss_Damage = 10;
 
+    public int percentage_fase_2 = 60;
+    public int percentage_fase_3 = 30;
+
     [Header("---Others---")]
     public Transform player;
     public Animator animator;
-    
+
 
     [Header("---Sliders/Bars---")]
     public Slider Health_bar;
     public Slider stamina_bar;
+
+    public int fase;
 
     public static Boss_Controleler instance;
 
     private void Awake()
     {
         instance = this;
+        fase = 1;
+        HP = MAX_HP;
     }
 
     private void Update()
     {
-        //healthbar.value = HP;
-        /*if(HP < 60)
-        {
-            //FASE 2
-        }
-        else
-        {
-            //ATACAR
-        }
-        if (HP < 30)
-        {
-            //FASE 3
-        }
-        else
-        {
-            //FASE 2
-        }*/
-
-
-
         if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage();
-            Switch();
         }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
@@ -73,32 +61,6 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
-    private void Switch()
-    {
-        switch (HP)
-        {
-
-            case 30:
-                {
-                    //fase 3
-                    animator.SetTrigger("New_Stage");
-                    //bloquear movimiento
-                    Debug.Log("30");
-                    break;
-                }
-
-            case 60:
-                {
-                    //fase 2
-                    animator.SetTrigger("New_Stage");
-                    //bloquear movimiento
-                    Fase2();
-                    break;
-
-                }
-
-        }
-    }
 
     public void TakeDamage()
     {
@@ -106,19 +68,26 @@ public class Boss_Controleler : MonoBehaviour
         Health_bar.value = HP;
         Debug.Log("Estoy aqui");
 
+
         if (HP <= 0)
         {
 
             //FindObjectOfType<AudioManager>().PlaySound("DragonDeath");
             animator.SetTrigger("Die");
-            GetComponent<Collider>().enabled = false;
+            //GetComponent<Collider>().enabled = false;
             
         }
-        else
+
+        if (HP < (MAX_HP * percentage_fase_2 / 100) && HP > (MAX_HP * percentage_fase_3 / 100))
         {
-            //FindObjectOfType<AudioManager>().PlaySound("DragonHit");
-            //animator.SetTrigger("Damage");
+            Boss_AI.instance.navMeshAgent.speed = 0;
+            animator.SetTrigger("New_Stage");
+            fase = 2;
+        } else if (HP < (MAX_HP * percentage_fase_3 / 100))
+        {
+            fase = 3;
         }
+
     }
 
     public void PlayerDamage(int damageAmount)
@@ -132,8 +101,11 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
-    private void Fase2()
+
+    public void Cambio_Fase2()
     {
-        Debug.Log("Estoy en fase 2");
+        //Stamina_Controller.instance.Boss_is_OnFase = true;
+        animator.SetTrigger("f2_1");
     }
+
 }

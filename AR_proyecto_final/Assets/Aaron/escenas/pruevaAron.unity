@@ -931,6 +931,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 721096250}
   player: {fileID: 1200465280}
   anim: {fileID: 5866666020012836885}
+  initialAnimCompleted: 0
 --- !u!195 &721096250
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3654,12 +3655,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  MAX_HP: 100
   DamageAmount: 10
   Boss_Damage: 20
+  percentage_fase_2: 61
+  percentage_fase_3: 31
   player: {fileID: 1200465280}
   animator: {fileID: 5866666020012836885}
   Health_bar: {fileID: 2130055276}
   stamina_bar: {fileID: 1503128674}
+  fase: 0
 --- !u!114 &5866666020012836887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,10 +3679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boss_stamina: 0
   max_stamina: 100
-  Boss_is_attacking: 0
+  Boss_is_Loaded: 0
   stamina_Slider: {fileID: 1503128674}
   anim: {fileID: 5866666020012836885}
-  player: {fileID: 1200465280}
   Stamina_Drain: 20
   Stamina_Regen: 10
 --- !u!4 &5901452233903472876
