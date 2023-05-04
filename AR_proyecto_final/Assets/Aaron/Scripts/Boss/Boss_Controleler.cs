@@ -20,6 +20,7 @@ public class Boss_Controleler : MonoBehaviour
     [Header("---Others---")]
     public Transform player;
     public Animator animator;
+    public GameObject sword;
 
 
     [Header("---Sliders/Bars---")]
@@ -35,6 +36,11 @@ public class Boss_Controleler : MonoBehaviour
         instance = this;
         fase = 1;
         HP = MAX_HP;
+    }
+
+    private void Start()
+    {
+        sword.SetActive(false);
     }
 
     private void Update()
@@ -81,6 +87,7 @@ public class Boss_Controleler : MonoBehaviour
         if (HP < (MAX_HP * percentage_fase_2 / 100) && HP > (MAX_HP * percentage_fase_3 / 100))
         {
             Boss_AI.instance.navMeshAgent.speed = 0;
+            Stamina_Controller.instance.Boss_is_OnFase = true;
             animator.SetTrigger("New_Stage");
             fase = 2;
         } else if (HP < (MAX_HP * percentage_fase_3 / 100))
@@ -106,6 +113,11 @@ public class Boss_Controleler : MonoBehaviour
     {
         //Stamina_Controller.instance.Boss_is_OnFase = true;
         animator.SetTrigger("f2_1");
+    }
+
+    public void Activar_Espada()
+    {
+        sword.SetActive(true);
     }
 
 }
