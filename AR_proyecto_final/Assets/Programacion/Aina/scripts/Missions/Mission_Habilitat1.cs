@@ -1,12 +1,11 @@
-using System;
+using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
 
-
-public class Mission_Mana: MonoBehaviour
+public class Mission_Habilitat1 : MonoBehaviour
 {
-    public static Mission_Mana instance;
+    public static Mission_Habilitat1 instance;
     
     [SerializeField, Tooltip("Bool to check if the mission is failed")]
     private bool isFailed;
@@ -14,13 +13,13 @@ public class Mission_Mana: MonoBehaviour
     [SerializeField, Tooltip("Text to show at UI")]
     private TMP_Text descriptionTxt;
     
-    [SerializeField, Tooltip("Minimum mana you need to have")]
-    private int minMana;
+    [SerializeField, Tooltip("Maximum of times you can use the ability")]
+    private int maxUses;
     
     [SerializeField, Tooltip("Index of the list of the current mission")]
     private int indexList;
     
-    [SerializeField] private List<MissionMana_Data> manamissionList;
+    [SerializeField] private List<MissionHabilitat1_Data> ability1missionList;
 
     // Getters
     
@@ -40,24 +39,27 @@ public class Mission_Mana: MonoBehaviour
 
     private void Start()
     {
-        MissionMana_Data currentMission = manamissionList[indexList];
-        minMana = currentMission.MinMana;
+        MissionHabilitat1_Data currentMission = ability1missionList[indexList];
+        maxUses = currentMission.MaxUses;
     }
 
-    public void RefreshManaMission()
+    public void RefreshHabilitat1Mission()
     {
         ++indexList;
-
+        
         isFailed = false;
-        MissionMana_Data currentMission = manamissionList[indexList];
-        minMana = currentMission.MinMana;
-        descriptionTxt.text = $"{minMana}";
+        MissionHabilitat1_Data currentMission = ability1missionList[indexList];
+        maxUses = currentMission.MaxUses;
+        descriptionTxt.text = $"{maxUses}";
     }
 
-    public void CheckFailedManaMission()
+    public void DeductMissionMaxUses()
     {
-        //add vaiable mana player 
-        if (minMana <= 0)
+        --maxUses;
+        
+        descriptionTxt.text = $"{maxUses}";
+
+        if (maxUses == 0)
         {
             isFailed = true;
             if (gameObject.activeInHierarchy)

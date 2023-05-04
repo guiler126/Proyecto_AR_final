@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b77c64d42f2a1441843e4e4e701942c, type: 3}
-  m_Name: MissionMana_4
+  m_Script: {fileID: 11500000, guid: 6bee5cbf0b6d190468bb953c7d56fc12, type: 3}
+  m_Name: MissionHabilitat1_5
   m_EditorClassIdentifier: 
-  minMana: 20
+  maxUses: 6

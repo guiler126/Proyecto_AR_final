@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class Mission_Fixed : MonoBehaviour
 {
@@ -8,12 +10,12 @@ public class Mission_Fixed : MonoBehaviour
     
     [SerializeField, Tooltip("Checker of mission has been completed")]
     private bool isCompleted;
-    
-    [SerializeField, Tooltip("String with the title, description of the mission")]
-    private string description;
+
+    [SerializeField, Tooltip("Text to show at UI")]
+    private TMP_Text descriptionTxt;
 
     [SerializeField, Tooltip("Index on lest list of the current mission")]
-    private int indexList;
+    private int indexList = -1;
     
     [SerializeField, Tooltip("Number of enemies eliminated (not total)")]
     private int enemiesEliminated;
@@ -30,8 +32,7 @@ public class Mission_Fixed : MonoBehaviour
     // Getters
     
     public bool IsCompleted => isCompleted;
-    public string Description => description;
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -42,10 +43,15 @@ public class Mission_Fixed : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    private void Start()
+    {
+        isCompleted = false;
         MissionFixed_Data currentMission = fixedmissionList[indexList];
         enemiesToEliminate = currentMission.EnemiesToEliminate;
         maxTime = currentMission.MaxTime;
+        descriptionTxt.text = $"{enemiesToEliminate}{maxTime}, {enemiesEliminated}";
         Activate_CheckerMision();
     }
 
@@ -53,9 +59,11 @@ public class Mission_Fixed : MonoBehaviour
     {
         ++indexList;
         
+        isCompleted = false;
         MissionFixed_Data currentMission = fixedmissionList[indexList];
         enemiesToEliminate = currentMission.EnemiesToEliminate;
         maxTime = currentMission.MaxTime;
+        descriptionTxt.text = $"{enemiesToEliminate}{maxTime}, {enemiesEliminated}";
         Activate_CheckerMision();
     }
     
