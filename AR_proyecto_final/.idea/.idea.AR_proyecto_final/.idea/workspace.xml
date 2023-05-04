@@ -9,6 +9,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Magano/Scripts/Upgrade_Manager_Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Guilem N/scripts/StatsInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Guilem N/scripts/Upgrade_Manager_Enemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,6 +88,7 @@
       <workItem from="1682613337702" duration="45000" />
       <workItem from="1682613407864" duration="2315000" />
       <workItem from="1682703128084" duration="4079000" />
+      <workItem from="1683213731612" duration="5784000" />
     </task>
     <servers />
   </component>

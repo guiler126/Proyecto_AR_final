@@ -30,6 +30,7 @@ public class Mana_Controller : MonoBehaviour
         if (Slider_Mana.value < 200f && PlayerController.instance.imAttacking == false)
         {
             Slider_Mana.value += recoveryVelocity;
+            Slider_Mana.value += recoveryVelocity;
         }
     }
 

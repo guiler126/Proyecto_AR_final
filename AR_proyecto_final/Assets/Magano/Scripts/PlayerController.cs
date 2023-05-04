@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [Header("---- STATS PLAYER ----")]
-    public int health = 5;
+    public float health = 5;
     public bool isDie;
 
     [Space]
@@ -299,9 +299,9 @@ public class PlayerController : MonoBehaviour
         Destroy(newBulletSecondAttack, 2f);
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        health--;
+        health-= damage;
         
         if (health <= 0)
         {
