@@ -52,18 +52,16 @@ public class Mission_Dash : MonoBehaviour
 
     public void DeductMissionMaxUses()
     {
-        --maxUses;
-        
-        if (maxUses == 0)
+        if (gameObject.activeInHierarchy)
         {
-            isFailed = true;
+            --maxUses;
             
-            if (gameObject.activeInHierarchy)
+            if (maxUses == 0)
             {
+                isFailed = true;
                 --Sistema_Missions.instance.MissionsCompleted;
+                gameObject.SetActive(false);
             }
-            
-            gameObject.SetActive(false);
         }
     }
 }

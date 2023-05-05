@@ -95,7 +95,7 @@ public class Sistema_Missions : MonoBehaviour
         }
     }
 
-    public void RefreshAllMissions(bool nextPhase)
+    private void RefreshAllMissions(bool nextPhase)
     {
         Mission_Mana.instance.RefreshManaMission(nextPhase);
         Mission_Habilitat1.instance.RefreshHabilitat1Mission(nextPhase);

@@ -53,17 +53,15 @@ public class Mission_Mana: MonoBehaviour
 
     public void CheckFailedManaMission()
     {
-        //add vaiable mana player 
-        if (minMana <= 0)
+        if (gameObject.activeInHierarchy)
         {
-            isFailed = true;
-            
-            if (gameObject.activeInHierarchy)
+            //add vaiable mana player 
+            if (minMana <= 0)
             {
+                isFailed = true;
                 --Sistema_Missions.instance.MissionsCompleted;
+                gameObject.SetActive(false);
             }
-            
-            gameObject.SetActive(false);
         }
     }
 }
