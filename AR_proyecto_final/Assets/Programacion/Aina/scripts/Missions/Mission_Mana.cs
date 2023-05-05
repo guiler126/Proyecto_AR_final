@@ -38,15 +38,12 @@ public class Mission_Mana: MonoBehaviour
         }
     }
 
-    private void Start()
+    public void RefreshManaMission(bool nextPhase)
     {
-        MissionMana_Data currentMission = manamissionList[indexList];
-        minMana = currentMission.MinMana;
-    }
-
-    public void RefreshManaMission()
-    {
-        ++indexList;
+        if (nextPhase)
+        {
+            ++indexList;
+        }
 
         isFailed = false;
         MissionMana_Data currentMission = manamissionList[indexList];
@@ -60,10 +57,12 @@ public class Mission_Mana: MonoBehaviour
         if (minMana <= 0)
         {
             isFailed = true;
+            
             if (gameObject.activeInHierarchy)
             {
                 --Sistema_Missions.instance.MissionsCompleted;
             }
+            
             gameObject.SetActive(false);
         }
     }

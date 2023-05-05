@@ -35,17 +35,14 @@ public class Mission_Habilitat1 : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    } 
 
-    private void Start()
+    public void RefreshHabilitat1Mission(bool nextPhase)
     {
-        MissionHabilitat1_Data currentMission = ability1missionList[indexList];
-        maxUses = currentMission.MaxUses;
-    }
-
-    public void RefreshHabilitat1Mission()
-    {
-        ++indexList;
+        if (nextPhase)
+        {
+            ++indexList;
+        }
         
         isFailed = false;
         MissionHabilitat1_Data currentMission = ability1missionList[indexList];
@@ -62,10 +59,12 @@ public class Mission_Habilitat1 : MonoBehaviour
         if (maxUses == 0)
         {
             isFailed = true;
+            
             if (gameObject.activeInHierarchy)
             {
                 --Sistema_Missions.instance.MissionsCompleted;
             }
+            
             gameObject.SetActive(false);
         }
     }

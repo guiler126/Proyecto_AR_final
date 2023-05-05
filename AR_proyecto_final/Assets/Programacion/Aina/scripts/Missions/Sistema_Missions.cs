@@ -32,37 +32,51 @@ public class Sistema_Missions : MonoBehaviour
         }
     }
 
-    public void Spawner()
+    public void StartMissionRound()
     {        
         switch(Sistema_Oleadas.Instance.waveNumber)
         {
             case 0:
                 MissionsEndRound();
-                Mission_Fixed.instance.RefreshFixedMission();
+                Mission_Fixed.instance.RefreshFixedMission(false);
+                RefreshAllMissions(false);
                 SelectMissions();
                 missionsCompleted = 2;
                 break;
             case 1:
-                Mission_Fixed.instance.RefreshFixedMission();
-                RefreshAllMissions();
+                MissionsEndRound();
+                Mission_Fixed.instance.RefreshFixedMission(true);
+                RefreshAllMissions(true);
                 SelectMissions();
                 missionsCompleted = 2;
                 break;
             case 2:
-                Mission_Fixed.instance.RefreshFixedMission();
+                MissionsEndRound();
+                Mission_Fixed.instance.RefreshFixedMission(true);
+                RefreshAllMissions(true);
                 SelectMissions();
+                missionsCompleted = 2;
                 break;
             case 3:
-                Mission_Fixed.instance.RefreshFixedMission();
+                MissionsEndRound();
+                Mission_Fixed.instance.RefreshFixedMission(true);
+                RefreshAllMissions(true);
                 SelectMissions();
+                missionsCompleted = 2;
                 break;
             case 4:
-                Mission_Fixed.instance.RefreshFixedMission();
+                MissionsEndRound();
+                Mission_Fixed.instance.RefreshFixedMission(true);
+                RefreshAllMissions(true);
                 SelectMissions();
+                missionsCompleted = 2;
                 break;
             case 5:
-                Mission_Fixed.instance.RefreshFixedMission();
+                MissionsEndRound();
+                Mission_Fixed.instance.RefreshFixedMission(true);
+                RefreshAllMissions(true);
                 SelectMissions();
+                missionsCompleted = 2;
                 break;
         }
     }
@@ -81,11 +95,11 @@ public class Sistema_Missions : MonoBehaviour
         }
     }
 
-    public void RefreshAllMissions()
+    public void RefreshAllMissions(bool nextPhase)
     {
-        Mission_Mana.instance.RefreshManaMission();
-        Mission_Habilitat1.instance.RefreshHabilitat1Mission();
-        Mission_Habilitat2.instance.RefreshHabilitat2Mission();
-        Mission_Dash.instance.RefreshDashMission();
+        Mission_Mana.instance.RefreshManaMission(nextPhase);
+        Mission_Habilitat1.instance.RefreshHabilitat1Mission(nextPhase);
+        Mission_Habilitat2.instance.RefreshHabilitat2Mission(nextPhase);
+        Mission_Dash.instance.RefreshDashMission(nextPhase);
     }
 }

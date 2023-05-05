@@ -37,20 +37,12 @@ public class Mission_Habilitat2 : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void RefreshHabilitat2Mission(bool nextPhase)
     {
-        if (isFailed) return;
-    }
-    
-    private void Start()
-    {
-        MissionHabilitat2_Data currentMission = ability2missionList[indexList];
-        maxUses = currentMission.MaxUses;
-    }
-    
-    public void RefreshHabilitat2Mission()
-    {
-        ++indexList;
+        if (nextPhase)
+        {
+            ++indexList;
+        }
         
         isFailed = false;
         MissionHabilitat2_Data currentMission = ability2missionList[indexList];
@@ -65,10 +57,13 @@ public class Mission_Habilitat2 : MonoBehaviour
         if (maxUses == 0)
         {
             isFailed = true;
+            
             if (gameObject.activeInHierarchy)
             {
                 --Sistema_Missions.instance.MissionsCompleted;
             }
-            gameObject.SetActive(false);        }
+            
+            gameObject.SetActive(false);
+        }
     }
 }

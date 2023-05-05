@@ -37,20 +37,12 @@ public class Mission_Dash : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void RefreshDashMission(bool nextPhase)
     {
-        if (isFailed) return;
-    }
-    
-    private void Start()
-    {
-        MissionDash_Data currentMission = dashmissionList[indexList];
-        maxUses = currentMission.MaxUses;
-    }
-    
-    public void RefreshDashMission()
-    {
-        ++indexList;
+        if (nextPhase)
+        {
+            ++indexList;
+        }
         
         isFailed = false;
         MissionDash_Data currentMission = dashmissionList[indexList];
@@ -65,10 +57,12 @@ public class Mission_Dash : MonoBehaviour
         if (maxUses == 0)
         {
             isFailed = true;
+            
             if (gameObject.activeInHierarchy)
             {
                 --Sistema_Missions.instance.MissionsCompleted;
             }
+            
             gameObject.SetActive(false);
         }
     }
