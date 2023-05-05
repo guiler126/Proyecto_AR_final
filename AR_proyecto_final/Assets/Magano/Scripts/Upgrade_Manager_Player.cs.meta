@@ -3,7 +3,15 @@ guid: 97d0857249a86564e8b403f5c92cb5d2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - statsInfo_speed: {fileID: 11400000, guid: ca3afc7fc413e2744b2a1ed305855207, type: 2}
+  - statsInfo_DashSpeed: {fileID: 11400000, guid: b99d668d30b320f429f3b0bf510fcea5, type: 2}
+  - statsInfo_Mana: {fileID: 11400000, guid: f7f20c424a59e8240bcf046f8ea11d77, type: 2}
+  - statsInfo_Mana_Regeneration: {fileID: 11400000, guid: 8f8b5cd4d59c9774ab1b3eab12493e1d, type: 2}
+  - statsInfo_BulletDamage: {fileID: 11400000, guid: 03d9f868378ff554bbba8601dd9b4b94, type: 2}
+  - statsInfo_HabilityDamage: {fileID: 11400000, guid: 1f6b96ab9377dbd4fbac1cd960461b29, type: 2}
+  - statsInfo_Health: {fileID: 11400000, guid: f0c03e414ce44a047bbad6ae7d0c7881, type: 2}
+  - statsInfo_HabilityCooldown: {fileID: 11400000, guid: fefe9868a0083e34c936b51f0ffd628b, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

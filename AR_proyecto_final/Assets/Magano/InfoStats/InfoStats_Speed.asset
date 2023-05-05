@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295a244514fde98479fc9e102c5b1a4c, type: 3}
   m_Name: InfoStats_Speed
   m_EditorClassIdentifier: 
-  current_lvl: 0
+  current_lvl: 4
   options_list_lvl:
   - 5
   - 5.5
