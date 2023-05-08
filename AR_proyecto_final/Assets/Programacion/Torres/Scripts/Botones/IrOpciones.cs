@@ -1,16 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class IrOpciones : MonoBehaviour
 {
-   public void CambiarEscena()
+
+    public GameObject Opciones;
+    public GameObject PanelOCULTAR;
+
+
+    private void Start()
     {
-        SceneManager.LoadScene("Opciones");
+        Opciones.SetActive(false);
     }
 
 
+    public void PanelOpciones()
+    {
+        if(Opciones != false)
+        {
+            bool EstaActivo = Opciones.activeSelf;
+
+            Opciones.SetActive(!EstaActivo);
+        }
+       
+    }
+
+    public void Desaparecer()
+    {
+        if(PanelOCULTAR != true)
+        {
+          PanelOCULTAR.SetActive(true);
+        }
+    }
+
+   
 
 
 }

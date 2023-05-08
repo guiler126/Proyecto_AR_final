@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Lenguas_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 447f85c6a854add40ac763bb95482c19, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 48281071616
+    m_Localized: <color=green>Idiomas</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2703422304256
+    m_Localized: "<color=green>ESPA\xD1OL</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2992397266944
+    m_Localized: "<color=green>FRANC\xC9S</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3375492411392
+    m_Localized: "<color=green>INGL\xC9S</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4071985950720
+    m_Localized: "<color=green>CATAL\xC1N</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4077421768704
+    m_Localized: <color=green>Volver</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4078529064960
+    m_Localized: <color=green>Opciones</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4079300816896
+    m_Localized: <color=green>Idiomas</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4080240340992
+    m_Localized: <color=green>Volumen</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9477755940864
+    m_Localized: <color=green>Brillo</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9478355726336
+    m_Localized: "<color=green>Men\xFA principal</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9478959706112
+    m_Localized: <color=green>Jugar</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9489801981952
+    m_Localized: <color=green>Salir</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13006805577728
+    m_Localized: <color=green>Opciones</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13511439069184
+    m_Localized: <color=green>BRILLO</color>
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
