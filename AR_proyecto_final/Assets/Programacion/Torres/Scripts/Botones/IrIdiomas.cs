@@ -1,17 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class IrIdiomas : MonoBehaviour
 {
+    public GameObject Idiomas;
+    public GameObject PanelOCULTAR;
 
-    public void irIdiomas()
+
+   
+
+    public void PanelOpciones()
     {
-        SceneManager.LoadScene("IDIOMAS");
+        if (Idiomas != false)
+        {
+            bool EstaActivo = Idiomas.activeSelf;
+
+            Idiomas.SetActive(!EstaActivo);
+        }
+        if (PanelOCULTAR != true)
+        {
+            bool EstaActivo = PanelOCULTAR.activeSelf;
+
+            PanelOCULTAR.SetActive(EstaActivo);
+        }
+
     }
-
-
 
 
 }

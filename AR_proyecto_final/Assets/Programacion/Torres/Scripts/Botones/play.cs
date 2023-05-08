@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class play : MonoBehaviour
 {
-   
-    public void IrJuego()
+    public GameObject MenuPrincipal;
+
+
+    private void Start()
     {
-        SceneManager.LoadScene("Prueba_D");
+        MenuPrincipal.SetActive(false);
     }
 
 
+    public void PanelMenu()
+    {
+        if(MenuPrincipal != null)
+        {
+            bool IsActive = MenuPrincipal.activeSelf;
 
+            MenuPrincipal.SetActive(!IsActive);
+        }
+    }
 
 
 

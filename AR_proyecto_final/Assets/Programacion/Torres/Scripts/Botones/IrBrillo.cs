@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class IrBrillo : MonoBehaviour
 {
-   
 
-    public void irBrillo()
+
+    public GameObject brillo;
+    public GameObject PanelOCULTAR;
+
+
+    private void Start()
     {
-        SceneManager.LoadScene("Brillo");
+        brillo.SetActive(false);
     }
 
 
+    public void PanelOpciones()
+    {
+        if (brillo != false)
+        {
+            bool EstaActivo = brillo.activeSelf;
+
+            brillo.SetActive(!EstaActivo);
+        }
+        
+    }
 
 
 
