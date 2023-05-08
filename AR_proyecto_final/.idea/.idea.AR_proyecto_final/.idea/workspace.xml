@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Settings/LocalizationSettings.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -102,6 +105,8 @@
       <workItem from="1683213731612" duration="5784000" />
       <workItem from="1683274706837" duration="1052000" />
       <workItem from="1683304430041" duration="598000" />
+      <workItem from="1683571716843" duration="5000" />
+      <workItem from="1683572173101" duration="55000" />
     </task>
     <servers />
   </component>
