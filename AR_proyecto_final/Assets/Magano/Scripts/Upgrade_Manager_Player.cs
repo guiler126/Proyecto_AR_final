@@ -20,6 +20,13 @@ public class Upgrade_Manager_Player : MonoBehaviour
    private void OnEnable()
    {
       statsInfo_speed.current_lvl = 0;
+      statsInfo_DashSpeed.current_lvl = 0;
+      statsInfo_Mana.current_lvl = 0;
+      statsInfo_Mana_Regeneration.current_lvl = 0;
+      statsInfo_BulletDamage.current_lvl = 0;
+      statsInfo_HabilityDamage.current_lvl = 0;
+      statsInfo_Health.current_lvl = 0;
+      statsInfo_HabilityCooldown.current_lvl = 0;
    }
    
    private bool CanUpdate(StatsInfo statsInfo)
