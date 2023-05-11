@@ -6781,6 +6781,10 @@ MonoBehaviour:
   sword: {fileID: 919132149472298214}
   Health_bar: {fileID: 2130055276}
   stamina_bar: {fileID: 1503128674}
+  maxScale: {x: 10, y: 10, z: 10}
+  repeatable: 1
+  Scale_speed: 2
+  duration: 5
   fase: 0
 --- !u!114 &5866666020012836887
 MonoBehaviour:

@@ -27,6 +27,13 @@ public class Boss_Controleler : MonoBehaviour
     public Slider Health_bar;
     public Slider stamina_bar;
 
+    [Header("--- Escala F3 ---")]
+    Vector3 minScale;
+    public Vector3 maxScale;
+    public bool repeatable;
+    public float Scale_speed = 2f;
+    public float duration = 10f;
+
     public int fase;
 
     public static Boss_Controleler instance;
@@ -92,6 +99,9 @@ public class Boss_Controleler : MonoBehaviour
             fase = 2;
         } else if (HP < (MAX_HP * percentage_fase_3 / 100))
         {
+            Boss_AI.instance.navMeshAgent.speed = 0;
+            Stamina_Controller.instance.Boss_is_OnFase = true;
+            animator.SetTrigger("F3_Stage");
             fase = 3;
         }
 
@@ -106,6 +116,28 @@ public class Boss_Controleler : MonoBehaviour
             Debug.Log("Estoy muerto");
 
         }
+    }
+
+    public IEnumerator ScaleLerp(Vector3 a, Vector3 b, float time)
+    {
+        float i = 0.0f;
+        float rate = (1.0f / time) * Scale_speed;
+        while (i < 1.0f) 
+        {
+            i += Time.deltaTime * rate;
+            transform.localScale = Vector3.Lerp(a, b, i);
+            yield return null;
+        }
+    }
+    public void Start_Scaling()
+    {
+        minScale = transform.localScale;
+        StartCoroutine(ScaleLerp(minScale, maxScale, duration));
+    }
+
+    public void Finish_Scaling()
+    {
+        StopCoroutine(ScaleLerp(minScale, maxScale, duration));
     }
 
 

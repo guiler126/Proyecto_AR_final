@@ -74,6 +74,17 @@ public class Stamina_Controller : MonoBehaviour
                 }
             }
 
+            /**if (Boss_Controleler.instance.fase == 3)
+            {
+                timeLastAttack_PS_2 += Time.deltaTime;
+
+                if (timeLastAttack_PS_2 >= timeBetweenAttacks_PS_2)
+                {
+                    anim.SetBool("F2_Attack", true);
+                    timeLastAttack_PS_2 = 0;
+                }
+            }*/
+
 
         } 
         else if(Boss_is_Loaded && Boss_is_OnFase)
@@ -110,6 +121,14 @@ public class Stamina_Controller : MonoBehaviour
     {
         Boss_is_OnFase = false;
         anim.SetBool("F2_Walk", true);
+        Boss_AI.instance.navMeshAgent.SetDestination(Boss_AI.instance.player.position);
+    }
+
+    public void Acabar_Boss_F3()
+    {
+        Boss_is_OnFase = false;
+        anim.SetBool("F3_Walk", true);
+        Boss_AI.instance.navMeshAgent.speed = 5;
         Boss_AI.instance.navMeshAgent.SetDestination(Boss_AI.instance.player.position);
     }
 
@@ -153,17 +172,19 @@ public class Stamina_Controller : MonoBehaviour
 
     }
 
-    /**IEnumerator Ataque_normal()
-    {
-        yield return new WaitForSeconds(3f);
-        anim.SetBool("F2_Attack", true);
-        Instantiate(ObjetoACrear_2, punto_disparo.transform.position, punto_disparo.transform.rotation);
-    }*/
-
-
     private void LogicaFase_3()
     {
-        //
+        anim.SetBool("F3_Heal", true);
+        Boss_AI.instance.navMeshAgent.speed = 0;
+        Boss_stamina -= Stamina_Drain_F2 * Time.deltaTime;
+        stamina_Slider.value = Boss_stamina;
+
+        if (Boss_stamina <= 0)
+        {
+            anim.SetBool("F3_Heal", false);
+            Boss_AI.instance.navMeshAgent.speed = 5f;
+            Boss_is_Loaded = false;
+        }
     }
 
     public void Proyectil_1()
