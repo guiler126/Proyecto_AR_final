@@ -15,7 +15,6 @@ public class Sistema_Logros : MonoBehaviour
     [Header("----- Damage Caused Variables -----")]
     [Tooltip("Int variable of number of damage the player did too the enemies")]
     private int damageCaused;
-    [SerializeField] private Sprite damageCaused_sprite;
     
     [Header("----- Attack 1 Variables -----")]
     [Tooltip("Int variable of number of times the player used the main attack")]
@@ -34,6 +33,7 @@ public class Sistema_Logros : MonoBehaviour
     private float totalTime;
     
     [Header("----- Sounds List -----")]
+    [SerializeField] private List<Logro_Data> logroData_list;
     [SerializeField] private GameObject content_logros_list;
     [SerializeField] private Item_logros_list item_logros_list;
 
@@ -85,6 +85,63 @@ public class Sistema_Logros : MonoBehaviour
     {
         currentCoroutine = Coroutine_TotalTime();
         StartCoroutine(currentCoroutine);
+        Refresh_Sound_List();
+    }
+
+    public void Refresh_Sound_List()
+    {
+        Clean_Sound_List();
+
+        foreach (Logro_Data logro in logroData_list)
+        {
+            if (logro.IsCompleted)
+            {
+                Item_logros_list _item_logros_list;
+                _item_logros_list = Instantiate(item_logros_list, content_logros_list.transform);
+                _item_logros_list.sprite = logro.Sprite;
+                _item_logros_list.numVar = logro.NumberVariable;
+                
+                if (Application.systemLanguage == SystemLanguage.Spanish)
+                {
+                    _item_logros_list.title = logro.Title_Es; 
+                    _item_logros_list.description = logro.Description_Es; 
+                }
+                else if (Application.systemLanguage == SystemLanguage.Catalan)
+                {
+                    _item_logros_list.title = logro.Title_Ca; 
+                    _item_logros_list.description = logro.Description_Ca; 
+                }
+                else if (Application.systemLanguage == SystemLanguage.English)
+                {
+                    _item_logros_list.title = logro.Title_En; 
+                    _item_logros_list.description = logro.Description_En; 
+                }
+                else if (Application.systemLanguage == SystemLanguage.French)
+                {
+                    _item_logros_list.title = logro.Title_Fr; 
+                    _item_logros_list.description = logro.Description_Fr; 
+                }
+            }
+        }
+    }    
+    
+    private void Clean_Sound_List()
+    {
+        foreach (Transform child in content_logros_list.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    
+    private void MarkCompletedLogro(string title)
+    {
+        foreach (var logro in logroData_list)
+        {
+            if (logro.Title_Es == title)
+            {
+                logro.IsCompleted = true;
+            }
+        }
     }
 
     #region Total Time Achievement
@@ -93,15 +150,15 @@ public class Sistema_Logros : MonoBehaviour
     {
         if (totalTime <= 300)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (totalTime <= 420)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (totalTime <= 640)
         {
-            return;
+            MarkCompletedLogro("da");
         }
     }
 
@@ -132,15 +189,15 @@ public class Sistema_Logros : MonoBehaviour
     {
         if (damageCaused >= 600)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (damageCaused >= 420)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (damageCaused >= 340)
         {
-            return;
+            MarkCompletedLogro("da");
         }
     }
 
@@ -158,17 +215,69 @@ public class Sistema_Logros : MonoBehaviour
     {
         if (attack1UsedTimes >= 600)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (attack1UsedTimes >= 420)
         {
-            return;
+            MarkCompletedLogro("da");
         }
         else if (attack1UsedTimes >= 340)
         {
-            return;
+            MarkCompletedLogro("da");
         }
     }
+    
+    #endregion    
+    
+    #region Attack 2 Used Times Achievement
 
+    public void AddAttack2_Achievement(int value)
+    {
+        attack2UsedTimes += value;
+        Attack2Used_Check_Achievement();
+    }
+    
+    private void Attack2Used_Check_Achievement()
+    {
+        if (attack2UsedTimes >= 600)
+        {
+            MarkCompletedLogro("da");
+        }
+        else if (attack2UsedTimes >= 420)
+        {
+            MarkCompletedLogro("da");
+        }
+        else if (attack2UsedTimes >= 340)
+        {
+            MarkCompletedLogro("da");
+        }
+    }
+    
+    #endregion
+    
+    #region Dash Used Times Achievement
+
+    public void AddADash_Achievement(int value)
+    {
+        dashUsedTimes += value;
+        DashUsed_Check_Achievement();
+    }
+    
+    private void DashUsed_Check_Achievement()
+    {
+        if (dashUsedTimes >= 600)
+        {
+            MarkCompletedLogro("da");
+        }
+        else if (dashUsedTimes >= 420)
+        {
+            MarkCompletedLogro("da");
+        }
+        else if (dashUsedTimes >= 340)
+        {
+            MarkCompletedLogro("da");
+        }
+    }
+    
     #endregion
 }
