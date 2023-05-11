@@ -32,6 +32,10 @@ public class Sistema_Logros : MonoBehaviour
     [Header("----- Total Time Variables -----")]
     [Tooltip("Float variable of total time the player took to complete the game")]
     private float totalTime;
+    
+    [Header("----- Sounds List -----")]
+    [SerializeField] private GameObject content_logros_list;
+    [SerializeField] private Item_logros_list item_logros_list;
 
     // Get Set
     
