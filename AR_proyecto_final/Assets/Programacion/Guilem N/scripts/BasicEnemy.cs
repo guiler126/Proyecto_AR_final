@@ -1,6 +1,7 @@
 
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BasicEnemy : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class BasicEnemy : MonoBehaviour
         {
             Animator.SetTrigger("Morrir");
             enemigo.Instance.navMeshAgent.isStopped = true;
+            SceneManager.LoadScene("Win");
+
         }
     }
     

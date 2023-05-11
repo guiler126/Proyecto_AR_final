@@ -24,7 +24,6 @@ public class Arma : MonoBehaviour
             PlayerController.instance.TakeDamage(damage_enemy);
             
             Debug.Log("Has muerto");
-            SceneManager.LoadScene("pruevaGuillem");
         }
     }
 }

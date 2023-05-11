@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
@@ -74,6 +75,9 @@ public class PlayerController : MonoBehaviour
     [Header("---- SLIDERS ----")]
     public UnityEngine.UI.Slider Slider_DashCooldown;
     public UnityEngine.UI.Slider Slider_SecoundaryAttackCooldown;
+
+
+    public CapsuleCollider _Capsule;
     
     
     
@@ -111,6 +115,7 @@ public class PlayerController : MonoBehaviour
             ShootBasic();
             SecondAttack();
             Dash();
+            GodMode();
         }
          
     }
@@ -312,6 +317,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetTrigger("Die");
+        SceneManager.LoadScene("Lose");
         
         isDie = true;
 
@@ -347,5 +353,14 @@ public class PlayerController : MonoBehaviour
             tengo_mana = true;
         }
 
+    }
+
+
+    public void GodMode()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Arma.Instance.damage_enemy = 0;
+        }
     }
 }
