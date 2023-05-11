@@ -14,7 +14,14 @@ public class Mana_Controller : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         
         Slider_Mana.value = 200f;
     }
