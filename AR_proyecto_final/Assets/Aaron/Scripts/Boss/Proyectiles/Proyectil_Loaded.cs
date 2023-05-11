@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Proyectil_1 : MonoBehaviour
-{
+public class Proyectil_Loaded : MonoBehaviour
+{      
+
     public float speed;
 
     public Vector3 playerPosition;
 
     private void Awake()
     {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        //playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
     void Start()
@@ -30,6 +31,7 @@ public class Proyectil_1 : MonoBehaviour
     IEnumerator disparo()
     {
         yield return new WaitForSeconds(0.1f);
+        Vector3 playerPosition = Player_Main.instance.transform.position;
 
         while (true)
         {

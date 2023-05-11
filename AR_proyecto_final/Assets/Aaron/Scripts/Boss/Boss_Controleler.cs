@@ -74,7 +74,7 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
-
+    //DAÑO RECIBIDO AL BOSS Y SU CAMBIO DE FASE CON ANIM EN BASE A SU HP
     public void TakeDamage()
     {
         HP -= DamageAmount;
@@ -107,6 +107,7 @@ public class Boss_Controleler : MonoBehaviour
 
     }
 
+    //DAÑAR AL MAIN PLAYER (A TI)
     public void PlayerDamage(int damageAmount)
     {
         Player_Main.instance.HP -= damageAmount;
@@ -118,6 +119,7 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
+    //ESCALAR AL BOSS EN FASE 3
     public IEnumerator ScaleLerp(Vector3 a, Vector3 b, float time)
     {
         float i = 0.0f;

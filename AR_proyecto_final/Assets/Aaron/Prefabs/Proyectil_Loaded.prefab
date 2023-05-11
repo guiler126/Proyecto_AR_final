@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1782129753188635859}
   - component: {fileID: 1782129753188635860}
   - component: {fileID: 1782129753188635862}
-  - component: {fileID: 1782129753188635857}
+  - component: {fileID: -1526195132011855121}
   m_Layer: 0
-  m_Name: Proyectil_Followable
+  m_Name: Proyectil_Loaded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1782129753188635857
+--- !u!114 &-1526195132011855121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1782129753188635863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58cd5524595a32f4295cc1986726ae62, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b83c53b92381f34eaad78869739ace5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20

@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class Stamina_Controller : MonoBehaviour
 {
     [Header("---Emptys---")]
-    public GameObject ObjetoACrear;
-    public GameObject ObjetoACrear_2;
+    public GameObject proyectil_1;
+    public GameObject Proyectil_Cargado;
     public GameObject punto_disparo;
+    public GameObject Invoked_Enemy;
+    public GameObject Invoke_Point;
 
 
     [Header("Parameters")]
@@ -24,12 +26,20 @@ public class Stamina_Controller : MonoBehaviour
     [Header("Stamina_Parameters")]
     [Range(0f, 50f)][SerializeField] private float Stamina_Drain = 20f;
     [Range(0f, 50f)][SerializeField] private float Stamina_Drain_F2 = 18f;
+    [Range(0f, 50f)][SerializeField] private float Stamina_Drain_F3 = 30f;
     [Range(0f, 50f)][SerializeField] private float Stamina_Regen = 10f;
 
 
     [Header("INFO_ATTACKS_PHASE_2")]
     [SerializeField] private float timeBetweenAttacks_PS_2 = 5f;
     [SerializeField] private float timeLastAttack_PS_2 = 0f;
+
+
+    [Header("INFO_ACTIONS_PHASE_3")]
+    [SerializeField] private float timeBetweenAttacks_PS_3 = 4f;
+    [SerializeField] private float timeLastAttack_PS_3 = 0f;
+    [SerializeField] private float time_Between_Invokes_PS_3 = 7f;
+    [SerializeField] private float time_Last_Invoke_PS_3 = 0f;
 
     [Header("Stamina_UI_Elements")]
     //[SerializeField] private Image stamina_Progress = null;
@@ -74,16 +84,28 @@ public class Stamina_Controller : MonoBehaviour
                 }
             }
 
-            /**if (Boss_Controleler.instance.fase == 3)
+            if (Boss_Controleler.instance.fase == 3)
             {
-                timeLastAttack_PS_2 += Time.deltaTime;
+                timeLastAttack_PS_3 += Time.deltaTime;
 
-                if (timeLastAttack_PS_2 >= timeBetweenAttacks_PS_2)
+                if (timeLastAttack_PS_3 >= timeBetweenAttacks_PS_3)
                 {
-                    anim.SetBool("F2_Attack", true);
-                    timeLastAttack_PS_2 = 0;
+                    anim.SetBool("F3_Attack", true);
+                    timeLastAttack_PS_3 = 0;
                 }
-            }*/
+
+                //invocar cada 10 segundos
+            }
+
+            if(Boss_Controleler.instance.fase == 3)
+            {
+                time_Last_Invoke_PS_3 += Time.deltaTime;
+                if(time_Last_Invoke_PS_3 >= time_Between_Invokes_PS_3)
+                {
+                    anim.SetBool("F3_Invoke", true);
+                    time_Last_Invoke_PS_3 = 0;
+                }
+            }
 
 
         } 
@@ -117,6 +139,18 @@ public class Stamina_Controller : MonoBehaviour
         anim.SetBool("F2_Attack", false);
     }
 
+    public void FinishAttack_PS_3()
+    {
+        timeLastAttack_PS_2 = 0;
+        anim.SetBool("F3_Attack", false);
+    }
+
+    public void Finish_Invoke_PS_3()
+    {
+        timeLastAttack_PS_2 = 0;
+        anim.SetBool("F3_Invoke", false);
+    }
+
     public void AcabarBossOnFase()
     {
         Boss_is_OnFase = false;
@@ -142,7 +176,6 @@ public class Stamina_Controller : MonoBehaviour
         Boss_AI.instance.navMeshAgent.SetDestination(Boss_AI.instance.player.position);
         Boss_stamina -= Stamina_Drain * Time.deltaTime;
         stamina_Slider.value = Boss_stamina;
-        Debug.Log("Estoy llegando");
 
 
         if (Boss_stamina <= 0)
@@ -176,24 +209,38 @@ public class Stamina_Controller : MonoBehaviour
     {
         anim.SetBool("F3_Heal", true);
         Boss_AI.instance.navMeshAgent.speed = 0;
-        Boss_stamina -= Stamina_Drain_F2 * Time.deltaTime;
+        Boss_stamina -= Stamina_Drain_F3 * Time.deltaTime;
         stamina_Slider.value = Boss_stamina;
 
         if (Boss_stamina <= 0)
         {
             anim.SetBool("F3_Heal", false);
+            anim.SetBool("F3_Walk", true);
             Boss_AI.instance.navMeshAgent.speed = 5f;
             Boss_is_Loaded = false;
         }
     }
 
-    public void Proyectil_1()
+    public void Proyectil_Loaded()
     {
-        Instantiate(ObjetoACrear_2, punto_disparo.transform.position, punto_disparo.transform.rotation);
+        Instantiate(Proyectil_Cargado, punto_disparo.transform.position, punto_disparo.transform.rotation);
     }
 
     public void Proyectil_Followable()
     {
-        Instantiate(ObjetoACrear_2, punto_disparo.transform.position, punto_disparo.transform.rotation);
+        Instantiate(proyectil_1, punto_disparo.transform.position, punto_disparo.transform.rotation);
+    }
+
+
+    //VOIDS CURAR E INVOCAR FASE 3
+    public void Curar_Vida()
+    {
+        Boss_Controleler.instance.HP += 12;
+        Boss_Controleler.instance.Health_bar.value = Boss_Controleler.instance.HP;
+    }
+
+    public void Invoke_Enemy()
+    {
+        Instantiate(Invoked_Enemy, Invoke_Point.transform.position, Invoke_Point.transform.rotation);
     }
 }

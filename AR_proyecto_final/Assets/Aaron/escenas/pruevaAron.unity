@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 276330134}
   - component: {fileID: 276330133}
+  - component: {fileID: 276330135}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -315,6 +316,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &276330135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276330132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &446846259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446846260}
+  m_Layer: 0
+  m_Name: Invoke_Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446846260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446846259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.091, y: 0.269, z: 0.727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450651838222959}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &459277634
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,10 +995,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1149,8 +1201,6 @@ GameObject:
   - component: {fileID: 1200465277}
   - component: {fileID: 1200465282}
   - component: {fileID: 1200465281}
-  - component: {fileID: 1200465284}
-  - component: {fileID: 1200465283}
   m_Layer: 0
   m_Name: PLAYER_MAIN
   m_TagString: Player
@@ -1183,7 +1233,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1200465275}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -1246,7 +1296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200465275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.29, z: 0}
+  m_LocalPosition: {x: 0, y: 1.29, z: -3.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1294,43 +1344,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &1200465283
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200465275}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1200465284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200465275}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 105f48661927e6343b9e3b474932e720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 1200465283}
-  mainCamera: {fileID: 613021049}
-  panel_youLose: {fileID: 0}
 --- !u!1 &1258811510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,17 +2666,18 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147836897493}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.39, y: 0.11, z: 9.2454}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -13.41, y: 0.109999895, z: -1.79}
   m_LocalScale: {x: 3.6163, y: 3.6163, z: 3.6163}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7021014693500865042}
   - {fileID: 751176135779341008}
   - {fileID: 5465940246229938939}
+  - {fileID: 446846260}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &543450653389774428
 Transform:
   m_ObjectHideFlags: 0
@@ -3021,7 +3035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &919132149472298214
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,9 +6812,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a92ff9eac1292c41ac7975e35e86361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjetoACrear: {fileID: 1782129753188635863, guid: 29014cbe75750dc4c93a59ea4de6d610, type: 3}
-  ObjetoACrear_2: {fileID: 1782129753188635863, guid: 29b29bb52460d4c4998a3db8906cfaf1, type: 3}
+  proyectil_1: {fileID: 1782129753188635863, guid: 29014cbe75750dc4c93a59ea4de6d610, type: 3}
+  Proyectil_Cargado: {fileID: 1782129753188635863, guid: 29b29bb52460d4c4998a3db8906cfaf1, type: 3}
   punto_disparo: {fileID: 1661296318}
+  Invoked_Enemy: {fileID: 7996519823526075909, guid: 4c06265a9a43e4148b520dbc75b239ae, type: 3}
+  Invoke_Point: {fileID: 446846259}
   Boss_stamina: 0
   max_stamina: 100
   Boss_is_Loaded: 0
@@ -6809,9 +6825,14 @@ MonoBehaviour:
   anim: {fileID: 5866666020012836885}
   Stamina_Drain: 20
   Stamina_Drain_F2: 19
+  Stamina_Drain_F3: 30
   Stamina_Regen: 10
   timeBetweenAttacks_PS_2: 5
   timeLastAttack_PS_2: 0
+  timeBetweenAttacks_PS_3: 6
+  timeLastAttack_PS_3: 0
+  time_Between_Invokes_PS_3: 7
+  time_Last_Invoke_PS_3: 0
 --- !u!23 &5888892787008037273
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -49,22 +49,7 @@ public class Player_Main : MonoBehaviour
         //animator.SetFloat("Vely", playermovementInput.z);
 
         MovePlayer();
-
-        
-
-
-        //ANIMACION CORRER
-        if (Input.GetKey(KeyCode.P))
-        {
-            speed = runspeed;
-          
-        }
-        else
-        {
-            speed = Initialspeed;
-        }
-
-        
+ 
     }
 
     
