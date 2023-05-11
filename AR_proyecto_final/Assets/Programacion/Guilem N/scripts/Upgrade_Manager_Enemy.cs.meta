@@ -3,7 +3,10 @@ guid: d229ec7a0cba5a141a54fd36b15fe918
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - statsInfo_speed_ENEMY: {fileID: 11400000, guid: 01a1a328ac8b61c43870be93db28e96c, type: 2}
+  - statsInfo_DMG_ENEMY: {fileID: 11400000, guid: dcf8565f0616bae4281e7f2577c5289a, type: 2}
+  - statsInfo_hEALTH_ENEMY: {fileID: 11400000, guid: f0c03e414ce44a047bbad6ae7d0c7881, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
