@@ -82,6 +82,11 @@ public class Sistema_Spawn : MonoBehaviour
             spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
 
+        if (sistemaOleadas.waveNumber == 14 && Sistema_Oleadas.Instance.TotalEnemies >= 50)
+        {
+            // Spawn Boss
+        }
+
         timer = 0f;
         sistemaOleadas.Checker();
     }

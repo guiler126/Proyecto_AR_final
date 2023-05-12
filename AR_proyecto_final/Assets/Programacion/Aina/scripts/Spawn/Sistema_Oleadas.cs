@@ -23,6 +23,8 @@ public class Sistema_Oleadas : MonoBehaviour
     [Tooltip("Waiting time between one round and another")]
     private float timeBetweenRounds = 30;
     
+    
+    
     public bool CheckEndRound()
     {
         if (totalEnemies <= 0)
