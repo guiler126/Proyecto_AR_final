@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sphereRadius;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool atackkRight;
-    [SerializeField] private bool canDash;
+    [SerializeField] public bool canDash;
     
     
     
