@@ -2077,12 +2077,12 @@ GameObject:
   - component: {fileID: 2069141821}
   - component: {fileID: 2069141820}
   m_Layer: 0
-  m_Name: Prueba_Boss
+  m_Name: Rigged_Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!195 &2069141820
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2092,7 +2092,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2069141819}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.7
+  m_Radius: 1.2
   m_Speed: 3.5
   m_Acceleration: 15
   avoidancePriority: 50
@@ -2101,8 +2101,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.87
-  m_BaseOffset: 0
+  m_Height: 2.65
+  m_BaseOffset: 1.22
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2069141821
