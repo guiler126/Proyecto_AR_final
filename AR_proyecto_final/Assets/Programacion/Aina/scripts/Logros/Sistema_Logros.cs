@@ -30,7 +30,7 @@ public class Sistema_Logros : MonoBehaviour
     
     [Header("----- Total Time Variables -----")]
     [Tooltip("Float variable of total time the player took to complete the game")]
-    private float totalTime;
+    private int totalTime;
     
     [Header("----- Sounds List -----")]
     [SerializeField] private List<Logro_Data> logroData_list;
@@ -63,7 +63,7 @@ public class Sistema_Logros : MonoBehaviour
         set {dashUsedTimes = value; }
     }
     
-    public float TotalTime
+    public int TotalTime
     {
         get {return totalTime; }
         set {totalTime = value; }
@@ -133,13 +133,16 @@ public class Sistema_Logros : MonoBehaviour
         }
     }
     
-    private void MarkCompletedLogro(string title)
+    private void MarkCompletedLogro(string title, int numCheck)
     {
         foreach (var logro in logroData_list)
         {
             if (logro.Title_Es == title)
             {
-                logro.IsCompleted = true;
+                if (logro.NumberVariable >= numCheck)
+                {
+                    logro.IsCompleted = true;
+                }
             }
         }
     }
@@ -148,18 +151,7 @@ public class Sistema_Logros : MonoBehaviour
 
     private void TotalTime_Check_Achievement()
     {
-        if (totalTime <= 300)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (totalTime <= 420)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (totalTime <= 640)
-        {
-            MarkCompletedLogro("da");
-        }
+        MarkCompletedLogro("aa", totalTime);
     }
 
     IEnumerator Coroutine_TotalTime()
@@ -172,7 +164,7 @@ public class Sistema_Logros : MonoBehaviour
             yield return null;
         }
 
-        totalTime = timer;
+        totalTime = ((int)timer);
     }
     
     #endregion
@@ -182,23 +174,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddDamage_Achievement(int value)
     {
         damageCaused += value;
-        DamageCaused_Check_Achievement();
-    }
-    
-    private void DamageCaused_Check_Achievement()
-    {
-        if (damageCaused >= 600)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (damageCaused >= 420)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (damageCaused >= 340)
-        {
-            MarkCompletedLogro("da");
-        }
+        MarkCompletedLogro("aa", damageCaused);
     }
 
     #endregion
@@ -208,24 +184,10 @@ public class Sistema_Logros : MonoBehaviour
     public void AddAttack1_Achievement(int value)
     {
         attack1UsedTimes += value;
-        Attack1Used_Check_Achievement();
+
+        MarkCompletedLogro("aa", attack1UsedTimes);
     }
-    
-    private void Attack1Used_Check_Achievement()
-    {
-        if (attack1UsedTimes >= 600)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (attack1UsedTimes >= 420)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (attack1UsedTimes >= 340)
-        {
-            MarkCompletedLogro("da");
-        }
-    }
+
     
     #endregion    
     
@@ -234,25 +196,9 @@ public class Sistema_Logros : MonoBehaviour
     public void AddAttack2_Achievement(int value)
     {
         attack2UsedTimes += value;
-        Attack2Used_Check_Achievement();
+        MarkCompletedLogro("aa", attack2UsedTimes);
     }
-    
-    private void Attack2Used_Check_Achievement()
-    {
-        if (attack2UsedTimes >= 600)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (attack2UsedTimes >= 420)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (attack2UsedTimes >= 340)
-        {
-            MarkCompletedLogro("da");
-        }
-    }
-    
+
     #endregion
     
     #region Dash Used Times Achievement
@@ -260,24 +206,8 @@ public class Sistema_Logros : MonoBehaviour
     public void AddADash_Achievement(int value)
     {
         dashUsedTimes += value;
-        DashUsed_Check_Achievement();
+        MarkCompletedLogro("aa", dashUsedTimes);
     }
-    
-    private void DashUsed_Check_Achievement()
-    {
-        if (dashUsedTimes >= 600)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (dashUsedTimes >= 420)
-        {
-            MarkCompletedLogro("da");
-        }
-        else if (dashUsedTimes >= 340)
-        {
-            MarkCompletedLogro("da");
-        }
-    }
-    
+
     #endregion
 }

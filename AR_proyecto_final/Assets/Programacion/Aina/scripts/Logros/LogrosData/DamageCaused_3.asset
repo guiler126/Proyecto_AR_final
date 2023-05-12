@@ -15,4 +15,11 @@ MonoBehaviour:
   sprite: {fileID: 0}
   title_es: 
   description_es: 
+  title_ca: 
+  description_ca: 
+  title_en: 
+  description_en: 
+  title_fr: 
+  description_fr: 
   numberVariable: 0
+  isCompleted: 0
