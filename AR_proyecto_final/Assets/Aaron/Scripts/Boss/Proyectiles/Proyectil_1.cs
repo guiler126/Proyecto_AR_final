@@ -16,25 +16,14 @@ public class Proyectil_1 : MonoBehaviour
     void Start()
     {
         // me destruyo a mi mismo cada 5 segundos 
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 2.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //traslado mi posición hacia adelante 
-        StartCoroutine(disparo());
+        transform.position = Vector3.MoveTowards(transform.position, playerPosition, Time.deltaTime * speed);
     }
 
-    IEnumerator disparo()
-    {
-        yield return new WaitForSeconds(0.1f);
 
-        while (true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, playerPosition, 0.1f);
-            yield return null;
-        }
-    }
 }

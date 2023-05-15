@@ -19,6 +19,38 @@ MonoBehaviour:
     m_Key: "ESPA\xD1OL"
     m_Metadata:
       m_Items: []
+  - m_Id: 1073615492001792
+    m_Key: frencha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1074175578386432
+    m_Key: ALEMAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1078076218191872
+    m_Key: "INGL\xC9S"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1078909542510592
+    m_Key: RETURN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080661989830656
+    m_Key: 'menu '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080665240416256
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080667425648640
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080671884193792
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

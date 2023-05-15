@@ -19,7 +19,27 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 56778731520
-    m_Localized: <color=blue>SPANISH</color>
+    m_Localized: <color=blue>Spanish</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1073615492001792
+    m_Localized: <color=blue>French</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1074175578386432
+    m_Localized: <color=blue>German</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1078076218191872
+    m_Localized: <color=blue>English</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1078909542510592
+    m_Localized: <color=blue>Return</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080661989830656
+    m_Localized: <color=blue>Main Menu</color>
     m_Metadata:
       m_Items: []
   references:

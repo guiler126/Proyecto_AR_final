@@ -14,7 +14,6 @@ public class Boss_SPAWN : MonoBehaviour
 
     [SerializeField] private float spawn_timer = 0f;
     [SerializeField] private float time_to_spawn = 4.5f;
-    [SerializeField] private float portal_timer = 5f;
     [SerializeField] private float timer_out = 5f;
     public bool Activo;
 
@@ -50,7 +49,7 @@ public class Boss_SPAWN : MonoBehaviour
 
         Activo = true;
         portal.SetActive(true);
-        RenderSettings.skybox = Night;
+        //RenderSettings.skybox = Night;
 
     }
 }
