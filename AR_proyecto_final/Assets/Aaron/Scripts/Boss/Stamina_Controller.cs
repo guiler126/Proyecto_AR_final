@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class Stamina_Controller : MonoBehaviour
 {
-    [Header("---Emptys---")]
-    public GameObject proyectil_1;
-    public GameObject Proyectil_Cargado;
+    [Header("---FILLABLE GO---")]
     public GameObject punto_disparo;
     public GameObject Invoked_Enemy;
     public GameObject Invoke_Point;
+    public GameObject VFX_Slash;
+    public GameObject VFX_Slash_charged;
 
 
     [Header("Parameters")]
@@ -221,14 +221,20 @@ public class Stamina_Controller : MonoBehaviour
         }
     }
 
-    public void Proyectil_Loaded()
+    /**public void Proyectil_Loaded()
     {
         Instantiate(Proyectil_Cargado, punto_disparo.transform.position, punto_disparo.transform.rotation);
+    }*/
+
+
+    public void Slash_Projectile()
+    {
+        Instantiate(VFX_Slash, punto_disparo.transform.position, transform.rotation);
     }
 
-    public void Proyectil_Followable()
+    public void Charged_Projectile()
     {
-        Instantiate(proyectil_1, punto_disparo.transform.position, punto_disparo.transform.rotation);
+        Instantiate(VFX_Slash_charged, punto_disparo.transform.position, transform.rotation);
     }
 
 

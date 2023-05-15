@@ -29,6 +29,7 @@ public class Boss_AI : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.baseOffset = 0;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         initialAnimCompleted = false;
         StartCoroutine(SpawnBoss());

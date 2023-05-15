@@ -9,10 +9,6 @@ public class Proyectil_Loaded : MonoBehaviour
 
     public Vector3 playerPosition;
 
-    private void Awake()
-    {
-        //playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-    }
 
     void Start()
     {
@@ -20,23 +16,12 @@ public class Proyectil_Loaded : MonoBehaviour
         Destroy(gameObject, 10);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-        //traslado mi posición hacia adelante 
-        StartCoroutine(disparo());
+    private void Update()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, Player_Main.instance.transform.position, Time.deltaTime * speed);
     }
 
-    IEnumerator disparo()
-    {
-        yield return new WaitForSeconds(0.1f);
-        Vector3 playerPosition = Player_Main.instance.transform.position;
 
-        while (true)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, playerPosition, 0.1f);
-            yield return null;
-        }
-    }
+
 }

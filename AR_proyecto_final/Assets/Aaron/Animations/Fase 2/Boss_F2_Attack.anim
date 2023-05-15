@@ -54826,7 +54826,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.5
-    functionName: Proyectil_Followable
+    functionName: Slash_Projectile
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
