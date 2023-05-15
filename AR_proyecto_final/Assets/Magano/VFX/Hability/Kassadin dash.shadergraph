@@ -1786,7 +1786,7 @@
         "a": 1.0
     },
     "isMainColor": false,
-    "m_ColorMode": 0
+    "m_ColorMode": 1
 }
 
 {
@@ -2247,7 +2247,7 @@
     "hlslDeclarationOverride": 2,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"ada90115db138634f849ee866730e065\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"96f87d49eda106d4a8b29ff00e4e88c1\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,

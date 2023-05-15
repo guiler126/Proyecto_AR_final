@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     [Header("---- CONFIG ATTACKS ----")]
     public float bulletSpeed = 50f;
-    public float bullet_SecondAttackSpeed = 50f;
+    public float bullet_SecondAttackSpeed = 10f;
     public bool canUseSecundaryAttack;
     public float timeBetweenSecondaryAttack;
     public float currentTimeLastSecundaryAttack;
