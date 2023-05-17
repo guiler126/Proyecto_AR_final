@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     [Header("---- Prefabs Attacks ----")]
     public GameObject bullet;
+    public GameObject bullet_2;
     public GameObject bulletSecondAttack;
 
     [Space]
@@ -238,7 +239,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Spawn_Bullet_Left()
     {
-        GameObject newBullet =  Instantiate(bullet, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
+        GameObject newBullet =  Instantiate(bullet_2, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
         
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         

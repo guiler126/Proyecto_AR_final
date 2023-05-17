@@ -9,7 +9,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Magano/VFX/Hability/Particulas_Active.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Aina/scripts/Json/WebRequest_Scores.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Aina/scripts/Json/Item_playerdata_list.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Aina/scripts/Json/Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Programacion/Aina/scripts/Trampes/Trampa_Parent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -114,7 +115,9 @@
       <workItem from="1683902687409" duration="1564000" />
       <workItem from="1683912984606" duration="3488000" />
       <workItem from="1684162522776" duration="690000" />
-      <workItem from="1684172163547" duration="1390000" />
+      <workItem from="1684172163547" duration="2313000" />
+      <workItem from="1684329247644" duration="1276000" />
+      <workItem from="1684330943247" duration="860000" />
     </task>
     <servers />
   </component>
