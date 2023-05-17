@@ -5427,7 +5427,7 @@ PrefabInstance:
       objectReference: {fileID: 274933625}
     - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: bulletSpeed
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: bulletSecondAttack
@@ -5447,15 +5447,15 @@ PrefabInstance:
       objectReference: {fileID: 841028990}
     - target: {fileID: 314256665924035842, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.666
       objectReference: {fileID: 0}
     - target: {fileID: 314256665924035842, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.116
+      value: 0.911
       objectReference: {fileID: 0}
     - target: {fileID: 314256665924035842, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.002
+      value: 0.153
       objectReference: {fileID: 0}
     - target: {fileID: 314256665924035842, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5483,15 +5483,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 314256666267855968, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.672
       objectReference: {fileID: 0}
     - target: {fileID: 314256666267855968, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.161
+      value: 0.925
       objectReference: {fileID: 0}
     - target: {fileID: 314256666267855968, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.004
+      value: 0.139
       objectReference: {fileID: 0}
     - target: {fileID: 314256666267855968, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: m_LocalRotation.w
