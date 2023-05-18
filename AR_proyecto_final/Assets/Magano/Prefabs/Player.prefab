@@ -454,6 +454,9 @@ MonoBehaviour:
   Slider_DashCooldown: {fileID: 0}
   Slider_SecoundaryAttackCooldown: {fileID: 0}
   _Capsule: {fileID: 0}
+  bullet_1_op: 2
+  bullet_2_op: 2
+  bulletSecondAttack_op: 3
 --- !u!114 &314256665735551926
 MonoBehaviour:
   m_ObjectHideFlags: 0

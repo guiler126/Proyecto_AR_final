@@ -13,6 +13,11 @@ public class Bullet_Basic : MonoBehaviour
     {
         instance = this;
     }
+    
+    private void Start()
+    {
+        Invoke("DeactivateGameObj", 2f);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,5 +25,10 @@ public class Bullet_Basic : MonoBehaviour
         {
             BasicEnemy.Instance.TakeDamage(damage);
         }
+    }
+    
+    private void DeactivateGameObj()
+    {
+        gameObject.SetActive(false);
     }
 }

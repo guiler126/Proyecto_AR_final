@@ -20,6 +20,7 @@ public class Sistema_Spawn : MonoBehaviour
     private IEnumerator currentCoroutine;
 
     public bool active_wave;
+    private bool spawnBoss;
     private float spawnTimer = 0.1f;
     private float timer = 0f;
 
@@ -82,9 +83,10 @@ public class Sistema_Spawn : MonoBehaviour
             spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
 
-        if (sistemaOleadas.waveNumber == 14 && Sistema_Oleadas.Instance.TotalEnemies >= 50)
+        if (sistemaOleadas.waveNumber == 15 && Sistema_Oleadas.Instance.TotalEnemies >= 50 && !spawnBoss)
         {
-            // Spawn Boss
+            Boss_SPAWN.instance.Portal_Boss();
+            spawnBoss = true;
         }
 
         timer = 0f;

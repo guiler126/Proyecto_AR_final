@@ -79,11 +79,15 @@ public class PlayerController : MonoBehaviour
 
 
     public CapsuleCollider _Capsule;
-    
-    
-    
 
-
+    [Space]
+    [Header("---- Object Pooling ----")]
+    // Canviar per nom bullet que toqui
+    public PoolingItemsEnum bullet_1_op;
+    public PoolingItemsEnum bullet_2_op;
+    public PoolingItemsEnum bulletSecondAttack_op;
+    
+    
 
     private void Awake()
     {
@@ -229,26 +233,35 @@ public class PlayerController : MonoBehaviour
 
     public void Spawn_Bullet_Right()
     { 
-        GameObject newBullet = Instantiate(bullet, Spawn_bullet_1.transform.position, Spawn_bullet_1.transform.rotation);
+        //GameObject newBullet = Instantiate(bullet, Spawn_bullet_1.transform.position, Spawn_bullet_1.transform.rotation);
+        GameObject newBullet = PoolingManager.Instance.GetPooledObject((int)bullet_1_op);
+        newBullet.transform.position = Spawn_bullet_1.transform.position;
+        newBullet.transform.rotation = Spawn_bullet_1.transform.rotation;
+        newBullet.SetActive(true);
         
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
         Mana_Controller.instance.Slider_Mana.value -= 20f;
         
-        Destroy(newBullet, 2f);
+        // No destruir, es fa en el script de la bala
+        //Destroy(newBullet, 2f);
     }
+    
     public void Spawn_Bullet_Left()
     {
-        GameObject newBullet =  Instantiate(bullet_2, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
-        
+        //GameObject newBullet =  Instantiate(bullet_2, Spawn_bullet_2.transform.position, Spawn_bullet_2.transform.rotation);
+        GameObject newBullet = PoolingManager.Instance.GetPooledObject((int)bullet_2_op);
+        newBullet.transform.position = Spawn_bullet_2.transform.position;
+        newBullet.transform.rotation = Spawn_bullet_2.transform.rotation;
+        newBullet.SetActive(true);
+
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
         Mana_Controller.instance.Slider_Mana.value -= 20f;
         
-        Destroy(newBullet, 4f);
+        //Destroy(newBullet, 4f);
     }
-
-
+    
     public void SecondAttack()
     {
         if (tengo_mana)
@@ -294,15 +307,19 @@ public class PlayerController : MonoBehaviour
 
     public void SpawnSecondAttack()
     {
-        GameObject newBulletSecondAttack =  Instantiate(bulletSecondAttack, Spawn_bullet_SecondAttack.transform.position, Spawn_bullet_SecondAttack.transform.rotation);
-        
+        //GameObject newBulletSecondAttack =  Instantiate(bulletSecondAttack, Spawn_bullet_SecondAttack.transform.position, Spawn_bullet_SecondAttack.transform.rotation);
+        GameObject newBulletSecondAttack = PoolingManager.Instance.GetPooledObject((int)bulletSecondAttack_op);
+        newBulletSecondAttack.transform.position = Spawn_bullet_SecondAttack.transform.position;
+        newBulletSecondAttack.transform.rotation = Spawn_bullet_SecondAttack.transform.rotation;
+        newBulletSecondAttack.SetActive(true);
+
         newBulletSecondAttack.GetComponent<Rigidbody>().AddForce(transform.forward * bullet_SecondAttackSpeed, ForceMode.Impulse);
 
         speed = normalSpeed;
         
         Mana_Controller.instance.Slider_Mana.value -= 60f;
         
-        Destroy(newBulletSecondAttack, 2f);
+        //Destroy(newBulletSecondAttack, 2f);
     }
 
     public void TakeDamage(int damage)
@@ -355,7 +372,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 
     public void GodMode()
     {

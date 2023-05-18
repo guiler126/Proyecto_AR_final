@@ -14,8 +14,7 @@ public class enemigo : MonoBehaviour
     public bool isInAttackRange;
     public float attackRange;
     public LayerMask playerMask;
-    
-    
+
     public void Awake()
     {
         Instance = this;

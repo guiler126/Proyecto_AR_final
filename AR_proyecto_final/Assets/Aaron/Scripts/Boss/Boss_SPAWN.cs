@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Boss_SPAWN : MonoBehaviour
 {
+    public static Boss_SPAWN instance;
+    
     [Header("---GO--")]
     public GameObject Boss;
     public GameObject Boss_Panel;
@@ -16,18 +18,31 @@ public class Boss_SPAWN : MonoBehaviour
     [SerializeField] private float time_to_spawn = 4.5f;
     [SerializeField] private float timer_out = 5f;
     public bool Activo;
+    
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
             Portal_Boss();
-            
         }
+        
         if (Activo == true)
         {
             spawn_timer += Time.deltaTime;
         }
+        
         if (spawn_timer >= time_to_spawn)
         {
             Boss.SetActive(true);
@@ -44,7 +59,7 @@ public class Boss_SPAWN : MonoBehaviour
 
     }
 
-    private void Portal_Boss()
+    public void Portal_Boss()
     {
 
         Activo = true;
