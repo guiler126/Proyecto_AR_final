@@ -4832,7 +4832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6430787506400012070}
   m_Layer: 0
-  m_Name: ps_particleSystemDemoniaca
+  m_Name: FVX_attack2_fuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
