@@ -42,6 +42,34 @@ MonoBehaviour:
     m_Localized: <color=blue>Main Menu</color>
     m_Metadata:
       m_Items: []
+  - m_Id: 1080665240416256
+    m_Localized: <color=blue>LANGUAGE</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080667425648640
+    m_Localized: <color=blue>SOUND</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080671884193792
+    m_Localized: <color=blue>GLOW</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744268981350400
+    m_Localized: <color=blue>OPTIONS</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744976455577600
+    m_Localized: <color=blue>PLAY</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1745305343537152
+    m_Localized: <color=blue>EXIT</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1747206327939072
+    m_Localized: <color=blue>CREDITS</color>
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

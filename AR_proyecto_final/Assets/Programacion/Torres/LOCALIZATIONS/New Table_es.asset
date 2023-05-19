@@ -42,6 +42,34 @@ MonoBehaviour:
     m_Localized: <color=green>Menu Princial</color>
     m_Metadata:
       m_Items: []
+  - m_Id: 1080667425648640
+    m_Localized: <color=green>VOLUMEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080665240416256
+    m_Localized: <color=green>IDIOMAS</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080671884193792
+    m_Localized: <color=green>BRILLO</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744268981350400
+    m_Localized: <color=green>OPCIONES</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744976455577600
+    m_Localized: <color=green>JUGAR</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1745305343537152
+    m_Localized: <color=green>SALIR</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1747206327939072
+    m_Localized: "<color=green>CR\xC9DITOS</color>"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

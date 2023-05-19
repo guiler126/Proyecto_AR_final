@@ -19,27 +19,55 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 56778731520
-    m_Localized: <color=blue>Spanisch</color>
+    m_Localized: <color=orange>Spanisch</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1073615492001792
-    m_Localized: <color=blue>Franzosisch</color>
+    m_Localized: <color=orange>Franzosisch</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1074175578386432
-    m_Localized: <color=blue>Deutsch</color>
+    m_Localized: <color=orange>Deutsch</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1078076218191872
-    m_Localized: <color=blue>Englisch</color>
+    m_Localized: <color=orange>Englisch</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1078909542510592
-    m_Localized: <color=blue>Anglais</color>
+    m_Localized: <color=orange>Zuruckkehren</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1080661989830656
-    m_Localized: <color=blue>Hauptmenu</color>
+    m_Localized: <color=orange>Hauptmenu</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080665240416256
+    m_Localized: <color=orange>SPRACHEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080667425648640
+    m_Localized: <color=orange>VOLUMEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080671884193792
+    m_Localized: <color=orange>GLUHEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744268981350400
+    m_Localized: <color=orange>OPTIONEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744976455577600
+    m_Localized: <color=orange>Spielen</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1745305343537152
+    m_Localized: <color=orange>HINAUSGEHEN</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1747206327939072
+    m_Localized: <color=orange>CREDITS</color>
     m_Metadata:
       m_Items: []
   references:

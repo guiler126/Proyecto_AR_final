@@ -40,15 +40,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1080665240416256
-    m_Key: New Entry 1
+    m_Key: IDIOMAS
     m_Metadata:
       m_Items: []
   - m_Id: 1080667425648640
-    m_Key: New Entry 2
+    m_Key: VOLUMEN
     m_Metadata:
       m_Items: []
   - m_Id: 1080671884193792
-    m_Key: New Entry 3
+    m_Key: BRILLO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744268981350400
+    m_Key: OPCIONES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744976455577600
+    m_Key: PLAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1745305343537152
+    m_Key: SORTIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1747206327939072
+    m_Key: "CR\xC9DITOS"
     m_Metadata:
       m_Items: []
   m_Metadata:

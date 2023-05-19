@@ -19,27 +19,55 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 56778731520
-    m_Localized: <color=blue>Espagnol</color>
+    m_Localized: <color=red>Espagnol</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1073615492001792
-    m_Localized: <color=blue>Francais</color>
+    m_Localized: <color=red>Francais</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1074175578386432
-    m_Localized: <color=blue>Allemand</color>
+    m_Localized: <color=red>Allemand</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1078076218191872
-    m_Localized: <color=blue>Anglais</color>
+    m_Localized: <color=red>Anglais</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1078909542510592
-    m_Localized: <color=blue>Revenir</color>
+    m_Localized: <color=red>Revenir</color>
     m_Metadata:
       m_Items: []
   - m_Id: 1080661989830656
-    m_Localized: <color=blue>Menu Principal</color>
+    m_Localized: <color=red>Menu Principal</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080665240416256
+    m_Localized: <color=red>LANGUES</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080667425648640
+    m_Localized: <color=red>VOLUME</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080671884193792
+    m_Localized: <color=red>BRILLER</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744268981350400
+    m_Localized: <color=red>CHOIX</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1744976455577600
+    m_Localized: "<color=red>JUGU\xC9</color>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1745305343537152
+    m_Localized: <color=red>SORTIR</color>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1747206327939072
+    m_Localized: "<color=red>CR\xC9DITS</color>"
     m_Metadata:
       m_Items: []
   references:
