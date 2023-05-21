@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,7 +10,6 @@ public class Sistema_Missions : MonoBehaviour
     [SerializeField] private List<GameObject> missionList;
 
     private int missionsCompleted;
-
     
     public int MissionsCompleted
     {

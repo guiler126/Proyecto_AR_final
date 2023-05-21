@@ -26,6 +26,11 @@ public class Bullet_Hability : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             BasicEnemy.Instance.TakeDamage(damage_hability);
+            
+            // Aina: Sistema Logros
+            Sistema_Logros.instance.AddDamage_Achievement(damage_hability);
+            // Aina: Json Local
+            PlayerController.instance.player_data_localRequest.damageDone += damage_hability;
         }
     }
     

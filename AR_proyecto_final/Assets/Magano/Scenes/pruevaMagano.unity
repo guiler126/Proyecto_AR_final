@@ -1255,8 +1255,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1649809813}
   - {fileID: 1396727723}
+  - {fileID: 1649809813}
   - {fileID: 362366069}
   - {fileID: 50335557}
   - {fileID: 1102975790}
@@ -4438,7 +4438,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299214970}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1396727724
 MonoBehaviour:
@@ -4459,6 +4459,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 259dbff4514ae2249976e3475ce714ee, type: 2}
   - {fileID: 11400000, guid: 3883d9c5388b4d64b87febc00522e299, type: 2}
   - {fileID: 11400000, guid: 3c1146a45dd5c2c4caef727834e537b2, type: 2}
+  - {fileID: 11400000, guid: c0aaa19b669c4874aaf9c37df42d8742, type: 2}
+  - {fileID: 11400000, guid: d9c427d31d728da47bc69aa05f628c96, type: 2}
+  - {fileID: 11400000, guid: 763269f2f10a6f945956c4714ede77b3, type: 2}
+  - {fileID: 11400000, guid: 87b88564e1b1add43ad3e4d90afb28ad, type: 2}
+  - {fileID: 11400000, guid: b555d2303d0aabe498759fb04e554369, type: 2}
+  - {fileID: 11400000, guid: 075669cf078a7494faee5d94347a3e5c, type: 2}
+  - {fileID: 11400000, guid: af32177c3f568644c871d4e3a294e9ac, type: 2}
+  - {fileID: 11400000, guid: f7da623f2a30875449eb720cfa21edc5, type: 2}
+  - {fileID: 11400000, guid: d3bb8eed3b158944099336e05a9c23be, type: 2}
   waveNumber: 0
   totalEnemies: 0
 --- !u!1 &1398695474
@@ -5302,7 +5311,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299214970}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1649809814
 MonoBehaviour:

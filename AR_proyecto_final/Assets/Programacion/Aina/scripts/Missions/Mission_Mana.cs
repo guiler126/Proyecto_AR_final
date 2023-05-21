@@ -51,12 +51,12 @@ public class Mission_Mana: MonoBehaviour
         descriptionTxt.text = $"{minMana}";
     }
 
-    public void CheckFailedManaMission()
+    public void CheckFailedManaMission(float playerMana)
     {
         if (gameObject.activeInHierarchy)
         {
             //add vaiable mana player 
-            if (minMana <= 0)
+            if (minMana <= playerMana)
             {
                 isFailed = true;
                 --Sistema_Missions.instance.MissionsCompleted;

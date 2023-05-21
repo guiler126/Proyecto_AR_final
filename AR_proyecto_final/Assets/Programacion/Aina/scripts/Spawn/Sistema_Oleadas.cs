@@ -22,9 +22,7 @@ public class Sistema_Oleadas : MonoBehaviour
     
     [Tooltip("Waiting time between one round and another")]
     private float timeBetweenRounds = 30;
-    
-    
-    
+
     public bool CheckEndRound()
     {
         if (totalEnemies <= 0)
@@ -85,9 +83,7 @@ public class Sistema_Oleadas : MonoBehaviour
     {
         if (CheckEndRound() && waveNumber != waveData_list.Count)
         {
-            ++waveNumber; //Increment by 1. Same as:  waveNumber = waveNumber + 1;
-            // Void activate menu upgrade
-            StartRound();
+            ++waveNumber;
         }
     }
 }

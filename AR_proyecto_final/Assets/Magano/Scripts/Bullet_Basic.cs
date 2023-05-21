@@ -24,6 +24,11 @@ public class Bullet_Basic : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             BasicEnemy.Instance.TakeDamage(damage);
+            
+            // Aina: Sistema Logros
+            Sistema_Logros.instance.AddDamage_Achievement(damage);
+            // Aina: Json Local
+            PlayerController.instance.player_data_localRequest.damageDone += damage;
         }
     }
     

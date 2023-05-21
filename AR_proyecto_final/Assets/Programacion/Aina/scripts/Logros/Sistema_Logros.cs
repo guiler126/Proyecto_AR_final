@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -137,9 +136,9 @@ public class Sistema_Logros : MonoBehaviour
     {
         foreach (var logro in logroData_list)
         {
-            if (logro.Title_Es == title)
+            if (logro.Title_En == title)
             {
-                if (logro.NumberVariable >= numCheck)
+                if (logro.NumberVariable >= numCheck && !logro.IsCompleted)
                 {
                     logro.IsCompleted = true;
                 }
@@ -151,7 +150,7 @@ public class Sistema_Logros : MonoBehaviour
 
     private void TotalTime_Check_Achievement()
     {
-        MarkCompletedLogro("aa", totalTime);
+        MarkCompletedLogro("Total Time", totalTime);
     }
 
     IEnumerator Coroutine_TotalTime()
@@ -174,18 +173,18 @@ public class Sistema_Logros : MonoBehaviour
     public void AddDamage_Achievement(int value)
     {
         damageCaused += value;
-        MarkCompletedLogro("aa", damageCaused);
+        MarkCompletedLogro("Damage Caused", damageCaused);
     }
 
     #endregion
 
     #region Attack 1 Used Times Achievement
 
-    public void AddAttack1_Achievement(int value)
+    public void AddAttack1_Achievement()
     {
-        attack1UsedTimes += value;
+        ++attack1UsedTimes;
 
-        MarkCompletedLogro("aa", attack1UsedTimes);
+        MarkCompletedLogro("Attack 1 Used Times", attack1UsedTimes);
     }
 
     
@@ -193,20 +192,20 @@ public class Sistema_Logros : MonoBehaviour
     
     #region Attack 2 Used Times Achievement
 
-    public void AddAttack2_Achievement(int value)
+    public void AddAttack2_Achievement()
     {
-        attack2UsedTimes += value;
-        MarkCompletedLogro("aa", attack2UsedTimes);
+        ++attack2UsedTimes;
+        MarkCompletedLogro("Attack 2 Used Times", attack2UsedTimes);
     }
 
     #endregion
     
     #region Dash Used Times Achievement
 
-    public void AddADash_Achievement(int value)
+    public void AddADash_Achievement()
     {
-        dashUsedTimes += value;
-        MarkCompletedLogro("aa", dashUsedTimes);
+        ++dashUsedTimes;
+        MarkCompletedLogro("Dash Used Times", dashUsedTimes);
     }
 
     #endregion

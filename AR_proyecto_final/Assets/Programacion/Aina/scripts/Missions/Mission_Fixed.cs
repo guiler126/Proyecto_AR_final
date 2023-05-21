@@ -19,6 +19,7 @@ public class Mission_Fixed : MonoBehaviour
     
     [SerializeField, Tooltip("Number of enemies eliminated (not total)")]
     private int enemiesEliminated;
+    
     [SerializeField, Tooltip("Number of enemies you need to eliminate to complete the mission")]
     private int enemiesToEliminate;    
     

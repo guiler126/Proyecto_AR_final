@@ -87,7 +87,10 @@ public class PlayerController : MonoBehaviour
     public PoolingItemsEnum bullet_2_op;
     public PoolingItemsEnum bulletSecondAttack_op;
     
-    
+    [Space]
+    [Header("---- Json Local ----")]
+    public Player_Data player_data_localRequest;
+
 
     private void Awake()
     {
@@ -213,6 +216,13 @@ public class PlayerController : MonoBehaviour
         {
             currentCorroutine = CorroutineDash();
             StartCoroutine(currentCorroutine);
+            
+            // Aina: Sistema Missions
+            Mission_Dash.instance.DeductMissionMaxUses();
+            // Aina: Sistema Logros
+            Sistema_Logros.instance.AddADash_Achievement();
+            // Aina: Json Local
+            ++player_data_localRequest.dashUsedTimes;
         }
     }
 
@@ -245,6 +255,14 @@ public class PlayerController : MonoBehaviour
         
         // No destruir, es fa en el script de la bala
         //Destroy(newBullet, 2f);
+        
+        // Aina: Sistema Missions
+        Mission_Habilitat1.instance.DeductMissionMaxUses();
+        Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
+        // Aina: Sistema Logros
+        Sistema_Logros.instance.AddAttack1_Achievement();
+        // Aina: Json Local
+        ++player_data_localRequest.attack1UsedTimes;
     }
     
     public void Spawn_Bullet_Left()
@@ -260,6 +278,14 @@ public class PlayerController : MonoBehaviour
         Mana_Controller.instance.Slider_Mana.value -= 20f;
         
         //Destroy(newBullet, 4f);
+        
+        // Aina: Sistema Missions
+        Mission_Habilitat1.instance.DeductMissionMaxUses();
+        Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
+        // Aina: Sistema Logros
+        Sistema_Logros.instance.AddAttack1_Achievement();
+        // Aina: Json Local
+        ++player_data_localRequest.attack1UsedTimes;
     }
     
     public void SecondAttack()
@@ -320,11 +346,22 @@ public class PlayerController : MonoBehaviour
         Mana_Controller.instance.Slider_Mana.value -= 60f;
         
         //Destroy(newBulletSecondAttack, 2f);
+        
+        // Aina: Sistema Missions
+        Mission_Habilitat2.instance.DeductMissionMaxUses();
+        Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
+        // Aina: Sistema Logros
+        Sistema_Logros.instance.AddAttack2_Achievement();
+        // Aina: Json Local
+        ++player_data_localRequest.attack2UsedTimes;
     }
 
     public void TakeDamage(int damage)
     {
         health-= damage;
+        
+        // Aina: Json Local
+        player_data_localRequest.damageTaken += damage;
         
         if (health <= 0)
         {
