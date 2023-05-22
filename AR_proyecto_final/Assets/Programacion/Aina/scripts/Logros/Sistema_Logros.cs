@@ -82,9 +82,9 @@ public class Sistema_Logros : MonoBehaviour
 
     private void Start()
     {
-        currentCoroutine = Coroutine_TotalTime();
-        StartCoroutine(currentCoroutine);
-        Refresh_Sound_List();
+        //currentCoroutine = Coroutine_TotalTime();
+        //StartCoroutine(currentCoroutine);
+        //Refresh_Sound_List();
     }
 
     public void Refresh_Sound_List()
