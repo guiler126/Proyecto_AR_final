@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6f3e5fe64b1734e9939435676583f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage_hability: 50
+  damage_hability: 60
