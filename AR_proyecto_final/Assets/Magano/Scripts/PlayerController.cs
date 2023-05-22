@@ -280,10 +280,10 @@ public class PlayerController : MonoBehaviour
         //Destroy(newBullet, 4f);
         
         // Aina: Sistema Missions
-        //Mission_Habilitat1.instance.DeductMissionMaxUses();
-        //Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
+        Mission_Habilitat1.instance.DeductMissionMaxUses();
+        Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
         // Aina: Sistema Logros
-        //Sistema_Logros.instance.AddAttack1_Achievement();
+        Sistema_Logros.instance.AddAttack1_Achievement();
         // Aina: Json Local
         ++player_data_localRequest.attack1UsedTimes;
     }
@@ -348,10 +348,10 @@ public class PlayerController : MonoBehaviour
         //Destroy(newBulletSecondAttack, 2f);
         
         // Aina: Sistema Missions
-        //Mission_Habilitat2.instance.DeductMissionMaxUses();
-        //Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
+        Mission_Habilitat2.instance.DeductMissionMaxUses();
+        Mission_Mana.instance.CheckFailedManaMission(Mana_Controller.instance.Slider_Mana.value);
         // Aina: Sistema Logros
-        //Sistema_Logros.instance.AddAttack2_Achievement();
+        Sistema_Logros.instance.AddAttack2_Achievement();
         // Aina: Json Local
         ++player_data_localRequest.attack2UsedTimes;
     }
@@ -372,8 +372,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetTrigger("Die");
-        SceneManager.LoadScene("Lose");
-        
+        Ui_Manager.instance.LoseCondition();        
         isDie = true;
 
         if (isDie == true)

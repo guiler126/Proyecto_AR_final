@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295a244514fde98479fc9e102c5b1a4c, type: 3}
   m_Name: statsInfo_health_ENEMY
   m_EditorClassIdentifier: 
-  current_lvl: 4
+  current_lvl: 0
   options_list_lvl:
   - 100
   - 150

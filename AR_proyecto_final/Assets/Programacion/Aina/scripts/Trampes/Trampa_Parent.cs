@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Trampa_Parent : MonoBehaviour
@@ -8,6 +6,7 @@ public class Trampa_Parent : MonoBehaviour
     private IEnumerator current_coroutine;
     public PoolingItemsEnum trapEnum;
     private GameObject trap;
+    [SerializeField] private float timeActivate;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +15,6 @@ public class Trampa_Parent : MonoBehaviour
         
         if (other.CompareTag("Player") || other.CompareTag("Enemy"))
         {
-            trap.SetActive(true);
             current_coroutine = Coroutine_DeactivateTrap();
             StartCoroutine(current_coroutine);
         }
@@ -24,7 +22,7 @@ public class Trampa_Parent : MonoBehaviour
 
     IEnumerator Coroutine_DeactivateTrap()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(timeActivate);
         // add animations 
         trap.SetActive(false);
     }

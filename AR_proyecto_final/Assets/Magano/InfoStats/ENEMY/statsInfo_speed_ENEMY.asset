@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   current_lvl: 0
   options_list_lvl:
-  - 7
+  - 4
   - 7.5
   - 8
   - 8.5

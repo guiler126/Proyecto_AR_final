@@ -5,12 +5,28 @@ using UnityEngine;
 
 public class Ui_Manager : MonoBehaviour
 {
+    public static Ui_Manager instance;
+    
     public GameObject health_1;
     public GameObject health_2;
     public GameObject health_3;
     public GameObject health_4;
     public GameObject health_5;
 
+    [SerializeField] private GameObject win_Panel;
+    [SerializeField] private GameObject lose_Panel;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {
@@ -40,5 +56,24 @@ public class Ui_Manager : MonoBehaviour
         {
             health_1.SetActive(false);
         }
+    }
+
+    public void WinCondition()
+    {
+        win_Panel.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
+    public void LoseCondition()
+    {
+        lose_Panel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void NextRound()
+    {
+        Time.timeScale = 1;
+        win_Panel.SetActive(false);
+        Sistema_Oleadas.Instance.StartRound();
     }
 }

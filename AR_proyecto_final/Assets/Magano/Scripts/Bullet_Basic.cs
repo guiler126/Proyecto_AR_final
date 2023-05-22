@@ -23,7 +23,7 @@ public class Bullet_Basic : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            BasicEnemy.Instance.TakeDamage(damage);
+            other.GetComponent<BasicEnemy>().TakeDamage(damage);
             
             // Aina: Sistema Logros
             Sistema_Logros.instance.AddDamage_Achievement(damage);

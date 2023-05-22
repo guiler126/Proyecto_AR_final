@@ -1,7 +1,4 @@
-
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Arma : MonoBehaviour
 {
@@ -10,12 +7,18 @@ public class Arma : MonoBehaviour
 
     public int damage_enemy;
     
+    public StatsInfo statsInfo_DMG_ENEMY;
+
+    private void OnEnable()
+    {
+        damage_enemy = (int)statsInfo_DMG_ENEMY.options_list_lvl[statsInfo_DMG_ENEMY.current_lvl];
+    }
+    
     private void Awake()
     {
         Instance = this;
     }
-
-
+    
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("he entrado en el trigger");

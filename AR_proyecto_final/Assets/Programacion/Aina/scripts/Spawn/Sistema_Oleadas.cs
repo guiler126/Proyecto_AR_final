@@ -76,6 +76,7 @@ public class Sistema_Oleadas : MonoBehaviour
         {
             totalEnemies = waveData_list[waveNumber].TotalEnemies;
             Sistema_Spawn.Instance.current_wave = waveData_list[waveNumber];
+            GameManager.instance.totalEnemies = totalEnemies;
         }
     }
     

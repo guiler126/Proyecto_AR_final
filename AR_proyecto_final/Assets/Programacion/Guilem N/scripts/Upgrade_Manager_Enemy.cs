@@ -15,7 +15,6 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
         statsInfo_speed_ENEMY.current_lvl = 0;
         statsInfo_DMG_ENEMY.current_lvl = 0;
         statsInfo_hEALTH_ENEMY.current_lvl = 0;
-       
     }
     
     private bool CanUpdate(StatsInfo statsInfo)
@@ -40,7 +39,7 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
     {
         if (CanUpdate(statsInfo_speed_ENEMY))
         {
-            enemigo.Instance.navMeshAgent.speed = ReturnStatValue(statsInfo_speed_ENEMY);
+            ReturnStatValue(statsInfo_speed_ENEMY);
         } 
     }
 
@@ -49,7 +48,7 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
     {
         if (CanUpdate(statsInfo_DMG_ENEMY))
         {
-            Arma.Instance.damage_enemy = (int) ReturnStatValue(statsInfo_DMG_ENEMY);
+            ReturnStatValue(statsInfo_DMG_ENEMY);
         } 
     }
   
@@ -58,7 +57,7 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
     {
         if (CanUpdate(statsInfo_hEALTH_ENEMY))
         {
-            BasicEnemy.Instance.health = (int) ReturnStatValue(statsInfo_hEALTH_ENEMY);
+            ReturnStatValue(statsInfo_hEALTH_ENEMY);
         } 
     }
    
