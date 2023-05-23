@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Ui_Manager : MonoBehaviour
@@ -15,6 +16,9 @@ public class Ui_Manager : MonoBehaviour
 
     [SerializeField] private GameObject win_Panel;
     [SerializeField] private GameObject lose_Panel;
+    [SerializeField] private TMP_Text pointStats_txt;
+
+    public PoolingItemsEnum enemy;
 
     private void Awake()
     {
@@ -60,6 +64,7 @@ public class Ui_Manager : MonoBehaviour
 
     public void WinCondition()
     {
+        pointStats_txt.text = $"{GameManager.instance.PointStats}";
         win_Panel.SetActive(true);
         Time.timeScale = 0;
     }
@@ -74,6 +79,8 @@ public class Ui_Manager : MonoBehaviour
     {
         Time.timeScale = 1;
         win_Panel.SetActive(false);
-        Sistema_Oleadas.Instance.StartRound();
+        PoolingManager.Instance.DesactivatePooledObject((int)enemy);
+        Sistema_Oleadas.Instance.Checker();
+        Sistema_Missions.instance.StartMissionRound();
     }
 }

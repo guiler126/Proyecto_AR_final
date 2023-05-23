@@ -21,7 +21,7 @@ public class Sistema_Spawn : MonoBehaviour
 
     public bool active_wave;
     private bool spawnBoss;
-    private float spawnTimer = 0.1f;
+    private float spawnTimer = 5f;
     private float timer = 0f;
 
     private void Awake()
@@ -62,9 +62,7 @@ public class Sistema_Spawn : MonoBehaviour
 
     void Spawner()
     {
-        Sistema_Oleadas sistemaOleadas = Sistema_Oleadas.Instance;
-
-        if (sistemaOleadas.CheckEndRound())
+        if (Sistema_Oleadas.Instance.CheckEndRound())
         {
             return;
         }
@@ -73,7 +71,7 @@ public class Sistema_Spawn : MonoBehaviour
 
         if (enemy != null)
         {
-            --sistemaOleadas.TotalEnemies;
+            --Sistema_Oleadas.Instance.totalEnemies;
             
             // Get random spawn point from the list
             int spawnPoint_index = Random.Range(0, spawnPoints.Count);
@@ -83,13 +81,12 @@ public class Sistema_Spawn : MonoBehaviour
             spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
 
-        if (sistemaOleadas.waveNumber == 15 && Sistema_Oleadas.Instance.TotalEnemies >= 50 && !spawnBoss)
+        if (Sistema_Oleadas.Instance.waveNumber == 15 && Sistema_Oleadas.Instance.totalEnemies >= 50 && !spawnBoss)
         {
             Boss_SPAWN.instance.Portal_Boss();
             spawnBoss = true;
         }
 
         timer = 0f;
-        sistemaOleadas.Checker();
     }
 }

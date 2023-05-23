@@ -1,17 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
     [Tooltip("Total number of enemies in the wave")]
-    public int totalEnemies;
+    private int totalEnemies;
     
     [Tooltip("Number of enemies the player has eliminated")]
     public int defeatedEnemies;
+
+    private int pointStats;
+
+    public int TotalEnemies
+    {
+        get {return totalEnemies; }
+        set {totalEnemies = value; }
+    }
+    
+    public int DefeatedEnemies
+    {
+        get {return defeatedEnemies; }
+        set {defeatedEnemies = value; }
+    }
+
+    public int PointStats => pointStats;
     
     private void Awake()
     {
@@ -29,6 +42,9 @@ public class GameManager : MonoBehaviour
     {
         if (defeatedEnemies >= totalEnemies)
         {
+            Mission_Fixed.instance.EndGame_CheckerMision();
+            pointStats = Sistema_Missions.instance.MissionsCompleted + 1;
+            Debug.Log(pointStats);
             Ui_Manager.instance.WinCondition();
         }
     }

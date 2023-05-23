@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Sistema_Oleadas : MonoBehaviour
@@ -16,12 +17,8 @@ public class Sistema_Oleadas : MonoBehaviour
     
     [Tooltip("Total number of enemies in the wave")]
     public int totalEnemies;
-    
-    [Tooltip("Number of enemies the player has eliminated")]
-    private int defeatedEnemies;
-    
-    [Tooltip("Waiting time between one round and another")]
-    private float timeBetweenRounds = 30;
+
+    private bool firstRound;
 
     public bool CheckEndRound()
     {
@@ -33,18 +30,6 @@ public class Sistema_Oleadas : MonoBehaviour
         return false;
     }
     
-    public int TotalEnemies
-    {
-        get {return totalEnemies; }
-        set {totalEnemies = value; }
-    }
-    
-    public int DefeatedEnemies
-    {
-        get {return defeatedEnemies; }
-        set {defeatedEnemies = value; }
-    }
-
     private void Awake()
     {
         if (Instance == null)
@@ -59,7 +44,7 @@ public class Sistema_Oleadas : MonoBehaviour
 
     private void Start()
     {
-        StartRound();
+        Checker();
     }
 
     public void StartRound()
@@ -76,16 +61,19 @@ public class Sistema_Oleadas : MonoBehaviour
         {
             totalEnemies = waveData_list[waveNumber].TotalEnemies;
             Sistema_Spawn.Instance.current_wave = waveData_list[waveNumber];
-            GameManager.instance.totalEnemies = totalEnemies;
+            GameManager.instance.TotalEnemies = totalEnemies;
         }
     }
     
     public void Checker()
     {
-        if (CheckEndRound() && waveNumber != waveData_list.Count)
+        if (CheckEndRound() && waveNumber != waveData_list.Count && firstRound)
         {
             ++waveNumber;
         }
+        
+        StartRound();
+        firstRound = true;
     }
 }
 

@@ -13,7 +13,8 @@ public class Mission_Mana: MonoBehaviour
     
     [SerializeField, Tooltip("Text to show at UI")]
     private TMP_Text descriptionTxt;
-    
+    public GameObject uiItem;
+
     [SerializeField, Tooltip("Minimum mana you need to have")]
     private int minMana;
     
@@ -55,11 +56,11 @@ public class Mission_Mana: MonoBehaviour
     {
         if (gameObject.activeInHierarchy)
         {
-            //add vaiable mana player 
             if (minMana <= playerMana)
             {
                 isFailed = true;
-                --Sistema_Missions.instance.MissionsCompleted;
+                ++Sistema_Missions.instance.MissionsCompleted;
+                uiItem.transform.GetChild(2).gameObject.SetActive(true);
                 gameObject.SetActive(false);
             }
         }

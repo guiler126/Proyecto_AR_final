@@ -12,7 +12,8 @@ public class Mission_Habilitat1 : MonoBehaviour
     
     [SerializeField, Tooltip("Text to show at UI")]
     private TMP_Text descriptionTxt;
-    
+    public GameObject uiItem;
+
     [SerializeField, Tooltip("Maximum of times you can use the ability")]
     private int maxUses;
     
@@ -35,7 +36,7 @@ public class Mission_Habilitat1 : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    } 
+    }
 
     public void RefreshHabilitat1Mission(bool nextPhase)
     {
@@ -61,7 +62,8 @@ public class Mission_Habilitat1 : MonoBehaviour
             if (maxUses == 0)
             {
                 isFailed = true;
-                --Sistema_Missions.instance.MissionsCompleted;
+                ++Sistema_Missions.instance.MissionsCompleted;
+                uiItem.transform.GetChild(2).gameObject.SetActive(true);
                 gameObject.SetActive(false);
             }
         }

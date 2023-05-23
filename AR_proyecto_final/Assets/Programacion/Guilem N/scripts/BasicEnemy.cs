@@ -29,7 +29,7 @@ public class BasicEnemy : MonoBehaviour
             death = true;
             Animator.SetTrigger("Morrir");
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-            ++GameManager.instance.defeatedEnemies;
+            ++GameManager.instance.DefeatedEnemies;
             GameManager.instance.WinCondition();
         }
     }

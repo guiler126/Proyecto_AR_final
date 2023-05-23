@@ -12,7 +12,8 @@ public class Mission_Dash : MonoBehaviour
     
     [SerializeField, Tooltip("Text to show at UI")]
     private TMP_Text descriptionTxt;
-    
+    public GameObject uiItem;
+
     [SerializeField, Tooltip("Maximum of times you can use the dash")]
     private int maxUses;
     
@@ -59,7 +60,8 @@ public class Mission_Dash : MonoBehaviour
             if (maxUses == 0)
             {
                 isFailed = true;
-                --Sistema_Missions.instance.MissionsCompleted;
+                ++Sistema_Missions.instance.MissionsCompleted;
+                uiItem.transform.GetChild(2).gameObject.SetActive(true);
                 gameObject.SetActive(false);
             }
         }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave_1
   m_EditorClassIdentifier: 
   totalEnemies: 10
-  spawnTimer_min: 1
-  spawnTimer_max: 2
+  spawnTimer_min: 4
+  spawnTimer_max: 5
