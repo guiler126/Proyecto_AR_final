@@ -23,9 +23,13 @@ public class GameManager : MonoBehaviour
         get {return defeatedEnemies; }
         set {defeatedEnemies = value; }
     }
-
-    public int PointStats => pointStats;
     
+    public int PointStats
+    {
+        get {return pointStats; }
+        set {pointStats = value; }
+    }
+
     private void Awake()
     {
         if (instance == null)
