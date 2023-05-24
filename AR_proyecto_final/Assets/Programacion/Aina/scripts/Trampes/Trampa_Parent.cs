@@ -7,23 +7,31 @@ public class Trampa_Parent : MonoBehaviour
     public PoolingItemsEnum trapEnum;
     private GameObject trap;
     [SerializeField] private float timeActivate;
+    [SerializeField] private float timeDeactivate;
     
     private void OnTriggerEnter(Collider other)
     {
-        trap = PoolingManager.Instance.GetPooledObject((int)trapEnum);
-        trap.transform.position = gameObject.transform.position;
-        
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Player"))
         {
-            current_coroutine = Coroutine_DeactivateTrap();
+            current_coroutine = Coroutine_ActivateTrap();
             StartCoroutine(current_coroutine);
         }
     }
 
-    IEnumerator Coroutine_DeactivateTrap()
+    IEnumerator Coroutine_ActivateTrap()
     {
         yield return new WaitForSeconds(timeActivate);
-        // add animations 
+
+        trap.SetActive(trap);
+        
+        current_coroutine = Coroutine_DeactivateTrap();
+        StartCoroutine(current_coroutine);
+    }    
+    
+    IEnumerator Coroutine_DeactivateTrap()
+    {
+        yield return new WaitForSeconds(timeDeactivate);
+
         trap.SetActive(false);
     }
 }

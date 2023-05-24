@@ -79,7 +79,7 @@ public class Sistema_Spawn : MonoBehaviour
 
         if (portal != null)
         {
-            portal.transform.position = spawnPoints[spawnPoint_index].position;
+            portal.transform.position = new Vector3(spawnPoints[spawnPoint_index].position.x, 0.01f, spawnPoints[spawnPoint_index].position.z);
             portal.gameObject.SetActive(true);
         }
         

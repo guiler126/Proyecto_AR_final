@@ -6,10 +6,13 @@ public class Trampa : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        // Aplicar amb script player o enemy
         if (other.GetComponent<PlayerController>())
         {
-            //other.GetComponent<PlayerController>().liufe -= damage; -= damage;
+            other.GetComponent<PlayerController>().health -= damage;
+        }
+        else if (other.GetComponent<BasicEnemy>())
+        {
+            other.GetComponent<BasicEnemy>().health -= damage;
         }
     }
 }
