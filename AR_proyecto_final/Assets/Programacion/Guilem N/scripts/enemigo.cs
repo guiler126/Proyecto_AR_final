@@ -46,7 +46,10 @@ public class enemigo : MonoBehaviour
         else
         {
             // Lógica perseguir
-            navMeshAgent.SetDestination(player.position);
+            if (navMeshAgent.enabled)
+            {
+                navMeshAgent.SetDestination(player.position);
+            }
         }
 
     }

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class Upgrade_Manager_Player : MonoBehaviour
@@ -49,9 +45,10 @@ public class Upgrade_Manager_Player : MonoBehaviour
 
    public void Upgrade_Speed()
    {
-      if (CanUpdate(statsInfo_speed))
+      if (CanUpdate(statsInfo_speed) && GameManager.instance.PointStats > 0)
       {
          PlayerController.instance.speed = ReturnStatValue(statsInfo_speed);
+         --GameManager.instance.PointStats;
       }
    }
 
@@ -59,55 +56,62 @@ public class Upgrade_Manager_Player : MonoBehaviour
    
    public void Upgrade_Dash_Speed()
    {
-      if (CanUpdate(statsInfo_DashSpeed))
+      if (CanUpdate(statsInfo_DashSpeed) && GameManager.instance.PointStats > 0)
       {
          PlayerController.instance.dashSpeed = ReturnStatValue(statsInfo_DashSpeed);
+         --GameManager.instance.PointStats;
       }
    }
    public void Upgrade_Mana()
    {
-      if (CanUpdate(statsInfo_Mana))
+      if (CanUpdate(statsInfo_Mana) && GameManager.instance.PointStats > 0)
       {
          Mana_Controller.instance.Slider_Mana.maxValue = ReturnStatValue(statsInfo_Mana);
+         --GameManager.instance.PointStats;
       }
       
    }
    public void Upgrade_Mana_Regeneration()
    {
-      if (CanUpdate(statsInfo_Mana_Regeneration))
+      if (CanUpdate(statsInfo_Mana_Regeneration) && GameManager.instance.PointStats > 0)
       {
          Mana_Controller.instance.recoveryVelocity = ReturnStatValue(statsInfo_Mana_Regeneration);
+         --GameManager.instance.PointStats;
       }
       
    }
    public void Upgrade_Damage_Basics()
    {
-      if (CanUpdate(statsInfo_BulletDamage))
+      if (CanUpdate(statsInfo_BulletDamage) && GameManager.instance.PointStats > 0)
       {
          Bullet_Basic.instance.damage = (int) ReturnStatValue(statsInfo_BulletDamage);
+         --GameManager.instance.PointStats;
       }
    }
    public void Upgrade_Damage_Hability()
    {
-      if (CanUpdate(statsInfo_HabilityDamage))
+      if (CanUpdate(statsInfo_HabilityDamage) && GameManager.instance.PointStats > 0)
       {
          Bullet_Hability.instance.damage_hability = (int) ReturnStatValue(statsInfo_HabilityDamage);
+         --GameManager.instance.PointStats;
       }
       
    }
    public void Upgrade_Health()
    {
-      if (CanUpdate(statsInfo_Health))
+      if (CanUpdate(statsInfo_Health) && GameManager.instance.PointStats > 0)
       {
          PlayerController.instance.health = ReturnStatValue(statsInfo_Health);
+         --GameManager.instance.PointStats;
       }
    }
    
    public void Upgrade_Cooldown_Hability()
    {
-      if (CanUpdate(statsInfo_HabilityCooldown))
+      if (CanUpdate(statsInfo_HabilityCooldown) && GameManager.instance.PointStats > 0)
       {
          PlayerController.instance.timeBetweenSecondaryAttack = ReturnStatValue(statsInfo_HabilityCooldown);
+         --GameManager.instance.PointStats;
       }
       
    }

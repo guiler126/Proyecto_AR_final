@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class Sistema_Spawn : MonoBehaviour
@@ -12,6 +13,7 @@ public class Sistema_Spawn : MonoBehaviour
     
     [Header("----- Spawn Variables -----")]
     public PoolingItemsEnum enemyType;
+    public PoolingItemsEnum enemyPortal;
 
     public WaveData current_wave;
     
@@ -24,6 +26,11 @@ public class Sistema_Spawn : MonoBehaviour
     private float spawnTimer = 5f;
     private float timer = 0f;
 
+    [SerializeField] private float timeSpawnEnemy;
+
+    private GameObject enemy;
+    private GameObject portal;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -67,19 +74,27 @@ public class Sistema_Spawn : MonoBehaviour
             return;
         }
         
-        GameObject enemy = PoolingManager.Instance.GetPooledObject((int)enemyType);
+        portal = PoolingManager.Instance.GetPooledObject((int)enemyPortal);
+        int spawnPoint_index = Random.Range(0, spawnPoints.Count);
+
+        if (portal != null)
+        {
+            portal.transform.position = spawnPoints[spawnPoint_index].position;
+            portal.gameObject.SetActive(true);
+        }
+        
+        enemy = PoolingManager.Instance.GetPooledObject((int)enemyType);
 
         if (enemy != null)
         {
             --Sistema_Oleadas.Instance.totalEnemies;
-            
-            // Get random spawn point from the list
-            int spawnPoint_index = Random.Range(0, spawnPoints.Count);
             enemy.transform.position = spawnPoints[spawnPoint_index].position;
             enemy.gameObject.SetActive(true);
             
             spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
+        
+        Invoke("SpawnEnemy", timeSpawnEnemy);
 
         if (Sistema_Oleadas.Instance.waveNumber == 15 && Sistema_Oleadas.Instance.totalEnemies >= 50 && !spawnBoss)
         {
@@ -88,5 +103,11 @@ public class Sistema_Spawn : MonoBehaviour
         }
 
         timer = 0f;
+    }
+
+    private void SpawnEnemy()
+    {
+        portal.SetActive(false);
+        enemy.GetComponent<NavMeshAgent>().enabled = true;
     }
 }

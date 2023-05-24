@@ -8,8 +8,7 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
     public StatsInfo statsInfo_DMG_ENEMY;
     public StatsInfo statsInfo_hEALTH_ENEMY;
     
-    
-    
+
     private void OnEnable()
     {
         statsInfo_speed_ENEMY.current_lvl = 0;
@@ -31,8 +30,6 @@ public class Upgrade_Manager_Enemy : MonoBehaviour
     {
         statsInfo.current_lvl++;
         return statsInfo.options_list_lvl[statsInfo.current_lvl];
-
-      
     }
     
     public void Upgrade_Speed()

@@ -4,7 +4,9 @@ using UnityEngine.AI;
 
 public class BasicEnemy : MonoBehaviour
 {
+    public PoolingItemsEnum enemyDie;
     public GameObject respawn_enemigo;
+    public GameObject portal_enemigo;
     [Header("Stats")]
     public int health;
     public Animator Animator;
@@ -34,8 +36,22 @@ public class BasicEnemy : MonoBehaviour
         }
     }
 
-    public void Death()
+    public void DeathPortal()
     {
+        portal_enemigo = PoolingManager.Instance.GetPooledObject((int)enemyDie);
+
+        if (portal_enemigo != null)
+        {
+            portal_enemigo.transform.position = gameObject.transform.position;
+            portal_enemigo.gameObject.SetActive(true);
+        }
+        
+        Invoke("Death", 2);
+    }
+
+    private void Death()
+    {
+        portal_enemigo.SetActive(false);
         gameObject.SetActive(false);
     }
     
