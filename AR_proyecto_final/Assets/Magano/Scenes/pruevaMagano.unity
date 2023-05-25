@@ -1972,7 +1972,7 @@ MonoBehaviour:
   - prefabToPool: {fileID: 8484831567000595695, guid: fd21feb60e997df4aa42f0f6efc9f452, type: 3}
     amountToPool: 2
     shouldExpand: 1
-  - prefabToPool: {fileID: 8484831567000595695, guid: fd21feb60e997df4aa42f0f6efc9f452, type: 3}
+  - prefabToPool: {fileID: 2156182465822885515, guid: 2cd91c2a66eb7d74aa8066bbe0cde685, type: 3}
     amountToPool: 2
     shouldExpand: 1
   - prefabToPool: {fileID: 8484831567000595695, guid: fd21feb60e997df4aa42f0f6efc9f452, type: 3}
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c16a9e7f0ce2855458d0824ad59347e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defeatedEnemies: 8
+  defeatedEnemies: 0
 --- !u!1 &621313830
 GameObject:
   m_ObjectHideFlags: 0

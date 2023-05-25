@@ -10,6 +10,5 @@ public enum PoolingItemsEnum
         FVX_spawnenemy,
         FVX_spawnboss,
         FVX_deathenemy,
-        FVX_walkplayer
 }
 

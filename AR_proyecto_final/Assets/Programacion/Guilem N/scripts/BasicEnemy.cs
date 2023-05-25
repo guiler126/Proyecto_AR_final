@@ -4,9 +4,9 @@ using UnityEngine.AI;
 
 public class BasicEnemy : MonoBehaviour
 {
-    public PoolingItemsEnum enemyDie;
+    public PoolingItemsEnum enemyDie_1;
     public GameObject respawn_enemigo;
-    public GameObject portal_enemigo;
+    public GameObject particles_enemigo;
     [Header("Stats")]
     public int health;
     public Animator Animator;
@@ -29,6 +29,7 @@ public class BasicEnemy : MonoBehaviour
         if (health <= 0 && !death)
         {
             death = true;
+
             Animator.SetTrigger("Morrir");
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             ++GameManager.instance.DefeatedEnemies;
@@ -38,20 +39,18 @@ public class BasicEnemy : MonoBehaviour
 
     public void DeathPortal()
     {
-        portal_enemigo = PoolingManager.Instance.GetPooledObject((int)enemyDie);
+        particles_enemigo = PoolingManager.Instance.GetPooledObject((int)enemyDie_1);
 
-        if (portal_enemigo != null)
+        if (particles_enemigo != null)
         {
-            portal_enemigo.transform.position = gameObject.transform.position;
-            portal_enemigo.gameObject.SetActive(true);
+            particles_enemigo.transform.position = gameObject.transform.position;
+            particles_enemigo.gameObject.SetActive(true);
         }
-        
-        Invoke("Death", 2);
     }
 
-    private void Death()
+    public void Death()
     {
-        portal_enemigo.SetActive(false);
+        particles_enemigo.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
     
