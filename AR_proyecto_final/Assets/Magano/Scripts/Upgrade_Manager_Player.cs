@@ -79,8 +79,6 @@ public class Upgrade_Manager_Player : MonoBehaviour
    private float ReturnStatValue(StatsInfo statsInfo)
    {
       return statsInfo.options_list_lvl[statsInfo.current_lvl];
-
-      
    }
 
    public void Upgrade_Speed()

@@ -80,14 +80,13 @@ public class Sistema_Logros : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void StartTimeCheck()
     {
-        //currentCoroutine = Coroutine_TotalTime();
-        //StartCoroutine(currentCoroutine);
-        //Refresh_Sound_List();
+        currentCoroutine = Coroutine_TotalTime();
+        StartCoroutine(currentCoroutine);
     }
 
-    public void Refresh_Sound_List()
+    public void Refresh_Logro_List()
     {
         Clean_Sound_List();
 
@@ -97,29 +96,10 @@ public class Sistema_Logros : MonoBehaviour
             {
                 Item_logros_list _item_logros_list;
                 _item_logros_list = Instantiate(item_logros_list, content_logros_list.transform);
-                _item_logros_list.sprite = logro.Sprite;
+                _item_logros_list.title = logro.title;
+                _item_logros_list.description = logro.description;
+                _item_logros_list.sprite = logro.icon;
                 _item_logros_list.numVar = logro.NumberVariable;
-                
-                if (Application.systemLanguage == SystemLanguage.Spanish)
-                {
-                    _item_logros_list.title = logro.Title_Es; 
-                    _item_logros_list.description = logro.Description_Es; 
-                }
-                else if (Application.systemLanguage == SystemLanguage.Catalan)
-                {
-                    _item_logros_list.title = logro.Title_Ca; 
-                    _item_logros_list.description = logro.Description_Ca; 
-                }
-                else if (Application.systemLanguage == SystemLanguage.English)
-                {
-                    _item_logros_list.title = logro.Title_En; 
-                    _item_logros_list.description = logro.Description_En; 
-                }
-                else if (Application.systemLanguage == SystemLanguage.French)
-                {
-                    _item_logros_list.title = logro.Title_Fr; 
-                    _item_logros_list.description = logro.Description_Fr; 
-                }
             }
         }
     }    
@@ -136,7 +116,7 @@ public class Sistema_Logros : MonoBehaviour
     {
         foreach (var logro in logroData_list)
         {
-            if (logro.Title_En == title)
+            if (logro.name == title)
             {
                 if (logro.NumberVariable >= numCheck && !logro.IsCompleted)
                 {
@@ -150,7 +130,7 @@ public class Sistema_Logros : MonoBehaviour
 
     private void TotalTime_Check_Achievement()
     {
-        MarkCompletedLogro("Total Time", totalTime);
+        MarkCompletedLogro("Time", totalTime);
     }
 
     IEnumerator Coroutine_TotalTime()
@@ -173,7 +153,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddDamage_Achievement(int value)
     {
         damageCaused += value;
-        MarkCompletedLogro("Damage Caused", damageCaused);
+        MarkCompletedLogro("Damage", damageCaused);
     }
 
     #endregion
@@ -184,7 +164,7 @@ public class Sistema_Logros : MonoBehaviour
     {
         ++attack1UsedTimes;
 
-        MarkCompletedLogro("Attack 1 Used Times", attack1UsedTimes);
+        MarkCompletedLogro("Attack 1", attack1UsedTimes);
     }
 
     
@@ -195,7 +175,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddAttack2_Achievement()
     {
         ++attack2UsedTimes;
-        MarkCompletedLogro("Attack 2 Used Times", attack2UsedTimes);
+        MarkCompletedLogro("Attack 2", attack2UsedTimes);
     }
 
     #endregion
@@ -205,7 +185,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddADash_Achievement()
     {
         ++dashUsedTimes;
-        MarkCompletedLogro("Dash Used Times", dashUsedTimes);
+        MarkCompletedLogro("Dash", dashUsedTimes);
     }
 
     #endregion

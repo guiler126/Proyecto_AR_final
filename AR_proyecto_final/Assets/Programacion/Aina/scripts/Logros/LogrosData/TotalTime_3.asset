@@ -12,14 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9228c8e979593b4eb55fedbe16a30a0, type: 3}
   m_Name: TotalTime_3
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  title_es: 
-  description_es: 
-  title_ca: 
-  description_ca: 
-  title_en: Total Time
-  description_en: 
-  title_fr: 
-  description_fr: 
+  type: Time
+  title:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 0}
   numberVariable: 0
   isCompleted: 0
+  references:
+    version: 2
+    RefIds: []

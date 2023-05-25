@@ -22,6 +22,7 @@ public class Ui_Manager : MonoBehaviour
 
     [Header("----- Mejora List -----")]
     public List<StatsInfo> _statsInfoPlaye;
+    public List<StatsInfo> _statsInfoEnemy;
     public List<StatsInfo> _randomStatsInfos;
     [SerializeField] private GameObject content_mejora_list;
     [SerializeField] private Item_Mejora item_mejora_list;
@@ -95,9 +96,11 @@ public class Ui_Manager : MonoBehaviour
     {
         Time.timeScale = 1;
         win_Panel.SetActive(false);
-        PoolingManager.Instance.DesactivatePooledObject((int)enemy);
-        Sistema_Oleadas.Instance.Checker();
-        Sistema_Missions.instance.StartMissionRound();
+        //PoolingManager.Instance.DesactivatePooledObject((int)enemy);
+        //Sistema_Oleadas.Instance.Checker();
+        //Sistema_Missions.instance.StartMissionRound();
+        ++GetRandomValue(_statsInfoEnemy).current_lvl;
+        Upgrade_Manager_Enemy.instace.RefreshAllStats();
     }
 
     public void Refresh_Mejora_List()
@@ -161,5 +164,25 @@ public class Ui_Manager : MonoBehaviour
         }
 
         return randomValues;
+    }
+    
+    private StatsInfo GetRandomValue(List<StatsInfo> list)
+    {
+        StatsInfo randomValue = null;
+        System.Random random = new System.Random();
+
+        // Obtener índices aleatorios hasta obtener la cantidad deseada
+        while (randomValue == null)
+        {
+            int randomIndex = random.Next(0, list.Count);
+
+            // Asegurarse de que el valor no se repita
+            if (!list[randomIndex].maxLvl)
+            {
+                randomValue = list[randomIndex];
+            }
+        }
+        
+        return randomValue;
     }
 }
