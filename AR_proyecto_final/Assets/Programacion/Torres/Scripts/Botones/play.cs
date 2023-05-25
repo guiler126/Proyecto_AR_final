@@ -1,25 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class play : MonoBehaviour
 {
-   
-    public void IrJuego()
+    public string sceneName; // Nombre de la escena a la que quieres cambiar
+
+    public void CambiaEsc()
     {
-        SceneManager.LoadScene("Prueba_D");
+        SceneManager.LoadScene(sceneName); // Cambiar a la escena especificada
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

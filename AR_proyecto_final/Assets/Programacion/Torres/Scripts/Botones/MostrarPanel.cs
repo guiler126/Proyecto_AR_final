@@ -11,15 +11,11 @@ public class MostrarPanel : MonoBehaviour
 
 
 
-   public void Mostrarpanel()
+    public void Mostrarpanel()
     {
-        if(panel != null)
+        if (panel != null)
         {
-            panel.SetActive(true);
-        }
-        else
-        {
-            panel.SetActive(false);
+            panel.SetActive(!panel.activeSelf);
         }
     }
 

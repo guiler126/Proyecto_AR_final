@@ -10,11 +10,14 @@ public class OcultarPanel : MonoBehaviour
 
     public void Ocultar()
     {
-        if(OCULTARpanel.activeSelf == true)
+        if (OCULTARpanel.activeSelf)
         {
             OCULTARpanel.SetActive(false);
         }
-        
+        else
+        {
+            OCULTARpanel.SetActive(true);
+        }
     }
 
 
