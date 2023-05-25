@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +12,8 @@ public class GameManager : MonoBehaviour
     [Tooltip("Number of enemies the player has eliminated")]
     public int defeatedEnemies;
 
-    private int pointStats;
-
+    [SerializeField] private int pointStats;
+    
     public int TotalEnemies
     {
         get {return totalEnemies; }
@@ -40,15 +42,23 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        pointStats = 2;
     }
 
     public void WinCondition()
     {
         if (defeatedEnemies >= totalEnemies)
         {
+            int value = 0;
+            
+            if (Sistema_Missions.instance.MissionsCompleted >= 2)
+            {
+                value = 1;
+            }
+            
             Mission_Fixed.instance.EndGame_CheckerMision();
-            pointStats = Sistema_Missions.instance.MissionsCompleted + 1;
-            Debug.Log(pointStats);
+            pointStats = value + 1;
             Ui_Manager.instance.WinCondition();
         }
     }

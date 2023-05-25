@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Magano/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Programacion/Guilem N/scripts/Item_Mejora.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.7/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.7/Editor/Util/FileUtilities.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -136,6 +137,7 @@
       <workItem from="1684939462481" duration="1311000" />
       <workItem from="1685020367345" duration="348000" />
       <workItem from="1685020802643" duration="1442000" />
+      <workItem from="1685022776311" duration="7356000" />
     </task>
     <servers />
   </component>
