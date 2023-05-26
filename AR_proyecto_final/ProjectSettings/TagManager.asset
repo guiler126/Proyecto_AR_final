@@ -7,6 +7,7 @@ TagManager:
   - Suelo
   - Ground
   - Enemy
+  - Proyectil
   layers:
   - Default
   - TransparentFX

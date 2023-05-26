@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -53,5 +54,12 @@ public class BasicEnemy : MonoBehaviour
         particles_enemigo.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Proyectil"))
+        {
+            TakeDamage(other.gameObject.GetComponent<Bullet_Basic>().damage);
+        }
+    }
 }

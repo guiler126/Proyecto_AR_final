@@ -8,6 +8,7 @@ public class Bullet_Basic : MonoBehaviour
     public static Bullet_Basic instance;
 
     public int damage;
+    public float speed;
 
     private void Awake()
     {
@@ -19,10 +20,18 @@ public class Bullet_Basic : MonoBehaviour
         Invoke("DeactivateGameObj", 2f);
     }
 
+    private void Update()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
+            
+            Debug.Log("IMPACTO");
             other.GetComponent<BasicEnemy>().TakeDamage(damage);
             
             // Aina: Sistema Logros

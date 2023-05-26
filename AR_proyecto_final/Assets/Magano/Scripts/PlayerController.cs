@@ -124,6 +124,7 @@ public class PlayerController : MonoBehaviour
             SecondAttack();
             Dash();
             GodMode();
+            CalculateGravity();
         }
          
     }
@@ -168,14 +169,14 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, sphereRadius, groundMask);
 
         //si estamos en el suelo y no estamos cayendo el eje "Y" será "-2";
-        if (isGrounded && velocity.y < 0)
+        if (isGrounded)
         {
             velocity.y = -2f;
+        } else
+        {
+            velocity.y -= gravity * -7f * Time.deltaTime;
         }
 
-        //El eje "Y" irá progresivamente a 0;
-        velocity.y += gravity * Time.deltaTime;
-        
         //Movemos al personaje en el eje "Y" cada vez que saltemos;
         _characterController.Move(velocity * Time.deltaTime);
     }
@@ -249,7 +250,7 @@ public class PlayerController : MonoBehaviour
         newBullet.transform.rotation = Spawn_bullet_1.transform.rotation;
         newBullet.SetActive(true);
         
-        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+        //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
         Mana_Controller.instance.Slider_Mana.value -= 20f;
         
@@ -273,7 +274,7 @@ public class PlayerController : MonoBehaviour
         newBullet.transform.rotation = Spawn_bullet_2.transform.rotation;
         newBullet.SetActive(true);
 
-        newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+        //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
         Mana_Controller.instance.Slider_Mana.value -= 20f;
         
