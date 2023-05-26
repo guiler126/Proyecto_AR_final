@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class Item_logros_list : MonoBehaviour
 {
-    public Sprite sprite;
+    public Image sprite;
     public LocalizedString title;
     public LocalizedString description;
-    public int numVar;
-
-    void Start()
-    {
-        transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"{numVar}";
-    }
+    public Slider logro_1;
+    public Slider logro_2;
+    public Slider logro_3;
+    
+    public TMP_Text textTotal_1;
+    
+    public TMP_Text textTotal_2;
+    
+    public TMP_Text textTotal_3;
 }

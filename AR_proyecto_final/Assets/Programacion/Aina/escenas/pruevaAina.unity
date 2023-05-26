@@ -1968,20 +1968,10 @@ MonoBehaviour:
   endGame: 0
   logroData_list:
   - {fileID: 11400000, guid: 1af59fb738048f14680dee15d2dd87c1, type: 2}
-  - {fileID: 11400000, guid: ed9da02f31c7b464e85f12c7d00b97dc, type: 2}
-  - {fileID: 11400000, guid: 61e39497a88775e4e9260f62cc139040, type: 2}
   - {fileID: 11400000, guid: d47caaa226ea79049a0748a8a74be5a3, type: 2}
-  - {fileID: 11400000, guid: 7bb97d8bc0b04234fac118c8236a503d, type: 2}
-  - {fileID: 11400000, guid: 2a56dacd7237bbf49b5f5d86a312da79, type: 2}
   - {fileID: 11400000, guid: 737594291110b2e4c8af6779918d21e2, type: 2}
-  - {fileID: 11400000, guid: 7cf3298d2491b6e4198b1a84c3cc4b76, type: 2}
-  - {fileID: 11400000, guid: 45eb7b8c385afce45bbd432f0ff32994, type: 2}
   - {fileID: 11400000, guid: 5436e65d13df6ce4faf855bd136e7935, type: 2}
-  - {fileID: 11400000, guid: 7293620978950104f89edbad9fa616d0, type: 2}
-  - {fileID: 11400000, guid: 1d706080b8f51224989f3e16a5dc22c2, type: 2}
   - {fileID: 11400000, guid: 706736dcc466ef2489a35ff9b599c0bd, type: 2}
-  - {fileID: 11400000, guid: 659a7ea148b6af14cb7cba9ca53b32cf, type: 2}
-  - {fileID: 11400000, guid: 66c8bc52347b4af4d8a986fc72cfdb07, type: 2}
   content_logros_list: {fileID: 1827940401}
   item_logros_list: {fileID: 5865032374602119021, guid: a85381fd2f4cb844ea8c3e14860fece7, type: 3}
 --- !u!1 &1801532850
