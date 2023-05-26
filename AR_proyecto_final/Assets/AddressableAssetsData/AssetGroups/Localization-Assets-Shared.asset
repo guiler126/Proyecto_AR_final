@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Programacion/Torres/LOCALIZATIONS/INFO_STATS Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+  - m_GUID: 82081cb677f057d438f12487e7f9e733
+    m_Address: Assets/Programacion/Sergio/Idiomas/New Table 1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6f68fdeb0e282a348b97be5372928635, type: 2}
   m_SchemaSet:

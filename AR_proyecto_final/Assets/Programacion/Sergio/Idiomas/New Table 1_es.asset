@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: New Table 1_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 431945195520
+    m_Localized: Mejora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 493416914944
+    m_Localized: "Reducci\xF3n de enfriamiento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471241629696
+    m_Localized: 'Salud '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465134723072
+    m_Localized: "Regeneraci\xF3n de man\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460680372224
+    m_Localized: "Da\xF1o Habilidad 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 456830001152
+    m_Localized: "Da\xF1o Habilidad 1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453038350336
+    m_Localized: "Man\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449011818496
+    m_Localized: 'Esquivar '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443945099264
+    m_Localized: Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2629919875072
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2636152610816
+    m_Localized: Brillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2640791511040
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2638933434368
+    m_Localized: "Configuraci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641626177536
+    m_Localized: Volumen principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2642431483904
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2643144515584
+    m_Localized: "Men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2643794632704
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2644516052992
+    m_Localized: ' Salir'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2645875007488
+    m_Localized: " Sensibilidad del rat\xF3n\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6733102620672
+    m_Localized: Logros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6735862472704
+    m_Localized: Programadores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6737808629760
+    m_Localized: Movimiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6741256347648
+    m_Localized: Ataque principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6742158123008
+    m_Localized: Ataque secundario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9336905572352
+    m_Localized: Controles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15721705807872
+    m_Localized: "men\xFA Pausa"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
