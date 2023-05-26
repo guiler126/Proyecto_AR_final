@@ -14,6 +14,7 @@ public class enemigo : MonoBehaviour
     public LayerMask playerMask;
 
     public StatsInfo statsInfo_speed_ENEMY;
+    
 
     private void Awake()
     {

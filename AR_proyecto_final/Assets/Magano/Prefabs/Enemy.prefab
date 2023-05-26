@@ -1064,14 +1064,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDie_1: 9
-  enemyDie: 10
   respawn_enemigo: {fileID: 0}
-  portal_enemigo: {fileID: 0}
   particles_enemigo: {fileID: 0}
   health: 100
   Animator: {fileID: 5274421705469190511}
   Enemy_kill_damage: 100
   statsInfo_hEALTH_ENEMY: {fileID: 11400000, guid: 2046a0e797c5ef444865ff06553a94ca, type: 2}
+  default_material: {fileID: 2100000, guid: 21f0d61056700fa499b0f28c10d57d8e, type: 2}
+  dissolve_material: {fileID: 2100000, guid: 8a980f72d10a0f84b8274025deca8713, type: 2}
+  SkinnedMeshRenderer: {fileID: 3401069865200471837}
 --- !u!114 &6348745064089568403
 MonoBehaviour:
   m_ObjectHideFlags: 0

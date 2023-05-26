@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: enemy
+  m_Name: enemy_disolver
   m_Shader: {fileID: -6465566751694194690, guid: de29defae0826994d98c4dd6b1c8c27a, type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON

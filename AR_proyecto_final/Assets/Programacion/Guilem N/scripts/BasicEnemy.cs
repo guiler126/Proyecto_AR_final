@@ -17,11 +17,24 @@ public class BasicEnemy : MonoBehaviour
     private bool death;
     
     public StatsInfo statsInfo_hEALTH_ENEMY;
+
+
+    public Material default_material;
+    public Material dissolve_material;
+    public SkinnedMeshRenderer SkinnedMeshRenderer;
+    
     
     private void OnEnable()
     {
         health = (int)statsInfo_hEALTH_ENEMY.options_list_lvl[statsInfo_hEALTH_ENEMY.current_lvl];
+
+        SkinnedMeshRenderer.materials[0] = dissolve_material;
+
+        dissolve_material.SetFloat("_DissolveAmount", 0f);
+
+        death = false;
     }
+    
 
     public void TakeDamage(int damage)
     {
@@ -33,6 +46,9 @@ public class BasicEnemy : MonoBehaviour
 
             Animator.SetTrigger("Morrir");
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+
+            SkinnedMeshRenderer.materials[0] = dissolve_material;
+            
             ++GameManager.instance.DefeatedEnemies;
             GameManager.instance.WinCondition();
         }

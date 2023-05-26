@@ -41,7 +41,7 @@ public class Ui_Manager : MonoBehaviour
 
     private void Start()
     {
-        Refresh_Mejora_List();
+        //Refresh_Mejora_List();
     }
 
     private void Update()
@@ -96,9 +96,9 @@ public class Ui_Manager : MonoBehaviour
     {
         Time.timeScale = 1;
         win_Panel.SetActive(false);
-        //PoolingManager.Instance.DesactivatePooledObject((int)enemy);
-        //Sistema_Oleadas.Instance.Checker();
-        //Sistema_Missions.instance.StartMissionRound();
+        PoolingManager.Instance.DesactivatePooledObject((int)enemy);
+        Sistema_Oleadas.Instance.Checker();
+        Sistema_Missions.instance.StartMissionRound();
         ++GetRandomValue(_statsInfoEnemy).current_lvl;
         Upgrade_Manager_Enemy.instace.RefreshAllStats();
     }
