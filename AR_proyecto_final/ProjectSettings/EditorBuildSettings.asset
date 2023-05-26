@@ -33,8 +33,11 @@ EditorBuildSettings:
     path: Assets/Magano/Scenes/Lose.unity
     guid: ee52110f015415e4d89f57448675e55f
   - enabled: 1
-    path: Assets/Programacion/Torres/Sergio/Pause_Menu_Sergio.unity
+    path: Assets/Programacion/Sergio/Scenes/Pause_Menu_Sergio.unity
     guid: 9901fdfffe092e349b2c1a8057c9e0ab
+  - enabled: 1
+    path: Assets/Programacion/Sergio/Scenes/Main_Menu_Sergio.unity
+    guid: aa280ca9b76ac714cb11583d4a9ea6ff
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: eea40e3514ad5ad4491d8b8a6f5b01f5, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: e83b346aa123f684194d80fae16f7d02, type: 2}

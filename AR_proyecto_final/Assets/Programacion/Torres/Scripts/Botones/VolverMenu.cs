@@ -7,7 +7,7 @@ public class VolverMenu : MonoBehaviour
 {
     public void CambiarEscena()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("Main_Menu_Sergio");
     }
 
 
