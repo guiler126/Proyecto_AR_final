@@ -335,7 +335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2232562612599623706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.331, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -942,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5672349587705483580
 Transform:
   m_ObjectHideFlags: 0
@@ -1017,15 +1017,15 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 62.5
+  m_Speed: 7
+  m_Acceleration: 30
   avoidancePriority: 50
   m_AngularSpeed: 1000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   respawn: {fileID: 0}
   Animator: {fileID: 5274421705469190511}
   isInAttackRange: 0
-  attackRange: 0.75
+  attackRange: 1
   playerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5040631107053456262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9ca8e9f3fc69754caab2ce40e2a0c38, type: 3}
   m_Name: 
@@ -1672,7 +1672,7 @@ BoxCollider:
   m_GameObject: {fileID: 8592799074461525949}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5571114, y: 1.8263409, z: 0.104235}
   m_Center: {x: 0.025471427, y: 0.82300913, z: -0.000000091650904}
