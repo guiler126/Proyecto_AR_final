@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Ui_Manager : MonoBehaviour
 {
@@ -33,7 +33,7 @@ public class Ui_Manager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    } 
 
     public void WinCondition()
     {

@@ -69,14 +69,8 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [Header("---- STATS PLAYER ----")]
-    public float health = 5;
+    public float health = 10;
     public bool isDie;
-
-    [Space]
-    [Header("---- SLIDERS ----")]
-    public UnityEngine.UI.Slider Slider_DashCooldown;
-    public UnityEngine.UI.Slider Slider_SecoundaryAttackCooldown;
-
 
     public CapsuleCollider _Capsule;
 
@@ -104,9 +98,6 @@ public class PlayerController : MonoBehaviour
         
         
         isDie = false;
-
-        Slider_SecoundaryAttackCooldown.value = 1f;
-        Slider_DashCooldown.value = 1f;
 
         imAttacking = false;
 
@@ -209,7 +200,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
 
     private void Dash()
     {
@@ -227,20 +217,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
-    
     IEnumerator CorroutineDash()
     {
         speed = dashSpeed;
         yield return new WaitForSeconds(0.5f);
         speed = normalSpeed;
         canDash = false;
-        Slider_DashCooldown.value = 0f;
         yield return new WaitForSeconds(3f);
-        Slider_DashCooldown.value = 1f;
         canDash = true;
     }
-
 
     public void Spawn_Bullet_Right()
     { 
@@ -315,7 +300,6 @@ public class PlayerController : MonoBehaviour
     private IEnumerator ReloadSecondaryAttack()
     {
         currentTimeLastSecundaryAttack = 0;
-        Slider_SecoundaryAttackCooldown.value = 0f;
         
         while (!canUseSecundaryAttack)
         {
@@ -324,7 +308,6 @@ public class PlayerController : MonoBehaviour
             if (currentTimeLastSecundaryAttack >= timeBetweenSecondaryAttack)
             {
                 canUseSecundaryAttack = true;
-                Slider_SecoundaryAttackCooldown.value = 1f;
             }
 
             yield return null;

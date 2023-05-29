@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalEnemies: 55
   spawnTimer_min: 3
-  spawnTimer_max: 5
+  spawnTimer_max: 4

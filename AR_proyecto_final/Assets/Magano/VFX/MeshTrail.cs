@@ -27,7 +27,7 @@ public class MeshTrail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isTrailActive)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isTrailActive && PlayerController.instance.canDash)
         {
             isTrailActive = true;
             StartCoroutine(ActivateTrail(activeTime));
