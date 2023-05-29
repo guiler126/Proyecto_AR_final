@@ -78,8 +78,6 @@ public class Sistema_Logros : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        Refresh_Logro_List();
     }
 
     public void StartTimeCheck()

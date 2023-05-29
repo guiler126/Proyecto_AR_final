@@ -21,7 +21,7 @@ public class Ui_Manager : MonoBehaviour
     public PoolingItemsEnum enemy;
 
     [Header("----- Mejora List -----")]
-    public List<StatsInfo> _statsInfoPlaye;
+    public List<StatsInfo> _statsInfoPlayer;
     public List<StatsInfo> _statsInfoEnemy;
     public List<StatsInfo> _randomStatsInfos;
     [SerializeField] private GameObject content_mejora_list;
@@ -47,11 +47,6 @@ public class Ui_Manager : MonoBehaviour
     private void Update()
     {
         //Update_Health();
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Refresh_Mejora_List();
-        }
     }
 
     public void Update_Health()
@@ -81,8 +76,9 @@ public class Ui_Manager : MonoBehaviour
 
     public void WinCondition()
     {
-        pointStats_txt.text = $"{GameManager.instance.PointStats}";
         win_Panel.SetActive(true);
+        RefreshTxtPoints();
+        Refresh_Mejora_List();
         Time.timeScale = 0;
     }
     
@@ -90,6 +86,11 @@ public class Ui_Manager : MonoBehaviour
     {
         lose_Panel.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void RefreshTxtPoints()
+    {
+        pointStats_txt.text = $"{GameManager.instance.PointStats}";
     }
 
     public void NextRound()
@@ -101,6 +102,16 @@ public class Ui_Manager : MonoBehaviour
         Sistema_Missions.instance.StartMissionRound();
         ++GetRandomValue(_statsInfoEnemy).current_lvl;
         Upgrade_Manager_Enemy.instace.RefreshAllStats();
+        GameManager.instance.DefeatedEnemies = 0;
+    }
+    
+    public void RestartRound()
+    {
+        Time.timeScale = 1;
+        lose_Panel.SetActive(false);
+        PoolingManager.Instance.DesactivatePooledObject((int)enemy);
+        Sistema_Oleadas.Instance.Checker();
+        Sistema_Missions.instance.StartMissionRound();
     }
 
     public void Refresh_Mejora_List()
@@ -108,7 +119,7 @@ public class Ui_Manager : MonoBehaviour
         Clean_Sound_List();
 
         _randomStatsInfos = new List<StatsInfo>();
-        _randomStatsInfos = GetRandomValuesFromList(_statsInfoPlaye, 3);
+        _randomStatsInfos = GetRandomValuesFromList(_statsInfoPlayer, 3);
 
         foreach (var mejora in _randomStatsInfos)
         {

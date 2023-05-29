@@ -17,12 +17,10 @@ public class Mission_Fixed : MonoBehaviour
 
     [SerializeField, Tooltip("Index on lest list of the current mission")]
     private int indexList;
-    
-    [SerializeField, Tooltip("Number of enemies eliminated (not total)")]
-    private int enemiesEliminated;
-    
+
     [SerializeField, Tooltip("Number of enemies you need to eliminate to complete the mission")]
-    private int enemiesToEliminate;    
+    private int enemiesToEliminate;
+    private int enemiesEliminated;    
     
     [SerializeField, Tooltip("Max time you have to kill the senemies (mission)")]
     private float maxTime;
@@ -31,6 +29,12 @@ public class Mission_Fixed : MonoBehaviour
     [SerializeField] private List<MissionFixed_Data> fixedmissionList;
     private IEnumerator currentCoroutine;
 
+    public int EnemiesEliminated
+    {
+        get {return enemiesEliminated; }
+        set {enemiesEliminated = value; }
+    }
+    
     private void Awake()
     {
         if (instance == null)
@@ -41,13 +45,6 @@ public class Mission_Fixed : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        RefreshFixedMission(false);
-        currentCoroutine = Coroutine_Check_MISSION();
-        StartCoroutine(currentCoroutine);
     }
 
     public void RefreshFixedMission(bool nextPhase)
@@ -62,7 +59,7 @@ public class Mission_Fixed : MonoBehaviour
         enemiesToEliminate = currentMission.EnemiesToEliminate;
         maxTime = currentMission.MaxTime;
         uiItem.SetActive(true);
-        descriptionTxt.text = $"{enemiesToEliminate}, {maxTime}, {enemiesEliminated}";
+        descriptionTxt.text = $"Eliminate {enemiesToEliminate} enemies in {maxTime}";
         Activate_CheckerMision();
     }
     

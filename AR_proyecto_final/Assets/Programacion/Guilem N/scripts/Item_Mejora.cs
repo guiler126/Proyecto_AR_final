@@ -38,6 +38,7 @@ public class Item_Mejora : MonoBehaviour
         {
             --GameManager.instance.PointStats;
             _statsInfo.current_lvl++;
+            Ui_Manager.instance.RefreshTxtPoints();
             Upgrade_Manager_Player.instace.RefreshAllStats();
             gameObject.SetActive(false);
         }

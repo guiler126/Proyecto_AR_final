@@ -50,16 +50,27 @@ public class GameManager : MonoBehaviour
     {
         if (defeatedEnemies >= totalEnemies)
         {
-            int value = 0;
-            
-            if (Sistema_Missions.instance.MissionsCompleted >= 2)
-            {
-                value = 1;
-            }
-            
             Mission_Fixed.instance.EndGame_CheckerMision();
+
+            int value = 0;
+            value = Sistema_Missions.instance.MissionsCompleted;
+            
+            if (value > 2)
+            {
+                value = 2;
+            }
+            else if (value < 0)
+            {
+                value = 0;
+            }
+
             pointStats = value + 1;
-            Ui_Manager.instance.WinCondition();
+            Invoke("UIWin", 5);
         }
+    }
+
+    private void UIWin()
+    {
+        Ui_Manager.instance.WinCondition();
     }
 }

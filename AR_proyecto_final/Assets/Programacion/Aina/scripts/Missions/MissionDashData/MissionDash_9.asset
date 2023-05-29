@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef142b11bd6de04087b29deba8f6bdf, type: 3}
   m_Name: MissionDash_9
   m_EditorClassIdentifier: 
-  maxUses: 0
+  maxUses: 8

@@ -50,6 +50,7 @@ public class BasicEnemy : MonoBehaviour
             SkinnedMeshRenderer.materials[0] = dissolve_material;
             
             ++GameManager.instance.DefeatedEnemies;
+            ++Mission_Fixed.instance.EnemiesEliminated;
             GameManager.instance.WinCondition();
         }
     }

@@ -56,11 +56,13 @@ public class Mission_Mana: MonoBehaviour
     {
         if (gameObject.activeInHierarchy)
         {
+            uiItem.transform.GetChild(2).gameObject.SetActive(true);
+
             if (minMana <= playerMana)
             {
                 isFailed = true;
-                ++Sistema_Missions.instance.MissionsCompleted;
-                uiItem.transform.GetChild(2).gameObject.SetActive(true);
+                --Sistema_Missions.instance.MissionsCompleted;
+                uiItem.transform.GetChild(2).gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }
         }

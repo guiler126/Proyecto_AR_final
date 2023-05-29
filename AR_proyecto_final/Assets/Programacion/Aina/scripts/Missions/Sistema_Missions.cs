@@ -45,7 +45,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(false);
                 RefreshAllMissions(false);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
             case 1:
                 MissionsEndRound();
@@ -53,7 +53,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(true);
                 RefreshAllMissions(true);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
             case 2:
                 MissionsEndRound();
@@ -61,7 +61,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(true);
                 RefreshAllMissions(true);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
             case 3:
                 MissionsEndRound();
@@ -69,7 +69,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(true);
                 RefreshAllMissions(true);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
             case 4:
                 MissionsEndRound();
@@ -77,7 +77,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(true);
                 RefreshAllMissions(true);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
             case 5:
                 MissionsEndRound();
@@ -85,7 +85,7 @@ public class Sistema_Missions : MonoBehaviour
                 Mission_Fixed.instance.RefreshFixedMission(true);
                 RefreshAllMissions(true);
                 SelectMissions();
-                missionsCompleted = 0;
+                missionsCompleted = 1;
                 break;
         }
     }

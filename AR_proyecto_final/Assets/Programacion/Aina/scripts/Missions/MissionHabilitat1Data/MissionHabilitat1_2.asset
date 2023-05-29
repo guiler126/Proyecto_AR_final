@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bee5cbf0b6d190468bb953c7d56fc12, type: 3}
   m_Name: MissionHabilitat1_2
   m_EditorClassIdentifier: 
-  maxUses: 9
+  maxUses: 24

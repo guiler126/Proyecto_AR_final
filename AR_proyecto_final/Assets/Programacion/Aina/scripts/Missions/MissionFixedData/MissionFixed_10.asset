@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32415a639bd3a7c4ea364c41d8f305a5, type: 3}
   m_Name: MissionFixed_10
   m_EditorClassIdentifier: 
-  enemiesToEliminate: 0
-  maxTime: 0
+  enemiesToEliminate: 5
+  maxTime: 2.5

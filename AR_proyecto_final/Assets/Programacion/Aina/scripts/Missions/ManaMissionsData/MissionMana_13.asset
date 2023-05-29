@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b77c64d42f2a1441843e4e4e701942c, type: 3}
   m_Name: MissionMana_13
   m_EditorClassIdentifier: 
-  minMana: 0
+  minMana: 60

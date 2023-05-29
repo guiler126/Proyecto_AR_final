@@ -58,12 +58,13 @@ public class Mission_Habilitat1 : MonoBehaviour
             --maxUses;
             
             descriptionTxt.text = $"{maxUses}";
+            uiItem.transform.GetChild(2).gameObject.SetActive(true);
 
             if (maxUses == 0)
             {
                 isFailed = true;
-                ++Sistema_Missions.instance.MissionsCompleted;
-                uiItem.transform.GetChild(2).gameObject.SetActive(true);
+                --Sistema_Missions.instance.MissionsCompleted;
+                uiItem.transform.GetChild(2).gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }
         }
