@@ -3,20 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Ui_Manager : MonoBehaviour
 {
     public static Ui_Manager instance;
     
-    public GameObject health_1;
-    public GameObject health_2;
-    public GameObject health_3;
-    public GameObject health_4;
-    public GameObject health_5;
-
     [SerializeField] private GameObject win_Panel;
     [SerializeField] private GameObject lose_Panel;
     [SerializeField] private TMP_Text pointStats_txt;
+    public Slider slider_health;
 
     public PoolingItemsEnum enemy;
 
@@ -36,41 +32,6 @@ public class Ui_Manager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        //Refresh_Mejora_List();
-    }
-
-    private void Update()
-    {
-        //Update_Health();
-    }
-
-    public void Update_Health()
-    {
-        if (PlayerController.instance.health == 4)
-        {
-            health_5.SetActive(false);
-        }
-
-        if (PlayerController.instance.health == 3)
-        {
-            health_4.SetActive(false);
-        }
-        if (PlayerController.instance.health == 2)
-        {
-            health_3.SetActive(false);
-        }
-        if (PlayerController.instance.health == 1)
-        {
-            health_2.SetActive(false);
-        }
-        if (PlayerController.instance.health <= 0)
-        {
-            health_1.SetActive(false);
         }
     }
 
@@ -115,6 +76,7 @@ public class Ui_Manager : MonoBehaviour
         PlayerController.instance.isDie = false;
         PlayerController.instance.health = 5;
         LookAtMouse.instance.enabled = true;
+        GameManager.instance.DefeatedEnemies = 0;
     }
 
     public void Refresh_Mejora_List()
@@ -199,4 +161,6 @@ public class Ui_Manager : MonoBehaviour
         
         return randomValue;
     }
+
+
 }

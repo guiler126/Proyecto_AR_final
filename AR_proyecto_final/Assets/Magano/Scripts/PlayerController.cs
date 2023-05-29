@@ -252,7 +252,7 @@ public class PlayerController : MonoBehaviour
         
         //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
-        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        Mana_Controller.instance.Slider_Mana.value -= 10f;
         
         // No destruir, es fa en el script de la bala
         //Destroy(newBullet, 2f);
@@ -276,7 +276,7 @@ public class PlayerController : MonoBehaviour
 
         //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
-        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        Mana_Controller.instance.Slider_Mana.value -= 10f;
         
         //Destroy(newBullet, 4f);
         
@@ -344,7 +344,7 @@ public class PlayerController : MonoBehaviour
 
         speed = normalSpeed;
         
-        Mana_Controller.instance.Slider_Mana.value -= 60f;
+        Mana_Controller.instance.Slider_Mana.value -= 30f;
         
         //Destroy(newBulletSecondAttack, 2f);
         
@@ -360,6 +360,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health-= damage;
+        Ui_Manager.instance.slider_health.value = health;
         
         // Aina: Json Local
         player_data_localRequest.damageTaken += damage;
