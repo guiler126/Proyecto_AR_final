@@ -112,6 +112,9 @@ public class Ui_Manager : MonoBehaviour
         PoolingManager.Instance.DesactivatePooledObject((int)enemy);
         Sistema_Oleadas.Instance.Checker();
         Sistema_Missions.instance.StartMissionRound();
+        PlayerController.instance.isDie = false;
+        PlayerController.instance.health = 5;
+        LookAtMouse.instance.enabled = true;
     }
 
     public void Refresh_Mejora_List()

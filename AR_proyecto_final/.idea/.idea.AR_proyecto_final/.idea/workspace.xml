@@ -140,7 +140,7 @@
       <workItem from="1685022776311" duration="11177000" />
       <workItem from="1685121700348" duration="4525000" />
       <workItem from="1685348252367" duration="3680000" />
-      <workItem from="1685374978324" duration="964000" />
+      <workItem from="1685374978324" duration="2625000" />
     </task>
     <servers />
   </component>
@@ -163,5 +163,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Magano/Scripts/PlayerController.cs</url>
+          <line>360</line>
+          <properties documentPath="C:\Users\a.nees\Documents\Github.projects\Proyecto_AR_final\AR_proyecto_final\Assets\Magano\Scripts\PlayerController.cs" initialLine="360" containingFunctionPresentation="method 'TakeDamage'">
+            <startOffsets>
+              <option value="11844" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11845" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
