@@ -122,6 +122,18 @@ MonoBehaviour:
     m_Localized: "men\xFA Pausa"
     m_Metadata:
       m_Items: []
+  - m_Id: 1301889999216640
+    m_Localized: "M\xE0xim de vegades que pots utilitzar l'habilitat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Localized: "M\xEDnim de mana que has de tenir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Localized: "M\xE0xim de vegades que pots utilitzar el dash."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

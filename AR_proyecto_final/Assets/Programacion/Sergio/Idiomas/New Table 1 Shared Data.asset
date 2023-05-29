@@ -20,35 +20,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 443945099264
-    m_Key: New Entry 1
+    m_Key: Velocitat
     m_Metadata:
       m_Items: []
   - m_Id: 449011818496
-    m_Key: New Entry 2
+    m_Key: Esquivar
     m_Metadata:
       m_Items: []
   - m_Id: 453038350336
-    m_Key: New Entry 3
+    m_Key: Mana
     m_Metadata:
       m_Items: []
   - m_Id: 456830001152
-    m_Key: New Entry 4
+    m_Key: Mal Habilitat 1
     m_Metadata:
       m_Items: []
   - m_Id: 460680372224
-    m_Key: New Entry 5
+    m_Key: Mal Habilitat 2
     m_Metadata:
       m_Items: []
   - m_Id: 465134723072
-    m_Key: New Entry 6
+    m_Key: "Regeneraci\xF3 de mana"
     m_Metadata:
       m_Items: []
   - m_Id: 471241629696
-    m_Key: New Entry 7
+    m_Key: Vida
     m_Metadata:
       m_Items: []
   - m_Id: 493416914944
-    m_Key: New Entry 8
+    m_Key: "Reducci\xF3 de refredament"
     m_Metadata:
       m_Items: []
   - m_Id: 2629919875072
@@ -117,6 +117,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15721705807872
     m_Key: "men\xFA Pausa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301889999216640
+    m_Key: "M\xE0xim de vegades que pots utilitzar l'habilitat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Key: "M\xEDnim de mana que has de tenir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Key: "M\xE0xim de vegades que pots utilitzar el dash."
     m_Metadata:
       m_Items: []
   m_Metadata:

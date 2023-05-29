@@ -122,6 +122,18 @@ MonoBehaviour:
     m_Localized: "Pause-Men\xFC"
     m_Metadata:
       m_Items: []
+  - m_Id: 1301889999216640
+    m_Localized: "Maximale Anzahl an Malen, die du die F\xE4higkeit verwenden kannst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Localized: "Mindestens ben\xF6tigte Menge an Mana."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Localized: Maximale Anzahl an Malen, die du den Dash verwenden kannst.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -122,6 +122,18 @@ MonoBehaviour:
     m_Localized: "men\xFA Pausa"
     m_Metadata:
       m_Items: []
+  - m_Id: 1301889999216640
+    m_Localized: "M\xE1ximo de veces que puedes usar la habilidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Localized: "M\xEDnimo de man\xE1 que debes tener."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Localized: "M\xE1xima veces que puedes usar el dash."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

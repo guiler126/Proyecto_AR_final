@@ -122,6 +122,18 @@ MonoBehaviour:
     m_Localized: Pause Menu
     m_Metadata:
       m_Items: []
+  - m_Id: 1301889999216640
+    m_Localized: Maximum number of times you can use the ability.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Localized: Minimum amount of mana you must have.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Localized: Maximum number of times you can use the dash.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

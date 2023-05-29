@@ -122,6 +122,18 @@ MonoBehaviour:
     m_Localized: Menu Pause
     m_Metadata:
       m_Items: []
+  - m_Id: 1301889999216640
+    m_Localized: "Nombre maximum de fois que vous pouvez utiliser la comp\xE9tence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301893086224384
+    m_Localized: "Quantit\xE9 minimale de mana que vous devez avoir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1301896370364416
+    m_Localized: Nombre maximum de fois que vous pouvez utiliser le dash.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
