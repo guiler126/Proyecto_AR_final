@@ -24,10 +24,11 @@ public class LanguageManager : MonoBehaviour
     {
         Dictionary<string, Locale> languageDic = new Dictionary<string, Locale>
         {
-            {"en", LocalizationSettings.AvailableLocales.Locales[0]},
+            {"ca", LocalizationSettings.AvailableLocales.Locales[0]},
             {"es", LocalizationSettings.AvailableLocales.Locales[1]},
-            {"fr", LocalizationSettings.AvailableLocales.Locales[2]},
-            {"de", LocalizationSettings.AvailableLocales.Locales[3]}
+            {"en", LocalizationSettings.AvailableLocales.Locales[2]},
+            {"fr", LocalizationSettings.AvailableLocales.Locales[3]},
+            {"de", LocalizationSettings.AvailableLocales.Locales[4]}
         };
 
         if (languageDic.ContainsKey(newLanguageCode))

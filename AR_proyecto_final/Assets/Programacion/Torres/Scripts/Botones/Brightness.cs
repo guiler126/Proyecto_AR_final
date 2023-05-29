@@ -31,6 +31,8 @@ public class Brightness : MonoBehaviour
         if (value != 0)
         {
             postExpo.value = value;
+
+
             colorAdjustments.postExposure.SetValue(postExpo);
 
             // Aplicar el valor de brillo también a la interfaz de usuario
