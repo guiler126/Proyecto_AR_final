@@ -8,5 +8,5 @@ public class Player_Data
     public int attack2UsedTimes;
     public int dashUsedTimes;
     public int damageDone;
-    public int damageTaken;
+    public float damageTaken;
 }

@@ -12,10 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295a244514fde98479fc9e102c5b1a4c, type: 3}
   m_Name: statsInfo_dmg_ENEMY
   m_EditorClassIdentifier: 
+  title:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 0}
+  background: {fileID: 0}
+  maxLvl: 0
   current_lvl: 0
   options_list_lvl:
-  - 1
-  - 2
-  - 3
-  - 4
   - 5
+  - 10
+  - 15
+  - 20
+  - 25
+  references:
+    version: 2
+    RefIds: []

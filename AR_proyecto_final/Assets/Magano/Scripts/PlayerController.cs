@@ -340,7 +340,7 @@ public class PlayerController : MonoBehaviour
         ++player_data_localRequest.attack2UsedTimes;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health-= damage;
         Ui_Manager.instance.slider_health.value = health;

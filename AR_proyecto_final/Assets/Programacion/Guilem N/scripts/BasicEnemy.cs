@@ -9,7 +9,7 @@ public class BasicEnemy : MonoBehaviour
     public GameObject respawn_enemigo;
     public GameObject particles_enemigo;
     [Header("Stats")]
-    public int health;
+    public float health;
     public Animator Animator;
 
     public int Enemy_kill_damage = 100;
@@ -36,7 +36,7 @@ public class BasicEnemy : MonoBehaviour
     }
     
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
 

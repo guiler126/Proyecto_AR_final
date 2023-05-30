@@ -1,28 +1,27 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class Trampa_Parent : MonoBehaviour
 {
     private IEnumerator current_coroutine;
-    public PoolingItemsEnum trapEnum;
-    private GameObject trap;
+    [SerializeField] private GameObject trap;
+    [SerializeField] private GameObject trap2;
     [SerializeField] private float timeActivate;
     [SerializeField] private float timeDeactivate;
-    
-    private void OnTriggerEnter(Collider other)
+
+    private void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            current_coroutine = Coroutine_ActivateTrap();
-            StartCoroutine(current_coroutine);
-        }
+        current_coroutine = Coroutine_ActivateTrap();
+        StartCoroutine(current_coroutine);
     }
 
     IEnumerator Coroutine_ActivateTrap()
     {
         yield return new WaitForSeconds(timeActivate);
 
-        trap.SetActive(trap);
+        trap.SetActive(true);
+        trap2.SetActive(true);
         
         current_coroutine = Coroutine_DeactivateTrap();
         StartCoroutine(current_coroutine);
@@ -33,5 +32,9 @@ public class Trampa_Parent : MonoBehaviour
         yield return new WaitForSeconds(timeDeactivate);
 
         trap.SetActive(false);
+        trap2.SetActive(false);
+
+        current_coroutine = Coroutine_ActivateTrap();
+        StartCoroutine(current_coroutine);
     }
 }

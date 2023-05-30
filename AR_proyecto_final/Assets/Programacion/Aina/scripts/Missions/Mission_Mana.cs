@@ -58,7 +58,7 @@ public class Mission_Mana: MonoBehaviour
         {
             uiItem.transform.GetChild(2).gameObject.SetActive(true);
 
-            if (minMana <= playerMana)
+            if (minMana > playerMana)
             {
                 isFailed = true;
                 --Sistema_Missions.instance.MissionsCompleted;

@@ -8,7 +8,7 @@ public class Item_playerdata_list : MonoBehaviour
     public int attack2UsedTimes;
     public int dashUsedTimes;
     public int damageDone;
-    public int damageTaken;
+    public float damageTaken;
 
     void Start()
     {

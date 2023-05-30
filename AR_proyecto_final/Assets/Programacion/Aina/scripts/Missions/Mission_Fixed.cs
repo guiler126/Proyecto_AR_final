@@ -90,6 +90,7 @@ public class Mission_Fixed : MonoBehaviour
                 if (timer <= maxTime)
                 {
                     isCompleted = true;
+                    uiItem.transform.GetChild(2).gameObject.SetActive(true);
                     yield break;
                 }
                 
