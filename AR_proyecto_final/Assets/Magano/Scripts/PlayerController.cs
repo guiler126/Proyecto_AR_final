@@ -69,14 +69,8 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [Header("---- STATS PLAYER ----")]
-    public float health = 5;
+    public float health = 10;
     public bool isDie;
-
-    [Space]
-    [Header("---- SLIDERS ----")]
-    public UnityEngine.UI.Slider Slider_DashCooldown;
-    public UnityEngine.UI.Slider Slider_SecoundaryAttackCooldown;
-
 
     public CapsuleCollider _Capsule;
 
@@ -104,9 +98,6 @@ public class PlayerController : MonoBehaviour
         
         
         isDie = false;
-
-        Slider_SecoundaryAttackCooldown.value = 1f;
-        Slider_DashCooldown.value = 1f;
 
         imAttacking = false;
 
@@ -209,7 +200,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
 
     private void Dash()
     {
@@ -227,20 +217,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
-    
     IEnumerator CorroutineDash()
     {
         speed = dashSpeed;
         yield return new WaitForSeconds(0.5f);
         speed = normalSpeed;
         canDash = false;
-        Slider_DashCooldown.value = 0f;
         yield return new WaitForSeconds(3f);
-        Slider_DashCooldown.value = 1f;
         canDash = true;
     }
-
 
     public void Spawn_Bullet_Right()
     { 
@@ -252,7 +237,7 @@ public class PlayerController : MonoBehaviour
         
         //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
-        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        Mana_Controller.instance.Slider_Mana.value -= 10f;
         
         // No destruir, es fa en el script de la bala
         //Destroy(newBullet, 2f);
@@ -276,7 +261,7 @@ public class PlayerController : MonoBehaviour
 
         //newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
         
-        Mana_Controller.instance.Slider_Mana.value -= 20f;
+        Mana_Controller.instance.Slider_Mana.value -= 10f;
         
         //Destroy(newBullet, 4f);
         
@@ -315,7 +300,6 @@ public class PlayerController : MonoBehaviour
     private IEnumerator ReloadSecondaryAttack()
     {
         currentTimeLastSecundaryAttack = 0;
-        Slider_SecoundaryAttackCooldown.value = 0f;
         
         while (!canUseSecundaryAttack)
         {
@@ -324,7 +308,6 @@ public class PlayerController : MonoBehaviour
             if (currentTimeLastSecundaryAttack >= timeBetweenSecondaryAttack)
             {
                 canUseSecundaryAttack = true;
-                Slider_SecoundaryAttackCooldown.value = 1f;
             }
 
             yield return null;
@@ -344,7 +327,7 @@ public class PlayerController : MonoBehaviour
 
         speed = normalSpeed;
         
-        Mana_Controller.instance.Slider_Mana.value -= 60f;
+        Mana_Controller.instance.Slider_Mana.value -= 30f;
         
         //Destroy(newBulletSecondAttack, 2f);
         
@@ -360,6 +343,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health-= damage;
+        Ui_Manager.instance.slider_health.value = health;
         
         // Aina: Json Local
         player_data_localRequest.damageTaken += damage;

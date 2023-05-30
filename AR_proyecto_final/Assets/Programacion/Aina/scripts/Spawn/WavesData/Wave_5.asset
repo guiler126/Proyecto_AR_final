@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1782daf322489c04fa1088ef8d15ac39, type: 3}
   m_Name: Wave_5
   m_EditorClassIdentifier: 
-  totalEnemies: 45
+  totalEnemies: 40
   spawnTimer_min: 4
   spawnTimer_max: 5

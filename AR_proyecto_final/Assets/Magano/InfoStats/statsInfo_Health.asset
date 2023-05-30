@@ -35,11 +35,11 @@ MonoBehaviour:
   maxLvl: 0
   current_lvl: 0
   options_list_lvl:
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
+  - 10
+  - 12
+  - 15
+  - 18
+  - 20
   references:
     version: 2
     RefIds: []

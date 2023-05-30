@@ -6,19 +6,23 @@ using UnityEngine;
 public class Bullet_Hability : MonoBehaviour
 {
     
-    public static Bullet_Hability instance;
+    
 
     public int damage_hability;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    public float speed;
+
+    
 
     private void Start()
     {
         // Desactivar bala despres de 2 segons
         Invoke("DeactivateGameObj", 2f);
+    }
+
+    private void Update()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
     private void OnTriggerEnter(Collider other)
