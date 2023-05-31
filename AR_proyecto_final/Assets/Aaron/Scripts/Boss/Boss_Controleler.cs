@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Boss_Controleler : MonoBehaviour
@@ -9,9 +7,9 @@ public class Boss_Controleler : MonoBehaviour
     [Header("---Parameters---")]
     public int HP = 100;
     public int MAX_HP = 100;
-    [Tooltip("Daño del player hacia el boss")]
+    [Tooltip("Daï¿½o del player hacia el boss")]
     public int DamageAmount = 10;
-    [Tooltip("Daño del Boss hacia el player")]
+    [Tooltip("Daï¿½o del Boss hacia el player")]
     public int Boss_Damage = 10;
 
     public int percentage_fase_2 = 60;
@@ -54,16 +52,16 @@ public class Boss_Controleler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            TakeDamage();
+            //TakeDamage();
         }
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
         if (distance < 3f)
         {
-            //animator.transform.LookAt(player);
+            animator.transform.LookAt(player);
             animator.SetBool("Attack", true);
-            //Player_Main.instance.HP -= Boss_Damage;
-            //Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
+            PlayerController.instance.health -= Boss_Damage;
+            Ui_Manager.instance.slider_health.value = PlayerController.instance.health;
             Debug.Log("Estoy atacando");
         }
             
@@ -74,10 +72,10 @@ public class Boss_Controleler : MonoBehaviour
         }
     }
 
-    //DAÑO RECIBIDO AL BOSS Y SU CAMBIO DE FASE CON ANIM EN BASE A SU HP
-    public void TakeDamage()
+    //DAï¿½O RECIBIDO AL BOSS Y SU CAMBIO DE FASE CON ANIM EN BASE A SU HP
+    public void TakeDamage(int damage)
     {
-        HP -= DamageAmount;
+        HP -= damage;
         Health_bar.value = HP;
         Debug.Log("Estoy aqui");
 
@@ -107,15 +105,14 @@ public class Boss_Controleler : MonoBehaviour
 
     }
 
-    //DAÑAR AL MAIN PLAYER (A TI)
-    public void PlayerDamage(int damageAmount)
+    //DAï¿½AR AL MAIN PLAYER (A TI)
+    public void PlayerDamage()
     {
-        Player_Main.instance.HP -= damageAmount;
-        Player_Main.instance.Health_bar.value = Player_Main.instance.HP;
+        PlayerController.instance.TakeDamage(Boss_Damage);
+
         if (Player_Main.instance.HP <= 0)
         {
             Debug.Log("Estoy muerto");
-
         }
     }
 
@@ -145,7 +142,7 @@ public class Boss_Controleler : MonoBehaviour
 
     public void Cambio_Fase2()
     {
-        //Stamina_Controller.instance.Boss_is_OnFase = true;
+        Stamina_Controller.instance.Boss_is_OnFase = true;
         animator.SetTrigger("f2_1");
     }
 

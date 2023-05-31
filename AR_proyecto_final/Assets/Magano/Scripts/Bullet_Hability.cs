@@ -1,13 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet_Hability : MonoBehaviour
 {
-    
-    
-
     public int damage_hability;
 
     public float speed;
@@ -30,6 +24,15 @@ public class Bullet_Hability : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<BasicEnemy>().TakeDamage(damage_hability);
+            
+            // Aina: Sistema Logros
+            Sistema_Logros.instance.AddDamage_Achievement(damage_hability);
+            // Aina: Json Local
+            PlayerController.instance.player_data_localRequest.damageDone += damage_hability;
+        }
+        else if (other.CompareTag("Boss"))
+        {
+            other.GetComponent<Boss_Controleler>().TakeDamage(damage_hability);
             
             // Aina: Sistema Logros
             Sistema_Logros.instance.AddDamage_Achievement(damage_hability);

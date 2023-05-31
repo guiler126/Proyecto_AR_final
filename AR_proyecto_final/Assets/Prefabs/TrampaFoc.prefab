@@ -234,8 +234,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 3.0049973, y: 3.9600692, z: 25.873547}
-  m_Center: {x: -0.008641069, y: 1.4014043, z: 11.387858}
+  m_Size: {x: 3.0049968, y: 3.9600697, z: 18.762005}
+  m_Center: {x: -0.008556342, y: 1.4014041, z: 7.8318934}
 --- !u!54 &8012475775158692351
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 6065851465920494018}
   - component: {fileID: 7132039535749347928}
   m_Layer: 0
-  m_Name: Puerta_Boca_Demonio_11
+  m_Name: TrampaFoc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 6874159244682814328}
   m_LocalRotation: {x: -0, y: 0.9773804, z: -0, w: 0.2114888}
   m_LocalPosition: {x: -22.79, y: 13.355, z: 31.42}
-  m_LocalScale: {x: 0.39207822, y: 0.29961383, z: 0.334833}
+  m_LocalScale: {x: 0.4, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8518158349923195180}

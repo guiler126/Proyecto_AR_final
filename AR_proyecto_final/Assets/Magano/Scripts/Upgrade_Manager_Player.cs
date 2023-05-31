@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Upgrade_Manager_Player : MonoBehaviour
@@ -141,6 +140,7 @@ public class Upgrade_Manager_Player : MonoBehaviour
       if (CanUpdate(statsInfo_Health) && GameManager.instance.PointStats > 0)
       {
          PlayerController.instance.health = ReturnStatValue(statsInfo_Health);
+         Ui_Manager.instance.slider_health.maxValue = PlayerController.instance.health;
          Ui_Manager.instance.slider_health.value = PlayerController.instance.health;
       }
    }

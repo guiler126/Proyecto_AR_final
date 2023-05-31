@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Enemy
   - Proyectil
+  - Boss
   layers:
   - Default
   - TransparentFX

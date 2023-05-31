@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,8 +15,16 @@ public class Trampa_Parent : MonoBehaviour
         StartCoroutine(current_coroutine);
     }
 
+    private void GetTime()
+    {
+        timeActivate = Random.Range(4, 6);
+        timeDeactivate = Random.Range(4, 6);
+    }
+
     IEnumerator Coroutine_ActivateTrap()
     {
+        GetTime();
+        
         yield return new WaitForSeconds(timeActivate);
 
         trap.SetActive(true);
@@ -29,6 +36,8 @@ public class Trampa_Parent : MonoBehaviour
     
     IEnumerator Coroutine_DeactivateTrap()
     {
+        GetTime();
+        
         yield return new WaitForSeconds(timeDeactivate);
 
         trap.SetActive(false);

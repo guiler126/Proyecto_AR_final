@@ -8,14 +8,12 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-
     public static PlayerController instance;
     
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Animator _animator;
-    
-    
+
     [Header("--- MOVEMENT PARAMETERS ---")]
     [Space(10)]
     [SerializeField] private float horizontal;
@@ -25,8 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float dashSpeed;
     [SerializeField] private float SecondaryAttackSpeed;
     [SerializeField] private float turnSmoothTime;
-    
-    
+
     [Header("--- GRAVITY PARAMETERS ---")]
     [Space(10)]
     [SerializeField] private LayerMask groundMask;
@@ -38,9 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool atackkRight;
     [SerializeField] public bool canDash;
-    
-    
-    
+
     public IEnumerator currentCorroutine;
 
     [Space]
@@ -48,7 +43,6 @@ public class PlayerController : MonoBehaviour
     public GameObject Spawn_bullet_1;
     public GameObject Spawn_bullet_2;
     public GameObject Spawn_bullet_SecondAttack;
-    
     
     [Space]
     [Header("---- Prefabs Attacks ----")]
@@ -84,7 +78,6 @@ public class PlayerController : MonoBehaviour
     [Space]
     [Header("---- Json Local ----")]
     public Player_Data player_data_localRequest;
-
 
     private void Awake()
     {
@@ -344,6 +337,7 @@ public class PlayerController : MonoBehaviour
     {
         health-= damage;
         Ui_Manager.instance.slider_health.value = health;
+        Debug.Log(Ui_Manager.instance.slider_health.value);
         
         // Aina: Json Local
         player_data_localRequest.damageTaken += damage;
