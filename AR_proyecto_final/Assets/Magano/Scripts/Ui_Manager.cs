@@ -55,6 +55,7 @@ public class Ui_Manager : MonoBehaviour
     public void NextRound()
     {
         Time.timeScale = 1;
+        GameManager.instance.ResetPlayerPosition();
         win_Panel.SetActive(false);
         PoolingManager.Instance.DesactivatePooledObject((int)enemy);
         Sistema_Oleadas.Instance.Checker();
@@ -67,16 +68,18 @@ public class Ui_Manager : MonoBehaviour
     public void RestartRound()
     {
         Time.timeScale = 1;
+        GameManager.instance.ResetPlayerPosition();
         lose_Panel.SetActive(false);
         PoolingManager.Instance.DesactivatePooledObject((int)enemy);
         Sistema_Oleadas.Instance.Checker();
         Sistema_Missions.instance.StartMissionRound();
         PlayerController.instance.isDie = false;
-        PlayerController.instance.health = 5;
+        PlayerController.instance.health = slider_health.maxValue;
+        slider_health.value = PlayerController.instance.health;
         LookAtMouse.instance.enabled = true;
         GameManager.instance.DefeatedEnemies = 0;
     }
-
+    
     public void Refresh_Mejora_List()
     {
         Clean_Sound_List();

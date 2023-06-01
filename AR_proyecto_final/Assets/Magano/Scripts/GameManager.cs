@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Components;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +11,9 @@ public class GameManager : MonoBehaviour
     public int defeatedEnemies;
 
     [SerializeField] private int pointStats;
+
+    [SerializeField] private Transform startPoint;
+    [SerializeField] private GameObject player;
     
     public int TotalEnemies
     {
@@ -72,5 +73,13 @@ public class GameManager : MonoBehaviour
     private void UIWin()
     {
         Ui_Manager.instance.WinCondition();
+    }
+
+    public void ResetPlayerPosition()
+    {
+        Debug.Log("spwn");
+        PlayerController.instance._characterController.enabled = false;
+        player.transform.position = Vector3.zero;
+        PlayerController.instance._characterController.enabled = true;
     }
 }

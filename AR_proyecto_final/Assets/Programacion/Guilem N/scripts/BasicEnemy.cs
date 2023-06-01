@@ -18,12 +18,10 @@ public class BasicEnemy : MonoBehaviour
     
     public StatsInfo statsInfo_hEALTH_ENEMY;
 
-
     public Material default_material;
     public Material dissolve_material;
     public SkinnedMeshRenderer SkinnedMeshRenderer;
-    
-    
+
     private void OnEnable()
     {
         health = (int)statsInfo_hEALTH_ENEMY.options_list_lvl[statsInfo_hEALTH_ENEMY.current_lvl];

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] public CharacterController _characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Animator _animator;
 
@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
             GodMode();
             CalculateGravity();
         }
-         
     }
 
     private void Movement()
@@ -337,7 +336,6 @@ public class PlayerController : MonoBehaviour
     {
         health-= damage;
         Ui_Manager.instance.slider_health.value = health;
-        Debug.Log(Ui_Manager.instance.slider_health.value);
         
         // Aina: Json Local
         player_data_localRequest.damageTaken += damage;
