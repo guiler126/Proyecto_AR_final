@@ -31,6 +31,7 @@ public class BasicEnemy : MonoBehaviour
         SkinnedMeshRenderer.materials[0] = dissolve_material;
 
         dissolve_material.SetFloat("_DissolveAmount", 0f);
+        
 
         death = false;
     }
@@ -48,7 +49,7 @@ public class BasicEnemy : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             SkinnedMeshRenderer.materials[0] = dissolve_material;
-            
+            health = (int)statsInfo_hEALTH_ENEMY.options_list_lvl[statsInfo_hEALTH_ENEMY.current_lvl];
             ++GameManager.instance.DefeatedEnemies;
             ++Mission_Fixed.instance.EnemiesEliminated;
             GameManager.instance.WinCondition();
