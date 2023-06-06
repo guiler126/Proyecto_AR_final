@@ -942,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5672349587705483580
 Transform:
   m_ObjectHideFlags: 0
@@ -1652,6 +1652,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 143.15399
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 40d3382fa5bff724b82a126cee742818, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 720dcbd1c494cdf45868e882730870e7, type: 2}
     - target: {fileID: 919132149155446097, guid: 40d3382fa5bff724b82a126cee742818, type: 3}
       propertyPath: m_Name
       value: Espada_Enemigo_Basico
