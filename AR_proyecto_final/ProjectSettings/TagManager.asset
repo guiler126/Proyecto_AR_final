@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Proyectil
   - Boss
+  - Level
   layers:
   - Default
   - TransparentFX

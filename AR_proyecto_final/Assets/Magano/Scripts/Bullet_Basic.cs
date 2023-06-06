@@ -28,7 +28,7 @@ public class Bullet_Basic : MonoBehaviour
         {
             Debug.Log("IMPACTO");
             other.GetComponent<BasicEnemy>().TakeDamage(damage);
-           DeactivateGameObj();
+             DeactivateGameObj();
             
             // Aina: Sistema Logros
             Sistema_Logros.instance.AddDamage_Achievement(damage);
@@ -43,6 +43,10 @@ public class Bullet_Basic : MonoBehaviour
             Sistema_Logros.instance.AddDamage_Achievement(damage);
             // Aina: Json Local
             PlayerController.instance.player_data_localRequest.damageDone += damage;
+        }
+        else if (other.CompareTag("Level"))
+        {
+            DeactivateGameObj();
         }
     }
     
