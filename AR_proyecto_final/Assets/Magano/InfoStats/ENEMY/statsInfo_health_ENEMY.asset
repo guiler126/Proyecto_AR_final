@@ -33,7 +33,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   background: {fileID: 0}
   maxLvl: 0
-  current_lvl: 1
+  current_lvl: 0
   options_list_lvl:
   - 100
   - 125

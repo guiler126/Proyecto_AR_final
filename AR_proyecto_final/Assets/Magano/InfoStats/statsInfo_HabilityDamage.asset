@@ -35,7 +35,7 @@ MonoBehaviour:
   maxLvl: 0
   current_lvl: 0
   options_list_lvl:
-  - 95
+  - 101
   - 120
   - 180
   - 240
