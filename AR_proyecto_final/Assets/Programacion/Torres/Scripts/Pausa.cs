@@ -28,14 +28,15 @@ public class Pausa : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            BotonPausa();
+            if (panelPausa.activeInHierarchy) 
+            {
+                BotonPlay();
+            }
+            else
+            {
+                BotonPausa();
+            }
         }
-
-        if(Input.GetKeyDown(KeyCode.Tab))
-        {
-            BotonPlay();
-        }
-
     }
 
 
