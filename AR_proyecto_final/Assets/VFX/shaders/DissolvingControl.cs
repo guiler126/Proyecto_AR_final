@@ -15,7 +15,7 @@ public class DissolvingControl : MonoBehaviour
 
     private Material defaultMaterial;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (skinnedMesh != null)
             skinnedMaterials = skinnedMesh.materials;
@@ -46,7 +46,7 @@ public class DissolvingControl : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void OnEnable()
     {
         skinnedMaterials[0].SetFloat("_DissolveAmount", 0f);
     }
