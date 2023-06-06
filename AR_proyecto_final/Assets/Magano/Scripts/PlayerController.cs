@@ -173,8 +173,8 @@ public class PlayerController : MonoBehaviour
                 if (imAttacking) return;
                     
                 atackkRight = !atackkRight;
-            
-                
+                StartCoroutine(AttackBoolFalse(1.5f));
+
                 if (atackkRight)
                 {
                     _animator.SetBool("BasicShootLeft", false);
@@ -279,6 +279,7 @@ public class PlayerController : MonoBehaviour
                     speed = SecondaryAttackSpeed;
                     canUseSecundaryAttack = false;
                     StartCoroutine(ReloadSecondaryAttack());
+                    StartCoroutine(AttackBoolFalse(2.4f));
                 }
                 else
                 {
@@ -361,6 +362,12 @@ public class PlayerController : MonoBehaviour
             isDie = false;
             LookAtMouse.instance.enabled = true;
         }
+    }
+    
+    IEnumerator AttackBoolFalse(float time)
+    {
+        yield return new WaitForSeconds(time);
+        FinishAtttack();
     }
 
     public void FinishAtttack()

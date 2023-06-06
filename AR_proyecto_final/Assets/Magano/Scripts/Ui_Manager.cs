@@ -10,6 +10,7 @@ public class Ui_Manager : MonoBehaviour
     [SerializeField] private GameObject win_Panel;
     [SerializeField] private GameObject lose_Panel;
     [SerializeField] private TMP_Text pointStats_txt;
+    [SerializeField] private TMP_Text round_txt;
     public Slider slider_health;
 
     public PoolingItemsEnum enemy;
@@ -63,6 +64,7 @@ public class Ui_Manager : MonoBehaviour
         ++GetRandomValue(_statsInfoEnemy).current_lvl;
         Upgrade_Manager_Enemy.instace.RefreshAllStats();
         GameManager.instance.DefeatedEnemies = 0;
+        round_txt.text = $"{Sistema_Oleadas.Instance.waveNumber + 1}";
     }
     
     public void RestartRound()
@@ -78,6 +80,7 @@ public class Ui_Manager : MonoBehaviour
         slider_health.value = PlayerController.instance.health;
         LookAtMouse.instance.enabled = true;
         GameManager.instance.DefeatedEnemies = 0;
+        round_txt.text = $"{Sistema_Oleadas.Instance.waveNumber + 1}";
     }
     
     public void Refresh_Mejora_List()
