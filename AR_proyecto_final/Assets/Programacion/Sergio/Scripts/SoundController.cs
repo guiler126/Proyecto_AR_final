@@ -28,30 +28,28 @@ public class SoundController : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // Actualizar el volumen de la categoría SonidoMaster
-        foreach (AudioSource source in masterSoundSources)
-        {
-            source.volume = masterVolume;
-        }
-
-        // Actualizar el volumen de la categoría SonidoVFX
-        foreach (AudioSource source in sfxSoundSources)
-        {
-            source.volume = sfxVolume;
-        }
-    }
 
     public void SetMasterVolume(float volume)
     {
         // Actualizar el volumen de la categoría SonidoMaster
         masterVolume = volume;
+
+        // Actualizar el volumen de la categoría SonidoMaster
+        foreach (AudioSource source in masterSoundSources)
+        {
+            source.volume = masterVolume;
+        }
     }
 
     public void SetSFXVolume(float volume)
     {
         // Actualizar el volumen de la categoría SonidoVFX
         sfxVolume = volume;
+
+        // Actualizar el volumen de la categoría SonidoVFX
+        foreach (AudioSource source in sfxSoundSources)
+        {
+            source.volume = sfxVolume;
+        }
     }
 }
