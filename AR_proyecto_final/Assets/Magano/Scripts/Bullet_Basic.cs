@@ -28,6 +28,7 @@ public class Bullet_Basic : MonoBehaviour
         {
             Debug.Log("IMPACTO");
             other.GetComponent<BasicEnemy>().TakeDamage(damage);
+           DeactivateGameObj();
             
             // Aina: Sistema Logros
             Sistema_Logros.instance.AddDamage_Achievement(damage);
