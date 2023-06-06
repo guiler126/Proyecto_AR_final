@@ -10,56 +10,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: New Table 1_de
+  m_Name: definitiva_en
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: de
+    m_Code: en
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 431945195520
-    m_Localized: Verbesserung
+    m_Localized: Upgrade
     m_Metadata:
       m_Items: []
   - m_Id: 443945099264
-    m_Localized: Geschwindigkeit
+    m_Localized: Speed
     m_Metadata:
       m_Items: []
   - m_Id: 449011818496
-    m_Localized: Ausweichen
+    m_Localized: Dodge
     m_Metadata:
       m_Items: []
   - m_Id: 453038350336
-    m_Localized: Mana
+    m_Localized: 'Mana '
     m_Metadata:
       m_Items: []
   - m_Id: 456830001152
-    m_Localized: "Schaden F\xE4higkeiten 1"
+    m_Localized: Damage Skill 1
     m_Metadata:
       m_Items: []
   - m_Id: 460680372224
-    m_Localized: "Schaden F\xE4higkeiten 2"
+    m_Localized: Damage Skill 2
     m_Metadata:
       m_Items: []
   - m_Id: 465134723072
-    m_Localized: Manaregeneration
+    m_Localized: Mana regeneration
     m_Metadata:
       m_Items: []
   - m_Id: 471241629696
-    m_Localized: Gesundheit
+    m_Localized: Health
     m_Metadata:
       m_Items: []
   - m_Id: 493416914944
-    m_Localized: Abklingzeitverringerung
+    m_Localized: Cooldown reduction
     m_Metadata:
       m_Items: []
   - m_Id: 2645875007488
-    m_Localized: Mausempfindlichkeit
+    m_Localized: Mouse sensitivity
     m_Metadata:
       m_Items: []
   - m_Id: 2644516052992
-    m_Localized: Beenden
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   - m_Id: 2643794632704
@@ -67,71 +67,75 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2643144515584
-    m_Localized: "Hauptmen\xFC"
+    m_Localized: Main menu
     m_Metadata:
       m_Items: []
   - m_Id: 2642431483904
-    m_Localized: "Zur\xFCck"
+    m_Localized: Back
     m_Metadata:
       m_Items: []
   - m_Id: 2641626177536
-    m_Localized: "Master-Lautst\xE4rke"
+    m_Localized: Master volume
     m_Metadata:
       m_Items: []
   - m_Id: 2640791511040
-    m_Localized: Optionen
+    m_Localized: Options
     m_Metadata:
       m_Items: []
   - m_Id: 2638933434368
-    m_Localized: Einstellungen
+    m_Localized: Settings
     m_Metadata:
       m_Items: []
   - m_Id: 2636152610816
-    m_Localized: Helligkeit
+    m_Localized: Brightness
     m_Metadata:
       m_Items: []
   - m_Id: 2629919875072
-    m_Localized: Spielen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 6742158123008
-    m_Localized: "Sekund\xE4rangriff"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 6741256347648
-    m_Localized: Hauptangriff
-    m_Metadata:
-      m_Items: []
-  - m_Id: 6737808629760
-    m_Localized: Bewegung
-    m_Metadata:
-      m_Items: []
-  - m_Id: 6735862472704
-    m_Localized: Programmierer
+    m_Localized: Play
     m_Metadata:
       m_Items: []
   - m_Id: 6733102620672
-    m_Localized: Erfolge
+    m_Localized: Achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6735862472704
+    m_Localized: Programmers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6737808629760
+    m_Localized: Movement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6741256347648
+    m_Localized: Primary attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6742158123008
+    m_Localized: Secondary attack
     m_Metadata:
       m_Items: []
   - m_Id: 9336905572352
-    m_Localized: Steuerung
+    m_Localized: Controls
     m_Metadata:
       m_Items: []
   - m_Id: 15721705807872
-    m_Localized: "Pause-Men\xFC"
+    m_Localized: Pause Menu
     m_Metadata:
       m_Items: []
   - m_Id: 1301889999216640
-    m_Localized: "Maximale Anzahl an Malen, die du die F\xE4higkeit verwenden kannst."
+    m_Localized: Maximum number of times you can use the ability.
     m_Metadata:
       m_Items: []
   - m_Id: 1301893086224384
-    m_Localized: "Mindestens ben\xF6tigte Menge an Mana."
+    m_Localized: Minimum amount of mana you must have.
     m_Metadata:
       m_Items: []
   - m_Id: 1301896370364416
-    m_Localized: Maximale Anzahl an Malen, die du den Dash verwenden kannst.
+    m_Localized: Maximum number of times you can use the dash.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4211542907199488
+    m_Localized: Achievements
     m_Metadata:
       m_Items: []
   references:

@@ -9,131 +9,140 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: New Table 1_en
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: definitiva Shared Data
   m_EditorClassIdentifier: 
-  m_LocaleId:
-    m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
-  m_Metadata:
-    m_Items: []
-  m_TableData:
+  m_TableCollectionName: definitiva
+  m_TableCollectionNameGuidString: 82081cb677f057d438f12487e7f9e733
+  m_Entries:
   - m_Id: 431945195520
-    m_Localized: Upgrade
+    m_Key: Mejora
     m_Metadata:
       m_Items: []
   - m_Id: 443945099264
-    m_Localized: Speed
+    m_Key: Velocitat
     m_Metadata:
       m_Items: []
   - m_Id: 449011818496
-    m_Localized: Dodge
+    m_Key: Esquivar
     m_Metadata:
       m_Items: []
   - m_Id: 453038350336
-    m_Localized: 'Mana '
+    m_Key: Mana
     m_Metadata:
       m_Items: []
   - m_Id: 456830001152
-    m_Localized: Damage Skill 1
+    m_Key: Mal Habilitat 1
     m_Metadata:
       m_Items: []
   - m_Id: 460680372224
-    m_Localized: Damage Skill 2
+    m_Key: Mal Habilitat 2
     m_Metadata:
       m_Items: []
   - m_Id: 465134723072
-    m_Localized: Mana regeneration
+    m_Key: "Regeneraci\xF3 de mana"
     m_Metadata:
       m_Items: []
   - m_Id: 471241629696
-    m_Localized: Health
+    m_Key: Vida
     m_Metadata:
       m_Items: []
   - m_Id: 493416914944
-    m_Localized: Cooldown reduction
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2645875007488
-    m_Localized: Mouse sensitivity
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2644516052992
-    m_Localized: Exit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2643794632704
-    m_Localized: Credits
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2643144515584
-    m_Localized: Main menu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2642431483904
-    m_Localized: Back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2641626177536
-    m_Localized: Master volume
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2640791511040
-    m_Localized: Options
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2638933434368
-    m_Localized: Settings
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2636152610816
-    m_Localized: Brightness
+    m_Key: "Reducci\xF3 de refredament"
     m_Metadata:
       m_Items: []
   - m_Id: 2629919875072
-    m_Localized: Play
+    m_Key: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2636152610816
+    m_Key: Lluminositat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2638933434368
+    m_Key: "Configuraci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2640791511040
+    m_Key: Opcions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641626177536
+    m_Key: Volum mestre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2642431483904
+    m_Key: Tornar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2643144515584
+    m_Key: "Men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2643794632704
+    m_Key: "Cr\xE8dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2644516052992
+    m_Key: ' Sortir'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2645875007488
+    m_Key: "Sensibilitat del ratol\xED"
     m_Metadata:
       m_Items: []
   - m_Id: 6733102620672
-    m_Localized: Achievements
+    m_Key: Assoliments
     m_Metadata:
       m_Items: []
   - m_Id: 6735862472704
-    m_Localized: Programmers
+    m_Key: Programadors
     m_Metadata:
       m_Items: []
   - m_Id: 6737808629760
-    m_Localized: Movement
+    m_Key: Moviment
     m_Metadata:
       m_Items: []
   - m_Id: 6741256347648
-    m_Localized: Primary attack
+    m_Key: Atac principal
     m_Metadata:
       m_Items: []
   - m_Id: 6742158123008
-    m_Localized: Secondary attack
+    m_Key: Atac secundari
     m_Metadata:
       m_Items: []
   - m_Id: 9336905572352
-    m_Localized: Controls
+    m_Key: Controls
     m_Metadata:
       m_Items: []
   - m_Id: 15721705807872
-    m_Localized: Pause Menu
+    m_Key: "men\xFA Pausa"
     m_Metadata:
       m_Items: []
   - m_Id: 1301889999216640
-    m_Localized: Maximum number of times you can use the ability.
+    m_Key: "M\xE0xim de vegades que pots utilitzar l'habilitat."
     m_Metadata:
       m_Items: []
   - m_Id: 1301893086224384
-    m_Localized: Minimum amount of mana you must have.
+    m_Key: "M\xEDnim de mana que has de tenir."
     m_Metadata:
       m_Items: []
   - m_Id: 1301896370364416
-    m_Localized: Maximum number of times you can use the dash.
+    m_Key: "M\xE0xim de vegades que pots utilitzar el dash."
     m_Metadata:
       m_Items: []
+  - m_Id: 4211542907199488
+    m_Key: assoliments
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7202759428058906624
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 7202759428058906624
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1685069187562
