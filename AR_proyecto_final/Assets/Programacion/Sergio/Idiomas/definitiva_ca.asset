@@ -9,136 +9,135 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: New Table 1 Shared Data
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: definitiva_ca
   m_EditorClassIdentifier: 
-  m_TableCollectionName: New Table 1
-  m_TableCollectionNameGuidString: 82081cb677f057d438f12487e7f9e733
-  m_Entries:
+  m_LocaleId:
+    m_Code: ca
+  m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
   - m_Id: 431945195520
-    m_Key: Mejora
+    m_Localized: Millora
     m_Metadata:
       m_Items: []
   - m_Id: 443945099264
-    m_Key: Velocitat
+    m_Localized: Velocitat
     m_Metadata:
       m_Items: []
   - m_Id: 449011818496
-    m_Key: Esquivar
+    m_Localized: Esquivar
     m_Metadata:
       m_Items: []
   - m_Id: 453038350336
-    m_Key: Mana
+    m_Localized: Mana
     m_Metadata:
       m_Items: []
   - m_Id: 456830001152
-    m_Key: Mal Habilitat 1
+    m_Localized: Mal Habilitat 1
     m_Metadata:
       m_Items: []
   - m_Id: 460680372224
-    m_Key: Mal Habilitat 2
+    m_Localized: Mal Habilitat 2
     m_Metadata:
       m_Items: []
   - m_Id: 465134723072
-    m_Key: "Regeneraci\xF3 de mana"
+    m_Localized: "Regeneraci\xF3 de mana"
     m_Metadata:
       m_Items: []
   - m_Id: 471241629696
-    m_Key: Vida
+    m_Localized: Vida
     m_Metadata:
       m_Items: []
   - m_Id: 493416914944
-    m_Key: "Reducci\xF3 de refredament"
+    m_Localized: "Reducci\xF3 de refredament"
     m_Metadata:
       m_Items: []
   - m_Id: 2629919875072
-    m_Key: Jugar
+    m_Localized: Jugar
     m_Metadata:
       m_Items: []
   - m_Id: 2636152610816
-    m_Key: Lluminositat
+    m_Localized: Lluminositat
     m_Metadata:
       m_Items: []
   - m_Id: 2638933434368
-    m_Key: "Configuraci\xF3"
+    m_Localized: "Configuraci\xF3"
     m_Metadata:
       m_Items: []
   - m_Id: 2640791511040
-    m_Key: Opcions
+    m_Localized: Opcions
     m_Metadata:
       m_Items: []
   - m_Id: 2641626177536
-    m_Key: Volum mestre
+    m_Localized: Volum mestre
     m_Metadata:
       m_Items: []
   - m_Id: 2642431483904
-    m_Key: Tornar
+    m_Localized: Tornar
     m_Metadata:
       m_Items: []
   - m_Id: 2643144515584
-    m_Key: "Men\xFA principal"
+    m_Localized: "Men\xFA principal"
     m_Metadata:
       m_Items: []
   - m_Id: 2643794632704
-    m_Key: "Cr\xE8dits"
+    m_Localized: "Cr\xE8dits"
     m_Metadata:
       m_Items: []
   - m_Id: 2644516052992
-    m_Key: ' Sortir'
+    m_Localized: ' Sortir'
     m_Metadata:
       m_Items: []
   - m_Id: 2645875007488
-    m_Key: "Sensibilitat del ratol\xED"
+    m_Localized: "Sensibilitat del ratol\xED"
     m_Metadata:
       m_Items: []
   - m_Id: 6733102620672
-    m_Key: Assoliments
+    m_Localized: Assoliments
     m_Metadata:
       m_Items: []
   - m_Id: 6735862472704
-    m_Key: Programadors
+    m_Localized: Programadors
     m_Metadata:
       m_Items: []
   - m_Id: 6737808629760
-    m_Key: Moviment
+    m_Localized: Moviment
     m_Metadata:
       m_Items: []
   - m_Id: 6741256347648
-    m_Key: Atac principal
+    m_Localized: Atac principal
     m_Metadata:
       m_Items: []
   - m_Id: 6742158123008
-    m_Key: Atac secundari
+    m_Localized: Atac secundari
     m_Metadata:
       m_Items: []
   - m_Id: 9336905572352
-    m_Key: Controls
+    m_Localized: Controls
     m_Metadata:
       m_Items: []
   - m_Id: 15721705807872
-    m_Key: "men\xFA Pausa"
+    m_Localized: "men\xFA Pausa"
     m_Metadata:
       m_Items: []
   - m_Id: 1301889999216640
-    m_Key: "M\xE0xim de vegades que pots utilitzar l'habilitat."
+    m_Localized: "M\xE0xim de vegades que pots utilitzar l'habilitat."
     m_Metadata:
       m_Items: []
   - m_Id: 1301893086224384
-    m_Key: "M\xEDnim de mana que has de tenir."
+    m_Localized: "M\xEDnim de mana que has de tenir."
     m_Metadata:
       m_Items: []
   - m_Id: 1301896370364416
-    m_Key: "M\xE0xim de vegades que pots utilitzar el dash."
+    m_Localized: "M\xE0xim de vegades que pots utilitzar el dash."
     m_Metadata:
       m_Items: []
-  m_Metadata:
-    m_Items: []
-  m_KeyGenerator:
-    rid: 7202759428058906624
+  - m_Id: 4211542907199488
+    m_Localized: Assoliments
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds:
-    - rid: 7202759428058906624
-      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
-      data:
-        m_CustomEpoch: 1685069187562
+    RefIds: []

@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: New Table 1_ca
+  m_Name: definitiva_de
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: ca
+    m_Code: de
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 431945195520
-    m_Localized: Millora
+    m_Localized: Verbesserung
     m_Metadata:
       m_Items: []
   - m_Id: 443945099264
-    m_Localized: Velocitat
+    m_Localized: Geschwindigkeit
     m_Metadata:
       m_Items: []
   - m_Id: 449011818496
-    m_Localized: Esquivar
+    m_Localized: Ausweichen
     m_Metadata:
       m_Items: []
   - m_Id: 453038350336
@@ -35,103 +35,107 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 456830001152
-    m_Localized: Mal Habilitat 1
+    m_Localized: "Schaden F\xE4higkeiten 1"
     m_Metadata:
       m_Items: []
   - m_Id: 460680372224
-    m_Localized: Mal Habilitat 2
+    m_Localized: "Schaden F\xE4higkeiten 2"
     m_Metadata:
       m_Items: []
   - m_Id: 465134723072
-    m_Localized: "Regeneraci\xF3 de mana"
+    m_Localized: Manaregeneration
     m_Metadata:
       m_Items: []
   - m_Id: 471241629696
-    m_Localized: Vida
+    m_Localized: Gesundheit
     m_Metadata:
       m_Items: []
   - m_Id: 493416914944
-    m_Localized: "Reducci\xF3 de refredament"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2629919875072
-    m_Localized: Jugar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2636152610816
-    m_Localized: Lluminositat
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2638933434368
-    m_Localized: "Configuraci\xF3"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2640791511040
-    m_Localized: Opcions
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2641626177536
-    m_Localized: Volum mestre
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2642431483904
-    m_Localized: Tornar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2643144515584
-    m_Localized: "Men\xFA principal"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2643794632704
-    m_Localized: "Cr\xE8dits"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2644516052992
-    m_Localized: ' Sortir'
+    m_Localized: Abklingzeitverringerung
     m_Metadata:
       m_Items: []
   - m_Id: 2645875007488
-    m_Localized: "Sensibilitat del ratol\xED"
+    m_Localized: Mausempfindlichkeit
     m_Metadata:
       m_Items: []
-  - m_Id: 6733102620672
-    m_Localized: Assoliments
+  - m_Id: 2644516052992
+    m_Localized: Beenden
     m_Metadata:
       m_Items: []
-  - m_Id: 6735862472704
-    m_Localized: Programadors
+  - m_Id: 2643794632704
+    m_Localized: Credits
     m_Metadata:
       m_Items: []
-  - m_Id: 6737808629760
-    m_Localized: Moviment
+  - m_Id: 2643144515584
+    m_Localized: "Hauptmen\xFC"
     m_Metadata:
       m_Items: []
-  - m_Id: 6741256347648
-    m_Localized: Atac principal
+  - m_Id: 2642431483904
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2641626177536
+    m_Localized: "Master-Lautst\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2640791511040
+    m_Localized: Optionen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2638933434368
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2636152610816
+    m_Localized: Helligkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2629919875072
+    m_Localized: Spielen
     m_Metadata:
       m_Items: []
   - m_Id: 6742158123008
-    m_Localized: Atac secundari
+    m_Localized: "Sekund\xE4rangriff"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6741256347648
+    m_Localized: Hauptangriff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6737808629760
+    m_Localized: Bewegung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6735862472704
+    m_Localized: Programmierer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6733102620672
+    m_Localized: Erfolge
     m_Metadata:
       m_Items: []
   - m_Id: 9336905572352
-    m_Localized: Controls
+    m_Localized: Steuerung
     m_Metadata:
       m_Items: []
   - m_Id: 15721705807872
-    m_Localized: "men\xFA Pausa"
+    m_Localized: "Pause-Men\xFC"
     m_Metadata:
       m_Items: []
   - m_Id: 1301889999216640
-    m_Localized: "M\xE0xim de vegades que pots utilitzar l'habilitat."
+    m_Localized: "Maximale Anzahl an Malen, die du die F\xE4higkeit verwenden kannst."
     m_Metadata:
       m_Items: []
   - m_Id: 1301893086224384
-    m_Localized: "M\xEDnim de mana que has de tenir."
+    m_Localized: "Mindestens ben\xF6tigte Menge an Mana."
     m_Metadata:
       m_Items: []
   - m_Id: 1301896370364416
-    m_Localized: "M\xE0xim de vegades que pots utilitzar el dash."
+    m_Localized: Maximale Anzahl an Malen, die du den Dash verwenden kannst.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4211542907199488
+    m_Localized: Erfolge
     m_Metadata:
       m_Items: []
   references:
