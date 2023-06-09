@@ -135,6 +135,94 @@ MonoBehaviour:
     m_Key: assoliments
     m_Metadata:
       m_Items: []
+  - m_Id: 5228583292989440
+    m_Key: Fixed Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229076564111360
+    m_Key: Hability 1 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229578710380544
+    m_Key: Hability 2 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229751842861056
+    m_Key: Dash Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230037969891328
+    m_Key: Mana Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230937258029056
+    m_Key: Number of enemies you have to eliminate in seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5236892209213440
+    m_Key: Mejora Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238215545679872
+    m_Key: Sped def
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238885074038784
+    m_Key: Bullet Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5239766838374400
+    m_Key: Dmage def
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240055268077568
+    m_Key: Dash speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240918925602816
+    m_Key: Hability Cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241457528762368
+    m_Key: Reduce el cooldawn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242044307697664
+    m_Key: Ability Damage Secundari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242538577063936
+    m_Key: Damage seecundari DEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242861966290944
+    m_Key: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5243861460545536
+    m_Key: Incrementa vida DEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244248414449664
+    m_Key: Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244981431988224
+    m_Key: Mana DEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5245656949813248
+    m_Key: Mana Regeneracio Miillora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5246056184639488
+    m_Key: Mejora Regeneracion Mana DEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248053990354944
+    m_Key: Mejora la velocidad del dash
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

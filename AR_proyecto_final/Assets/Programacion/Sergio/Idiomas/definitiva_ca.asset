@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: ca
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3047964099492446224
   m_TableData:
   - m_Id: 431945195520
     m_Localized: Millora
@@ -138,6 +139,99 @@ MonoBehaviour:
     m_Localized: Assoliments
     m_Metadata:
       m_Items: []
+  - m_Id: 5228583292989440
+    m_Localized: "Missi\xF3 fixa {name} {surename} {age}"
+    m_Metadata:
+      m_Items:
+      - rid: 3047964099492446224
+  - m_Id: 5229076564111360
+    m_Localized: "Habilitat 1 Missi\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229578710380544
+    m_Localized: "Habilitat 2 Missi\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229751842861056
+    m_Localized: "Missi\xF3 Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230037969891328
+    m_Localized: "Missi\xF3 Mana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230937258029056
+    m_Localized: Nombre d'enemics que has d'eliminar en segons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5236892209213440
+    m_Localized: Millora Velocitat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238215545679872
+    m_Localized: Incrementa la velocitat del jugador.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238885074038784
+    m_Localized: Millora Dany d'Atac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5239766838374400
+    m_Localized: Incrementa el mal de l'atac principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240055268077568
+    m_Localized: Millora Velocitat Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240918925602816
+    m_Localized: "Refrigeraci\xF3 de l'habilitat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241457528762368
+    m_Localized: Redueix el temps entre atacs secundaris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242044307697664
+    m_Localized: Millora Habilitat Dany Secundari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242538577063936
+    m_Localized: Incrementa el mal de l'atac secundari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242861966290944
+    m_Localized: Millorar la Vida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5243861460545536
+    m_Localized: Incrementa la vida total del jugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244248414449664
+    m_Localized: Millora de Mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244981431988224
+    m_Localized: Millora la quantitat total disponible de raja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5245656949813248
+    m_Localized: Mana Regeneracio Millora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5246056184639488
+    m_Localized: "Redueix el temps de regeneraci\xF3 del raja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248053990354944
+    m_Localized: Millora la velocitat del dash
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3047964099492446224
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0070db695e931200

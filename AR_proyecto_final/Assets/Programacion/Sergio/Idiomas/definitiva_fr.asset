@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: fr
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3047964099492446226
   m_TableData:
   - m_Id: 431945195520
     m_Localized: "Am\xE9liorer"
@@ -138,6 +139,99 @@ MonoBehaviour:
     m_Localized: "R\xE9alisations"
     m_Metadata:
       m_Items: []
+  - m_Id: 5228583292989440
+    m_Localized: Mission Fixe {name} {surename} {age}
+    m_Metadata:
+      m_Items:
+      - rid: 3047964099492446226
+  - m_Id: 5229076564111360
+    m_Localized: Attaque 1 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229578710380544
+    m_Localized: Attaque 2 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229751842861056
+    m_Localized: Mission Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230037969891328
+    m_Localized: Mission Mane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230937258029056
+    m_Localized: "Nombre d'ennemis \xE0 \xE9liminer en quelques secondes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5236892209213440
+    m_Localized: "Am\xE9liorer la vitesse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238215545679872
+    m_Localized: Augmente la vitesse du joueur.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238885074038784
+    m_Localized: "Am\xE9liorer D\xE9g\xE2ts d'Attaque"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5239766838374400
+    m_Localized: "Augmente les d\xE9g\xE2ts de l'attaque principale"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240055268077568
+    m_Localized: "Am\xE9liorer la vitesse Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240918925602816
+    m_Localized: "Temps de recharge des capacit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241457528762368
+    m_Localized: "R\xE9duit le temps entre les attaques secondaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242044307697664
+    m_Localized: "Am\xE9liorer D\xE9g\xE2ts de capacit\xE9 secondaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242538577063936
+    m_Localized: "Augmente les d\xE9g\xE2ts des attaques secondaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242861966290944
+    m_Localized: "Am\xE9liorer la Vie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5243861460545536
+    m_Localized: "Augmente la sant\xE9 totale du joueur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244248414449664
+    m_Localized: Augmente Mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244981431988224
+    m_Localized: "Am\xE9liore la quantit\xE9 totale de mana disponible"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5245656949813248
+    m_Localized: "Am\xE9lioration de la r\xE9g\xE9n\xE9ration du mana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5246056184639488
+    m_Localized: "R\xE9duit le temps de r\xE9g\xE9n\xE9ration du mana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248053990354944
+    m_Localized: "Am\xE9liorer la vitesse du tiret"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3047964099492446226
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0070db695e931200

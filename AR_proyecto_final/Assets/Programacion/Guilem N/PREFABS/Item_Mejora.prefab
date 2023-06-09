@@ -69,8 +69,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TITLE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 777b3353c6546f54da1036cc35afd81c, type: 2}
-  m_sharedMaterial: {fileID: -296048170756157317, guid: 777b3353c6546f54da1036cc35afd81c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10d494fc042381345a0ccde6a4d4e8c7, type: 2}
+  m_sharedMaterial: {fileID: -296048170756157317, guid: 10d494fc042381345a0ccde6a4d4e8c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -319,10 +319,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Description
+  m_text: MANA ES
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 777b3353c6546f54da1036cc35afd81c, type: 2}
-  m_sharedMaterial: {fileID: -296048170756157317, guid: 777b3353c6546f54da1036cc35afd81c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10d494fc042381345a0ccde6a4d4e8c7, type: 2}
+  m_sharedMaterial: {fileID: -296048170756157317, guid: 10d494fc042381345a0ccde6a4d4e8c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 5518795069682432644}
   - component: {fileID: 5518795069682432642}
   - component: {fileID: 5518795069682432643}
-  - component: {fileID: 5518795069682432641}
+  - component: {fileID: 1373698808002453014}
   m_Layer: 5
   m_Name: stars_panel
   m_TagString: Untagged
@@ -464,8 +464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 311.57, y: 40.9869}
+  m_AnchoredPosition: {x: 0, y: 3}
+  m_SizeDelta: {x: 311.57, y: 38.2056}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5518795069682432642
 CanvasRenderer:
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5518795069682432641
+--- !u!114 &1373698808002453014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -514,7 +514,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5518795069682432645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -523,14 +523,12 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 10
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 50, y: 20}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &5518795070351650445
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +690,8 @@ MonoBehaviour:
   content: {fileID: 5518795069682432645}
   star: {fileID: 2989014966009952239, guid: a9869cf93cf65ac438d4fbd514bc99c3, type: 3}
   _statsInfo: {fileID: 0}
+  _localizeStringEventTitle: {fileID: 5821875408078769010}
+  _localizeStringEventDescription: {fileID: 5518795069652283740}
   references:
     version: 2
     RefIds: []

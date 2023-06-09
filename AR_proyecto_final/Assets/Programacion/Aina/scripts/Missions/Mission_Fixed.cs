@@ -3,9 +3,18 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 public class Mission_Fixed : MonoBehaviour
 {
+    public LocalizeStringEvent localizedStringEvent;
+    public LocalizedString _LocalizedString;
+
+    public IntVariable playerScore = null;
+    public StringVariable nameNew = null;
+
     public static Mission_Fixed instance;
     
     [SerializeField, Tooltip("Checker of mission has been completed")]
@@ -59,10 +68,60 @@ public class Mission_Fixed : MonoBehaviour
         enemiesToEliminate = currentMission.EnemiesToEliminate;
         maxTime = currentMission.MaxTime;
         uiItem.SetActive(true);
-        descriptionTxt.text = $"Eliminate {enemiesToEliminate} enemies in {maxTime}";
+
         Activate_CheckerMision();
     }
     
+    void OnStringChanged(string s)
+    {
+        Debug.Log($"String changed to `{s}`");
+    }
+
+
+    [ContextMenu("test")]
+    public void TEST()
+    {
+
+        // Keep track of the original so we dont change localizedString by mistake
+        _LocalizedString = localizedStringEvent.StringReference;
+
+        if (!_LocalizedString.TryGetValue("age", out var variable))
+        {
+            playerScore = new IntVariable();
+            _LocalizedString.Add("age", playerScore);
+        }
+        else
+        {
+            playerScore = variable as IntVariable;
+        }
+        
+        if (!_LocalizedString.TryGetValue("name", out var variable2))
+        {
+            nameNew = new StringVariable();
+            _LocalizedString.Add("name", nameNew);
+        }
+        else
+        {
+            nameNew = variable2 as StringVariable;
+        }
+        
+        // We can add a listener if we are interested in the Localized String.
+        localizedStringEvent.OnUpdateString.AddListener(OnStringChanged);
+    }
+    
+    [ContextMenu("test")]
+    public void TEST2()
+    {
+        playerScore.Value = 2;
+        nameNew.Value = "carlos";
+    }
+    
+    public void TEST3()
+    {
+        playerScore.Value = 3;
+        nameNew.Value = "ruben";
+    }
+
     private void Activate_CheckerMision()
     {
         currentCoroutine = Coroutine_Check_MISSION();

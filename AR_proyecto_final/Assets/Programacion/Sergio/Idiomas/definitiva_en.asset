@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3047964099492446225
   m_TableData:
   - m_Id: 431945195520
     m_Localized: Upgrade
@@ -138,6 +139,99 @@ MonoBehaviour:
     m_Localized: Achievements
     m_Metadata:
       m_Items: []
+  - m_Id: 5228583292989440
+    m_Localized: Fixed Mission {name} {surename} {age}
+    m_Metadata:
+      m_Items:
+      - rid: 3047964099492446225
+  - m_Id: 5229076564111360
+    m_Localized: Ability 1 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229578710380544
+    m_Localized: Ability 2 Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229751842861056
+    m_Localized: Dash Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230037969891328
+    m_Localized: Mana Mission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230937258029056
+    m_Localized: Number of enemies you have to eliminate in seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5236892209213440
+    m_Localized: Improve Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238215545679872
+    m_Localized: Increases player speed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238885074038784
+    m_Localized: Improve Attack Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5239766838374400
+    m_Localized: Increases main attack damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240055268077568
+    m_Localized: Improve Speed Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240918925602816
+    m_Localized: Ability Cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241457528762368
+    m_Localized: Reduces the time between secondary attacks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242044307697664
+    m_Localized: Improve Ability Damage Secundari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242538577063936
+    m_Localized: Incrementa el mal de l'atac secundari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242861966290944
+    m_Localized: Improve Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5243861460545536
+    m_Localized: Increases the player's total health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244248414449664
+    m_Localized: Improve Mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244981431988224
+    m_Localized: Improves the total amount of mana available
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5245656949813248
+    m_Localized: Mana Regeneration Enhance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5246056184639488
+    m_Localized: Reduces mana regeneration time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248053990354944
+    m_Localized: Improve dash speed
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3047964099492446225
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0070db695e931200

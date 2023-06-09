@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 82081cb677f057d438f12487e7f9e733, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3047964099492446223
   m_TableData:
   - m_Id: 431945195520
     m_Localized: Mejora
@@ -138,6 +139,99 @@ MonoBehaviour:
     m_Localized: Logros
     m_Metadata:
       m_Items: []
+  - m_Id: 5228583292989440
+    m_Localized: "Missi\xF3n Fija  {name} {surename} {age}"
+    m_Metadata:
+      m_Items:
+      - rid: 3047964099492446223
+  - m_Id: 5229076564111360
+    m_Localized: "Habilidad 1 Misi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229578710380544
+    m_Localized: "Habilidad 2 Misi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5229751842861056
+    m_Localized: "Misi\xF3n Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230037969891328
+    m_Localized: "Missi\xF3n Mana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5230937258029056
+    m_Localized: 'Elimina '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5236892209213440
+    m_Localized: Mejora Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238215545679872
+    m_Localized: Incrementa la velocidad del jugador.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5238885074038784
+    m_Localized: "Mejora Da\xF1o de Ataque"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5239766838374400
+    m_Localized: "Incrementa el da\xF1o del ataque principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240055268077568
+    m_Localized: Mejora Velocidad Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5240918925602816
+    m_Localized: Enfriamiento de habilidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5241457528762368
+    m_Localized: Reduce el tiempo entre ataques secundarios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242044307697664
+    m_Localized: "Mejora Da\xF1o de Habilidad Secundario"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242538577063936
+    m_Localized: "Incrementa el da\xF1o del ataque secundario"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5242861966290944
+    m_Localized: Mejorar la Vida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5243861460545536
+    m_Localized: Incrementa la vida total del jugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244248414449664
+    m_Localized: Mejora de Mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5244981431988224
+    m_Localized: Mejora la cantidad total disponible de mana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5245656949813248
+    m_Localized: Mana Regeneracion Mejora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5246056184639488
+    m_Localized: "Reduce el tiempo de regeneraci\xF3n del mana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5248053990354944
+    m_Localized: Mejora la velocidad del dash
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3047964099492446223
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0070db695e931200
