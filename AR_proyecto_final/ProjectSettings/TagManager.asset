@@ -10,6 +10,8 @@ TagManager:
   - Proyectil
   - Boss
   - Level
+  - SonidoMaster
+  - SonidoVFX
   layers:
   - Default
   - TransparentFX
