@@ -3184,7 +3184,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1122995676}
   m_HandleRect: {fileID: 0}
@@ -24491,7 +24491,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1585244186}
   m_HandleRect: {fileID: 0}
@@ -31125,13 +31125,14 @@ GameObject:
   - component: {fileID: 1917596764}
   - component: {fileID: 1917596763}
   - component: {fileID: 1917596762}
+  - component: {fileID: 1917596768}
   m_Layer: 0
   m_Name: Rigged_Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &1917596762
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -31142,7 +31143,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.2
-  m_Speed: 3.5
+  m_Speed: 2.2
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -31175,7 +31176,7 @@ MonoBehaviour:
   max_stamina: 100
   Boss_is_Loaded: 0
   Boss_is_OnFase: 0
-  stamina_Slider: {fileID: 0}
+  stamina_Slider: {fileID: 1012488438}
   anim: {fileID: 1917596766}
   Stamina_Drain: 20
   Stamina_Drain_F2: 19
@@ -31202,8 +31203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81be242f6651c5446836e2c8580c490e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  MAX_HP: 100
+  HP: 1000
+  MAX_HP: 1000
   DamageAmount: 10
   Boss_Damage: 20
   percentage_fase_2: 61
@@ -31262,8 +31263,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917596761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 0, z: 2.4}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.12, y: 1.91, z: 2.4}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1594900058}
@@ -31272,6 +31273,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1917596768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917596761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1148162, y: 2.5849636, z: 1.0303893}
+  m_Center: {x: 0.082820736, y: 0.089754425, z: 0.045714658}
 --- !u!1 &1919489049
 GameObject:
   m_ObjectHideFlags: 0
