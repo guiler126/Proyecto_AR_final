@@ -8,11 +8,6 @@ public class VolverMenu : MonoBehaviour
     public void CambiarEscena()
     {
         SceneManager.LoadScene("Main_Menu_Sergio");
+        Time.timeScale = 1.0f;
     }
-
-
-
-
-
-   
 }

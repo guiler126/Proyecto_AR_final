@@ -5001,7 +5001,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1108353460}
-  - component: {fileID: 1108353459}
   - component: {fileID: 1108353458}
   m_Layer: 0
   m_Name: Brightness
@@ -5027,23 +5026,6 @@ MonoBehaviour:
   uiVolume: {fileID: 0}
   colorAdjustments: {fileID: 0}
   uiColorAdjustments: {fileID: 0}
---- !u!114 &1108353459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108353457}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 7727b58527849d34ebfcb7d870708751, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!4 &1108353460
 Transform:
   m_ObjectHideFlags: 0
