@@ -140,26 +140,34 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5228583292989440
-    m_Localized: Feste Mission  {name} {surename} {age}
+    m_Localized: Eliminiere <color=#34909F><b>{enemies}</b></color> Feinde in <color=#34909F><b>{time}</b></color>
+      Sekunden
     m_Metadata:
       m_Items:
       - rid: 3047964099492446227
   - m_Id: 5229076564111360
-    m_Localized: Hability 1 Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximale Nutzung von Fertigkeit
+      1
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446227
   - m_Id: 5229578710380544
-    m_Localized: Hability 2 Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximale Nutzung von Fertigkeit
+      2
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446227
   - m_Id: 5229751842861056
-    m_Localized: Dash Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximale Nutzung von dash
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446227
   - m_Id: 5230037969891328
-    m_Localized: Manna Mission
+    m_Localized: Behalten Sie ein Minimum von <color=#34909F><b>{mana}</b></color>
+      Mana bei
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446227
   - m_Id: 5230937258029056
     m_Localized: "Anzahl der Feinde, die Sie in Sekunden eliminieren m\xFCssen"
     m_Metadata:
@@ -234,4 +242,4 @@ MonoBehaviour:
     - rid: 3047964099492446227
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0070db695e931200
+        m_Entries: 0070db695e93120000701b43d19312000070db7c6e94120000705b2d4694120000705b1bb1941200

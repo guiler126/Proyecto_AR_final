@@ -2,17 +2,22 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 public class Mission_Mana: MonoBehaviour
 {
+    public LocalizeStringEvent localizedStringEvent;
+    public LocalizedString _LocalizedString;
+
+    public IntVariable mana = null;
+    
     public static Mission_Mana instance;
     
     [SerializeField, Tooltip("Bool to check if the mission is failed")]
     private bool isFailed;
-    
-    [SerializeField, Tooltip("Text to show at UI")]
-    private TMP_Text descriptionTxt;
+
     public GameObject uiItem;
 
     [SerializeField, Tooltip("Minimum mana you need to have")]
@@ -38,6 +43,30 @@ public class Mission_Mana: MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    private void Start()
+    {
+        // Keep track of the original so we dont change localizedString by mistake
+        _LocalizedString = localizedStringEvent.StringReference;
+
+        if (!_LocalizedString.TryGetValue("mana", out var variable))
+        {
+            mana = new IntVariable();
+            _LocalizedString.Add("mana", mana);
+        }
+        else
+        {
+            mana = variable as IntVariable;
+        }
+        
+        // We can add a listener if we are interested in the Localized String.
+        localizedStringEvent.OnUpdateString.AddListener(OnStringChanged);
+    }
+    
+    void OnStringChanged(string s)
+    {
+        Debug.Log($"String changed to `{s}`");
+    }
 
     public void RefreshManaMission(bool nextPhase)
     {
@@ -47,22 +76,28 @@ public class Mission_Mana: MonoBehaviour
         }
 
         isFailed = false;
+        uiItem.transform.GetChild(1).gameObject.SetActive(true);
         MissionMana_Data currentMission = manamissionList[indexList];
         minMana = currentMission.MinMana;
-        descriptionTxt.text = $"{minMana}";
+        Invoke("Parameters", 0.5f);
+    }
+    
+    public void Parameters()
+    {
+        mana.Value = minMana;
     }
 
     public void CheckFailedManaMission(float playerMana)
     {
         if (gameObject.activeInHierarchy)
         {
-            uiItem.transform.GetChild(2).gameObject.SetActive(true);
+            uiItem.transform.GetChild(1).gameObject.SetActive(true);
 
             if (minMana > playerMana)
             {
                 isFailed = true;
                 --Sistema_Missions.instance.MissionsCompleted;
-                uiItem.transform.GetChild(2).gameObject.SetActive(false);
+                uiItem.transform.GetChild(1).gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }
         }

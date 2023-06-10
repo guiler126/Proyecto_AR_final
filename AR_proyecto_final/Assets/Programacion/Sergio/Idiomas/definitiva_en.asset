@@ -140,26 +140,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5228583292989440
-    m_Localized: Fixed Mission {name} {surename} {age}
+    m_Localized: Eliminate <color=#34909F><b>{enemies}</b></color> enemies in <color=#34909F><b>{time}</b></color>
+      seconds
     m_Metadata:
       m_Items:
       - rid: 3047964099492446225
   - m_Id: 5229076564111360
-    m_Localized: Ability 1 Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximum uses of ability 1
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446225
   - m_Id: 5229578710380544
-    m_Localized: Ability 2 Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximum uses of ability 2
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446225
   - m_Id: 5229751842861056
-    m_Localized: Dash Mission
+    m_Localized: <color=#34909F><b>{uses}</b></color> maximum uses of the dash
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446225
   - m_Id: 5230037969891328
-    m_Localized: Mana Mission
+    m_Localized: Maintain a minimum of <color=#34909F><b>{mana}</b></color> mana
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446225
   - m_Id: 5230937258029056
     m_Localized: Number of enemies you have to eliminate in seconds
     m_Metadata:
@@ -234,4 +239,4 @@ MonoBehaviour:
     - rid: 3047964099492446225
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0070db695e931200
+        m_Entries: 0070db695e93120000701b43d193120000705b2d469412000070db7c6e94120000705b1bb1941200

@@ -140,26 +140,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5228583292989440
-    m_Localized: "Missi\xF3n Fija  {name} {surename} {age}"
+    m_Localized: Elimina <color=#34909F><b>{enemies}</b></color> enemigos en <color=#34909F><b>{time}</b></color>
+      segundos
     m_Metadata:
       m_Items:
       - rid: 3047964099492446223
   - m_Id: 5229076564111360
-    m_Localized: "Habilidad 1 Misi\xF3n"
+    m_Localized: "<color=#34909F><b>{uses}</b></color> usos m\xE1ximos de la habilidad
+      1"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446223
   - m_Id: 5229578710380544
-    m_Localized: "Habilidad 2 Misi\xF3n"
+    m_Localized: "<color=#34909F><b>{uses}</b></color> usos m\xE1ximos de la habilidad
+      2"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446223
   - m_Id: 5229751842861056
-    m_Localized: "Misi\xF3n Dash"
+    m_Localized: "<color=#34909F><b>{uses}</b></color> usos m\xE1ximos del dash"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446223
   - m_Id: 5230037969891328
-    m_Localized: "Missi\xF3n Mana"
+    m_Localized: "Mantener un m\xEDnimo de <color=#34909F><b>{mana}</b></color> manda"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3047964099492446223
   - m_Id: 5230937258029056
     m_Localized: 'Elimina '
     m_Metadata:
@@ -234,4 +241,4 @@ MonoBehaviour:
     - rid: 3047964099492446223
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 0070db695e931200
+        m_Entries: 0070db695e93120000701b43d193120000705b2d469412000070db7c6e94120000705b1bb1941200
