@@ -223,6 +223,26 @@ MonoBehaviour:
     m_Key: Mejora la velocidad del dash
     m_Metadata:
       m_Items: []
+  - m_Id: 5617496604246016
+    m_Key: Logro Habilidad 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617737239855104
+    m_Key: Logro Ability 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618838269820928
+    m_Key: Logro Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618983296270336
+    m_Key: Logro Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619406568652800
+    m_Key: Logro Time
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

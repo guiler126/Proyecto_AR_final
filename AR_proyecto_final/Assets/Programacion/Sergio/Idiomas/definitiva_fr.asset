@@ -236,6 +236,26 @@ MonoBehaviour:
     m_Localized: "Am\xE9liorer la vitesse du tiret"
     m_Metadata:
       m_Items: []
+  - m_Id: 5617496604246016
+    m_Localized: "Nombre de fois utilis\xE9 Attaque 1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617737239855104
+    m_Localized: "Nombre de fois utilis\xE9 Attaque 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618838269820928
+    m_Localized: "Nombre de fois utilis\xE9 Dash"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618983296270336
+    m_Localized: "Dommages caus\xE9s par le Joueur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619406568652800
+    m_Localized: "Gesamtzeit f\xFCr den Abschluss des Spiels"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

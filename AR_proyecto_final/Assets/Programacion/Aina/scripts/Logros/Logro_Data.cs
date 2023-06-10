@@ -9,8 +9,6 @@ public class Logro_Data : ScriptableObject
 {
     public LocalizedString title;
     
-    public LocalizedString description;
-
     public Sprite icon;
 
     [SerializeField, Tooltip("Variable of int on display, number achieved")]

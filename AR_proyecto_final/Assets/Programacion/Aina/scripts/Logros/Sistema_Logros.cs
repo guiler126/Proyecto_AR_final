@@ -95,7 +95,6 @@ public class Sistema_Logros : MonoBehaviour
             Item_logros_list _item_logros_list;
                 _item_logros_list = Instantiate(item_logros_list, content_logros_list.transform);
                 _item_logros_list.title = logro.title;
-                _item_logros_list.description = logro.description;
                 _item_logros_list.sprite.sprite = logro.icon;
                 _item_logros_list.textTotal_1.text = $"{logro.numberTotal_1}";
                 _item_logros_list.textTotal_2.text = $"{logro.numberTotal_2}";

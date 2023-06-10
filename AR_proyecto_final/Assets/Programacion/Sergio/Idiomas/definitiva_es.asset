@@ -235,6 +235,26 @@ MonoBehaviour:
     m_Localized: Mejora la velocidad del dash
     m_Metadata:
       m_Items: []
+  - m_Id: 5617496604246016
+    m_Localized: Veces Usado la Habilidad 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617737239855104
+    m_Localized: Veces Usado la Habilidad 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618838269820928
+    m_Localized: Veces Usado la Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618983296270336
+    m_Localized: "Da\xF1o causado por el Jugador"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619406568652800
+    m_Localized: Tiempo total en completar el juego
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

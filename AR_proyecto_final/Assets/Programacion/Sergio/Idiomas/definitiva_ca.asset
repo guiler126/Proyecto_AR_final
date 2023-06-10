@@ -235,6 +235,26 @@ MonoBehaviour:
     m_Localized: Millora la velocitat del dash
     m_Metadata:
       m_Items: []
+  - m_Id: 5617496604246016
+    m_Localized: Vegades Utilitzades del Habilitat 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617737239855104
+    m_Localized: Vegades Utilitzades del Habilitat 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618838269820928
+    m_Localized: Vegades Utilitzades del Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618983296270336
+    m_Localized: Danys causats pel Jugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619406568652800
+    m_Localized: Temps total en completar el joc
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

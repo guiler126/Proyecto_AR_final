@@ -233,6 +233,26 @@ MonoBehaviour:
     m_Localized: Improve dash speed
     m_Metadata:
       m_Items: []
+  - m_Id: 5617496604246016
+    m_Localized: Times Used Ability 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5617737239855104
+    m_Localized: Times Used Ability 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618838269820928
+    m_Localized: Times Used Dash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5618983296270336
+    m_Localized: Damage Caused by the Player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619406568652800
+    m_Localized: Total time in complete the game
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
