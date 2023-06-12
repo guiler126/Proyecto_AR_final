@@ -110,7 +110,7 @@ public class Boss_Controleler : MonoBehaviour
     {
         PlayerController.instance.TakeDamage(Boss_Damage);
 
-        if (Player_Main.instance.HP <= 0)
+        if (PlayerController.instance.health <= 0)
         {
             Debug.Log("Estoy muerto");
         }
