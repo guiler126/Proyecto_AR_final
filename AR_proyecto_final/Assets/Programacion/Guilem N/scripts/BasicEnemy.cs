@@ -22,6 +22,8 @@ public class BasicEnemy : MonoBehaviour
     public Material dissolve_material;
     public SkinnedMeshRenderer SkinnedMeshRenderer;
 
+    [SerializeField] private AudioClip enemyDeath;
+
     private void OnEnable()
     {
         health = (int)statsInfo_hEALTH_ENEMY.options_list_lvl[statsInfo_hEALTH_ENEMY.current_lvl];
@@ -63,6 +65,8 @@ public class BasicEnemy : MonoBehaviour
             particles_enemigo.transform.position = gameObject.transform.position;
             particles_enemigo.gameObject.SetActive(true);
         }
+        
+        AudioManager.instance.PlayEffectSound(enemyDeath);
     }
 
     public void Death()

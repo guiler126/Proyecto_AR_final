@@ -692,6 +692,7 @@ MonoBehaviour:
   _statsInfo: {fileID: 0}
   _localizeStringEventTitle: {fileID: 5821875408078769010}
   _localizeStringEventDescription: {fileID: 5518795069652283740}
+  btnSound: {fileID: 8300000, guid: fe3ef80071cfc6b43be7679883bda6bf, type: 3}
   references:
     version: 2
     RefIds: []

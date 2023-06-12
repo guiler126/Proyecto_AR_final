@@ -23,10 +23,13 @@ public class Item_Mejora : MonoBehaviour
 
     public LocalizeStringEvent _localizeStringEventTitle;
     public LocalizeStringEvent _localizeStringEventDescription;
+
+    [SerializeField] private AudioClip btnSound;
     
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(Mejora);
+        gameObject.GetComponent<Button>().onClick.AddListener(SoundEffect);
 
         if (_statsInfo != null)
         {
@@ -52,6 +55,11 @@ public class Item_Mejora : MonoBehaviour
             Upgrade_Manager_Player.instace.RefreshAllStats();
             gameObject.SetActive(false);
         }
+    }
+
+    private void SoundEffect()
+    {
+        AudioManager.instance.PlayEffectSound(btnSound);
     }
 }
 

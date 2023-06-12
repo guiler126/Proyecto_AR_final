@@ -79,6 +79,11 @@ public class PlayerController : MonoBehaviour
     [Header("---- Json Local ----")]
     public Player_Data player_data_localRequest;
 
+    [Space] [Header("---- Audio ----")] 
+    [SerializeField] private AudioClip playerAttack1;
+    [SerializeField] private AudioClip playerAttack2;
+    [SerializeField] private AudioClip playerDash;
+
     private void Awake()
     {
         instance = this;
@@ -206,6 +211,8 @@ public class PlayerController : MonoBehaviour
             Sistema_Logros.instance.AddADash_Achievement();
             // Aina: Json Local
             ++player_data_localRequest.dashUsedTimes;
+            
+            AudioManager.instance.PlayEffectSound(playerDash);
         }
     }
 
@@ -241,6 +248,8 @@ public class PlayerController : MonoBehaviour
         Sistema_Logros.instance.AddAttack1_Achievement();
         // Aina: Json Local
         ++player_data_localRequest.attack1UsedTimes;
+        
+        AudioManager.instance.PlayEffectSound(playerAttack1);
     }
     
     public void Spawn_Bullet_Left()
@@ -264,6 +273,8 @@ public class PlayerController : MonoBehaviour
         Sistema_Logros.instance.AddAttack1_Achievement();
         // Aina: Json Local
         ++player_data_localRequest.attack1UsedTimes;
+        
+        AudioManager.instance.PlayEffectSound(playerAttack1);
     }
     
     public void SecondAttack()
@@ -331,6 +342,8 @@ public class PlayerController : MonoBehaviour
         Sistema_Logros.instance.AddAttack2_Achievement();
         // Aina: Json Local
         ++player_data_localRequest.attack2UsedTimes;
+        
+        AudioManager.instance.PlayEffectSound(playerAttack2);
     }
 
     public void TakeDamage(float damage)

@@ -8,6 +8,8 @@ public class Arma : MonoBehaviour
     
     public StatsInfo statsInfo_DMG_ENEMY;
 
+    [SerializeField] private AudioClip enemyAttack;
+
     private void OnEnable()
     {
         damage_enemy = (int)statsInfo_DMG_ENEMY.options_list_lvl[statsInfo_DMG_ENEMY.current_lvl];
@@ -25,6 +27,8 @@ public class Arma : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerController.instance.TakeDamage(damage_enemy);
+            
+            AudioManager.instance.PlayEffectSound(enemyAttack);
             
             Debug.Log("Has muerto");
         }

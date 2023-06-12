@@ -1216,6 +1216,7 @@ MonoBehaviour:
   default_material: {fileID: 2100000, guid: 21f0d61056700fa499b0f28c10d57d8e, type: 2}
   dissolve_material: {fileID: 2100000, guid: 8a980f72d10a0f84b8274025deca8713, type: 2}
   SkinnedMeshRenderer: {fileID: 3401069865200471837}
+  enemyDeath: {fileID: 8300000, guid: 6ec1c970652e46042ad90e2b70c6f4d8, type: 3}
 --- !u!114 &6348745064089568403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,6 +1852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage_enemy: 5
   statsInfo_DMG_ENEMY: {fileID: 11400000, guid: dcf8565f0616bae4281e7f2577c5289a, type: 2}
+  enemyAttack: {fileID: 8300000, guid: 744708880732c004a84a347e64bc70e5, type: 3}
 --- !u!4 &8967812101748161799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40d3382fa5bff724b82a126cee742818, type: 3}

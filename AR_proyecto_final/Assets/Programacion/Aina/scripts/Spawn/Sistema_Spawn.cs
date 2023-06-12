@@ -30,7 +30,9 @@ public class Sistema_Spawn : MonoBehaviour
 
     private GameObject enemy;
     private GameObject portal;
-    
+
+    [SerializeField] private List<AudioClip> spawnSound;
+
     private void Awake()
     {
         if (Instance == null)
@@ -93,6 +95,8 @@ public class Sistema_Spawn : MonoBehaviour
             
             spawnTimer = Random.Range(current_wave.SpawnTimer_min, current_wave.SpawnTimer_max);
         }
+
+        SoundSpawn();
         
         Invoke("SpawnEnemy", timeSpawnEnemy);
 
@@ -100,6 +104,8 @@ public class Sistema_Spawn : MonoBehaviour
         {
             Boss_SPAWN.instance.Portal_Boss();
             spawnBoss = true;
+            SoundSpawn();
+            AudioManager.instance.ChangeBackgroundMusic(spawnSound[2]);
         }
 
         timer = 0f;
@@ -109,5 +115,12 @@ public class Sistema_Spawn : MonoBehaviour
     {
         portal.SetActive(false);
         enemy.GetComponent<NavMeshAgent>().enabled = true;
+    }
+
+    private void SoundSpawn()
+    {
+        var _index = Random.Range(0, 1);
+        
+        AudioManager.instance.PlayEffectSound(spawnSound[_index]);
     }
 }
