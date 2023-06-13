@@ -255,6 +255,14 @@ MonoBehaviour:
     m_Localized: Tiempo total en completar el juego
     m_Metadata:
       m_Items: []
+  - m_Id: 6593953765752832
+    m_Localized: 'Puntos de Mejora:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6595304314863616
+    m_Localized: 'Ronda:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

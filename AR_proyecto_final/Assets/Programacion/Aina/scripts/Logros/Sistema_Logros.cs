@@ -131,7 +131,7 @@ public class Sistema_Logros : MonoBehaviour
 
     private void TotalTime_Check_Achievement()
     {
-        ValuesLogro("Time", totalTime);
+        ValuesLogro("TotalTime", totalTime);
     }
 
     IEnumerator Coroutine_TotalTime()
@@ -154,7 +154,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddDamage_Achievement(int value)
     {
         damageCaused += value;
-        ValuesLogro("Damage", damageCaused);
+        ValuesLogro("DamageCaused", damageCaused);
     }
 
     #endregion
@@ -165,7 +165,7 @@ public class Sistema_Logros : MonoBehaviour
     {
         ++attack1UsedTimes;
 
-        ValuesLogro("Attack 1", attack1UsedTimes);
+        ValuesLogro("Attack1UsedTimes", attack1UsedTimes);
     }
 
     
@@ -176,7 +176,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddAttack2_Achievement()
     {
         ++attack2UsedTimes;
-        ValuesLogro("Attack 2", attack2UsedTimes);
+        ValuesLogro("Attack2UsedTimes", attack2UsedTimes);
     }
 
     #endregion
@@ -186,7 +186,7 @@ public class Sistema_Logros : MonoBehaviour
     public void AddADash_Achievement()
     {
         ++dashUsedTimes;
-        ValuesLogro("Dash", dashUsedTimes);
+        ValuesLogro("DashUsedTimes", dashUsedTimes);
     }
 
     #endregion

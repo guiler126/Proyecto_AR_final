@@ -15,6 +15,8 @@ public class Ui_Manager : MonoBehaviour
 
     public PoolingItemsEnum enemy;
 
+    public GameObject missionsPanel;
+
     [Header("----- Mejora List -----")]
     public List<StatsInfo> _statsInfoPlayer;
     public List<StatsInfo> _statsInfoEnemy;

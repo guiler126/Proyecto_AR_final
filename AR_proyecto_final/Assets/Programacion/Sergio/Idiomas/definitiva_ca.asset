@@ -255,6 +255,14 @@ MonoBehaviour:
     m_Localized: Temps total en completar el joc
     m_Metadata:
       m_Items: []
+  - m_Id: 6593953765752832
+    m_Localized: 'Punts de Millora:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6595304314863616
+    m_Localized: 'Ronda:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -100,12 +100,13 @@ public class Sistema_Spawn : MonoBehaviour
         
         Invoke("SpawnEnemy", timeSpawnEnemy);
 
-        if (Sistema_Oleadas.Instance.waveNumber == 15 && Sistema_Oleadas.Instance.totalEnemies >= 50 && !spawnBoss)
+        if (Sistema_Oleadas.Instance.waveNumber == Sistema_Oleadas.Instance.waveData_list.Count - 1 && Sistema_Oleadas.Instance.totalEnemies >= 40 && !spawnBoss)
         {
             Boss_SPAWN.instance.Portal_Boss();
             spawnBoss = true;
             SoundSpawn();
             AudioManager.instance.ChangeBackgroundMusic(spawnSound[2]);
+            Ui_Manager.instance.missionsPanel.SetActive(false);
         }
 
         timer = 0f;

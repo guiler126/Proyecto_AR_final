@@ -253,6 +253,14 @@ MonoBehaviour:
     m_Localized: Total time in complete the game
     m_Metadata:
       m_Items: []
+  - m_Id: 6593953765752832
+    m_Localized: 'Points to Upgrade:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6595304314863616
+    m_Localized: 'Wave:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
