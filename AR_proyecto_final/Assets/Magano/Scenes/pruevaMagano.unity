@@ -4536,7 +4536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -238.9, y: -47.4}
+  m_AnchoredPosition: {x: -238.9, y: -47.399994}
   m_SizeDelta: {x: 435, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &430978883
@@ -26330,6 +26330,7 @@ Transform:
   - {fileID: 267494526}
   - {fileID: 6230651}
   - {fileID: 1082702519}
+  - {fileID: 6621004667060149171}
   m_Father: {fileID: 974199280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29801,6 +29802,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7302255825560824146, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25.633759
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
 --- !u!224 &1559171472 stripped
@@ -32212,7 +32217,7 @@ MonoBehaviour:
   percentage_fase_3: 31
   player: {fileID: 543450653287209347}
   animator: {fileID: 1917596766}
-  sword: {fileID: 1082702518}
+  sword: {fileID: 5812273580630769929}
   boss_panel: {fileID: 1035550782}
   Health_bar: {fileID: 430978883}
   stamina_bar: {fileID: 2046957707}
@@ -49829,3 +49834,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb1519f63c234cf4fa4016e442200268, type: 3}
+--- !u!23 &5452069654519161052
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812273580630769929}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 720dcbd1c494cdf45868e882730870e7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5812273580630769929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6621004667060149171}
+  - component: {fileID: 7803985259390686230}
+  - component: {fileID: 5452069654519161052}
+  m_Layer: 0
+  m_Name: DA_Sword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6621004667060149171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812273580630769929}
+  m_LocalRotation: {x: 0.6694334, y: -0.683438, z: 0.18140069, w: -0.22773954}
+  m_LocalPosition: {x: -0.013, y: 0.101, z: 0.115}
+  m_LocalScale: {x: 0.6666667, y: 1.0288397, z: 0.66666687}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1084411830}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -3.265, y: 146.285, z: -87.824}
+--- !u!33 &7803985259390686230
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812273580630769929}
+  m_Mesh: {fileID: -3292925553009838691, guid: 07d43bb37ec1b794bac11402cf00557c, type: 3}

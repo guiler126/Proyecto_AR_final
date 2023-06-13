@@ -163,7 +163,6 @@ public class Stamina_Controller : MonoBehaviour
         Boss_AI.instance.navMeshAgent.SetDestination(Boss_AI.instance.player.position);
         Boss_AI.instance.navMeshAgent.isStopped = false;
         Boss_AI.instance.navMeshAgent.speed = 2;
-        Debug.Log("yeeeeee");
     }
 
     public void Acabar_Boss_F3()

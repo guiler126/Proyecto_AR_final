@@ -33,7 +33,7 @@ public class Proyectil_Loaded : MonoBehaviour
             other.GetComponent<PlayerController>().Bullet_Damage_Loaded();  
             gameObject.SetActive(false);    
         }
-        else if (other.CompareTag("Level"))
+        if (other.CompareTag("Level"))
         {
             Desactivate();
         }

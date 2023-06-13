@@ -10,7 +10,7 @@ public class Proyectil_1 : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Desactivate", 3f);
+        Invoke("Desactivate", 1.5f);
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
@@ -30,7 +30,7 @@ public class Proyectil_1 : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().Bullet_Damage();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (other.CompareTag("Level"))
         {
