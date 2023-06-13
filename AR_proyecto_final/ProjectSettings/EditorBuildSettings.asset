@@ -11,33 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Magano/Scenes/pruevaMagano.unity
     guid: 2bd7766efd89e9b4e97eb92437b5859e
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/MenuPrincipal.unity
-    guid: fac8a4d8a4161b043a2e579434a4ed8f
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/Opciones.unity
-    guid: e19206b988b569a40803e29f33eb18bc
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/Prueba_D.unity
-    guid: 4814a32531d906e48bca681cf0d5a8e7
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/IDIOMAS.unity
-    guid: 1d1f35fa6534aea4ba658ab4309a6a46
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/Brillo.unity
-    guid: 0caa0cecc6ba97b46a621580fb4aa4ab
-  - enabled: 1
-    path: Assets/Programacion/Torres/Scenes/Volumen.unity
-    guid: 09068754dafa97d4ba0df71b892757b5
-  - enabled: 1
-    path: Assets/Magano/Scenes/Win.unity
-    guid: 3b909b957144d9f40910483983a271f9
-  - enabled: 1
-    path: Assets/Magano/Scenes/Lose.unity
-    guid: ee52110f015415e4d89f57448675e55f
-  - enabled: 1
-    path: Assets/Programacion/Sergio/Scenes/Pause_Menu_Sergio.unity
-    guid: 9901fdfffe092e349b2c1a8057c9e0ab
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: eea40e3514ad5ad4491d8b8a6f5b01f5, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: e83b346aa123f684194d80fae16f7d02, type: 2}
