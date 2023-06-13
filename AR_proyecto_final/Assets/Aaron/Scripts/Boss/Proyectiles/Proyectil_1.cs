@@ -13,10 +13,14 @@ public class Proyectil_1 : MonoBehaviour
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
-    void Start()
+    private void OnEnable()
     {
-        // me destruyo a mi mismo cada 5 segundos 
-        Destroy(gameObject, 2.5f);
+        Invoke("Desactivate", 3f);
+    }
+
+    public void Desactivate()
+    {
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +35,10 @@ public class Proyectil_1 : MonoBehaviour
         {
             other.GetComponent<PlayerController>().Bullet_Damage();
             Destroy(gameObject);
+        }
+        else if (other.CompareTag("Level"))
+        {
+            Desactivate();
         }
     }
 }
