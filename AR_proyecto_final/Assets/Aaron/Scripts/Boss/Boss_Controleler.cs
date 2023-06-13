@@ -19,7 +19,7 @@ public class Boss_Controleler : MonoBehaviour
     public Transform player;
     public Animator animator;
     public GameObject sword;
-
+    public GameObject boss_panel;
 
     [Header("---Sliders/Bars---")]
     public Slider Health_bar;
@@ -41,6 +41,9 @@ public class Boss_Controleler : MonoBehaviour
         instance = this;
         fase = 1;
         HP = MAX_HP;
+
+        Health_bar.maxValue = MAX_HP;
+        Health_bar.value = HP;
     }
 
     private void Start()
@@ -82,6 +85,8 @@ public class Boss_Controleler : MonoBehaviour
             //FindObjectOfType<AudioManager>().PlaySound("DragonDeath");
             animator.SetTrigger("Die");
             //GetComponent<Collider>().enabled = false;
+            Destroy(boss_panel.gameObject);
+            Destroy(gameObject);
             
         }
 
