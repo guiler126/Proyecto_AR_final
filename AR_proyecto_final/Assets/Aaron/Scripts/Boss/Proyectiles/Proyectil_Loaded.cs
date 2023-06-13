@@ -27,7 +27,7 @@ public class Proyectil_Loaded : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().Bullet_Damage_Loaded();  
-            Destroy(gameObject);
+            gameObject.SetActive(false);    
         }
     }
 
