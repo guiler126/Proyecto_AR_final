@@ -10,7 +10,7 @@ public class Boss_Controleler : MonoBehaviour
     [Tooltip("Da�o del player hacia el boss")]
     public int DamageAmount = 10;
     [Tooltip("Da�o del Boss hacia el player")]
-    public int Boss_Damage = 10;
+    public int Boss_Damage;
 
     public int percentage_fase_2 = 60;
     public int percentage_fase_3 = 30;
@@ -60,15 +60,12 @@ public class Boss_Controleler : MonoBehaviour
         {
             animator.transform.LookAt(player);
             animator.SetBool("Attack", true);
-            PlayerController.instance.health -= Boss_Damage;
             Ui_Manager.instance.slider_health.value = PlayerController.instance.health;
-            Debug.Log("Estoy atacando");
         }
             
         if(distance >= 3)
         {
             animator.SetBool("Attack", false);
-            Debug.Log("Te estas alejando");
         }
     }
 
@@ -77,7 +74,6 @@ public class Boss_Controleler : MonoBehaviour
     {
         HP -= damage;
         Health_bar.value = HP;
-        Debug.Log("Estoy aqui");
 
 
         if (HP <= 0)
@@ -108,13 +104,18 @@ public class Boss_Controleler : MonoBehaviour
     //DA�AR AL MAIN PLAYER (A TI)
     public void PlayerDamage()
     {
-        PlayerController.instance.TakeDamage(Boss_Damage);
+        //PlayerController.instance.TakeDamage(Boss_Damage);
+        Debug.Log("Soy tu padree");
 
-        if (PlayerController.instance.health <= 0)
-        {
-            Debug.Log("Estoy muerto");
-        }
+        PlayerController.instance.Boss_Damage();
     }
+
+    public void _No_Life()
+    {
+        PlayerController.instance._boss_at = false;
+    }
+
+
 
     //ESCALAR AL BOSS EN FASE 3
     public IEnumerator ScaleLerp(Vector3 a, Vector3 b, float time)

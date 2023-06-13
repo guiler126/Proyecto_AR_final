@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     [FormerlySerializedAs("puedo_atacar")] public bool tengo_mana;
 
     public bool imAttacking;
+    public bool _boss_at;
 
     [Space]
     [Header("---- STATS PLAYER ----")]
@@ -357,6 +358,15 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        }
+    }
+
+    public void Boss_Damage()
+    {
+        _boss_at = true;
+        if(_boss_at)
+        {
+            health -= Boss_Controleler.instance.Boss_Damage;
         }
     }
 

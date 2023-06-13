@@ -18216,7 +18216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.611, y: -0}
+  m_AnchoredPosition: {x: 69.611, y: 0}
   m_SizeDelta: {x: 60.778, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858191077
@@ -28895,7 +28895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.8, y: -112.7}
+  m_AnchoredPosition: {x: -0.8, y: -112.70001}
   m_SizeDelta: {x: 90, y: 75}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1540869349
@@ -31586,7 +31586,7 @@ MonoBehaviour:
   HP: 500
   MAX_HP: 500
   DamageAmount: 10
-  Boss_Damage: 20
+  Boss_Damage: 10
   percentage_fase_2: 61
   percentage_fase_3: 31
   player: {fileID: 543450653287209347}
@@ -37104,7 +37104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11, y: 14.6}
+  m_AnchoredPosition: {x: 11, y: 14.599998}
   m_SizeDelta: {x: 43.785, y: 40.493}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2004876555
