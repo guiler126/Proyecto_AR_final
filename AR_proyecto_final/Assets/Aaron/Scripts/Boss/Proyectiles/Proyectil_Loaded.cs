@@ -19,7 +19,7 @@ public class Proyectil_Loaded : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Player_Main.instance.transform.position, Time.deltaTime * speed);
+        transform.position = Vector3.MoveTowards(transform.position, PlayerController.instance.transform.position, Time.deltaTime * speed);
     }
 
 

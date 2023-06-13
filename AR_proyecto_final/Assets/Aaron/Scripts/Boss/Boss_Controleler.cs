@@ -34,6 +34,9 @@ public class Boss_Controleler : MonoBehaviour
 
     public int fase;
 
+    public bool _trigger_anim_f2;
+    public bool _trigger_anim_stage;
+
     public static Boss_Controleler instance;
 
     private void Awake()
@@ -92,16 +95,26 @@ public class Boss_Controleler : MonoBehaviour
 
         if (HP < (MAX_HP * percentage_fase_2 / 100) && HP > (MAX_HP * percentage_fase_3 / 100))
         {
-            Boss_AI.instance.navMeshAgent.speed = 0;
-            Stamina_Controller.instance.Boss_is_OnFase = true;
-            animator.SetTrigger("New_Stage");
-            fase = 2;
+            if(!_trigger_anim_f2)
+            {
+                Boss_AI.instance.navMeshAgent.speed = 0;
+                Stamina_Controller.instance.Boss_is_OnFase = true;
+                animator.SetTrigger("New_Stage");
+                fase = 2;
+                _trigger_anim_f2 = true;
+            }
+            
         } else if (HP < (MAX_HP * percentage_fase_3 / 100))
         {
-            Boss_AI.instance.navMeshAgent.speed = 0;
-            Stamina_Controller.instance.Boss_is_OnFase = true;
-            animator.SetTrigger("F3_Stage");
-            fase = 3;
+            if(!_trigger_anim_stage)
+            {
+                Boss_AI.instance.navMeshAgent.speed = 0;
+                Stamina_Controller.instance.Boss_is_OnFase = true;
+                animator.SetTrigger("F3_Stage");
+                fase = 3;
+                _trigger_anim_stage = true; 
+            }
+          
         }
 
     }
