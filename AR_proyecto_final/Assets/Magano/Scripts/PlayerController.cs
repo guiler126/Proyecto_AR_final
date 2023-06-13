@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public GameObject bullet_2;
     public GameObject bulletSecondAttack;
+    public float bullet_damage;
+    public float bullet_damage_loaded;
 
     [Space]
     [Header("---- CONFIG ATTACKS ----")]
@@ -66,6 +68,7 @@ public class PlayerController : MonoBehaviour
     [Header("---- STATS PLAYER ----")]
     public float health = 10;
     public bool isDie;
+    
 
     public CapsuleCollider _Capsule;
 
@@ -421,6 +424,28 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Arma.Instance.damage_enemy = 0;
+        }
+    }
+
+    public void Bullet_Damage()
+    {
+        health -= bullet_damage;
+        Ui_Manager.instance.slider_health.value = health;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Bullet_Damage_Loaded()
+    {
+        health -= bullet_damage_loaded;
+        Ui_Manager.instance.slider_health.value = health;
+
+        if (health <= 0)
+        {
+            Die();
         }
     }
 }

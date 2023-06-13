@@ -2813,12 +2813,12 @@ RectTransform:
   - {fileID: 1382635277}
   - {fileID: 997085423}
   - {fileID: 639899952}
-  - {fileID: 1173232883}
-  - {fileID: 1614557033}
   - {fileID: 1892288697}
-  - {fileID: 1559171472}
   - {fileID: 471398135}
   - {fileID: 1035550783}
+  - {fileID: 1173232883}
+  - {fileID: 1614557033}
+  - {fileID: 1559171472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5054,7 +5054,7 @@ RectTransform:
   - {fileID: 315598387}
   - {fileID: 1012488437}
   m_Father: {fileID: 291597352}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5248,7 +5248,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5.199997, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -23436,7 +23436,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.80999756, y: 0}
   m_SizeDelta: {x: 0.0401, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -25721,7 +25721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1035550783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25738,7 +25738,7 @@ RectTransform:
   - {fileID: 430978882}
   - {fileID: 2046957706}
   m_Father: {fileID: 291597352}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27384,7 +27384,7 @@ RectTransform:
   - {fileID: 798385745}
   - {fileID: 1540869348}
   m_Father: {fileID: 291597352}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -28602,7 +28602,7 @@ MonoBehaviour:
   m_MinValue: 1
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 47
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -29667,7 +29667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7302255824202086821, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7302255824202086821, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
       propertyPath: m_AnchorMax.x
@@ -30257,7 +30257,7 @@ RectTransform:
   - {fileID: 610790882}
   - {fileID: 445289006}
   m_Father: {fileID: 291597352}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31660,7 +31660,7 @@ RectTransform:
   - {fileID: 1210843418}
   - {fileID: 285718294}
   m_Father: {fileID: 291597352}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -48692,6 +48692,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
+      propertyPath: bullet_damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: playerAttack1
       value: 
       objectReference: {fileID: 8300000, guid: 078dc64e0bbfd014381fecefc37823fa, type: 3}
@@ -48710,6 +48714,10 @@ PrefabInstance:
     - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: Slider_DashCooldown
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
+      propertyPath: bullet_damage_loaded
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 314256665735551924, guid: bea4a1f83db033e43a65c6ab1d984e5c, type: 3}
       propertyPath: bulletSecondAttack_op

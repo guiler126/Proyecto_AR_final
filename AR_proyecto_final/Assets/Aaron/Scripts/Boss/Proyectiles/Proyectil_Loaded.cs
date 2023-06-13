@@ -22,6 +22,13 @@ public class Proyectil_Loaded : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, PlayerController.instance.transform.position, Time.deltaTime * speed);
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerController>().Bullet_Damage_Loaded();  
+            Destroy(gameObject);
+        }
+    }
 
 }
