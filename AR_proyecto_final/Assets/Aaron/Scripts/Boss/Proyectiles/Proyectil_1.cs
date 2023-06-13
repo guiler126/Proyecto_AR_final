@@ -8,14 +8,10 @@ public class Proyectil_1 : MonoBehaviour
 
     public Vector3 playerPosition;
 
-    private void Awake()
-    {
-        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-    }
-
     private void OnEnable()
     {
         Invoke("Desactivate", 3f);
+        playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 
     public void Desactivate()
