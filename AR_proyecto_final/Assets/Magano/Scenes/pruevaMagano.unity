@@ -2895,7 +2895,9 @@ MonoBehaviour:
   round_txt: {fileID: 858191077}
   slider_health: {fileID: 1382635278}
   enemy: 0
+  boss: {fileID: 1917596764}
   missionsPanel: {fileID: 639899951}
+  bossPanel: {fileID: 1035550782}
   _statsInfoPlayer:
   - {fileID: 11400000, guid: ca3afc7fc413e2744b2a1ed305855207, type: 2}
   - {fileID: 11400000, guid: 03d9f868378ff554bbba8601dd9b4b94, type: 2}
@@ -12312,6 +12314,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726151872}
   m_CullTransparentMesh: 1
+--- !u!1 &733605654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302255825425726277, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
+  m_PrefabInstance: {fileID: 1559171471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733984973
 GameObject:
   m_ObjectHideFlags: 0
@@ -13405,6 +13412,11 @@ Transform:
   m_Father: {fileID: 1082702519}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &829964968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302255825560824145, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
+  m_PrefabInstance: {fileID: 1559171471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &830108384
 GameObject:
   m_ObjectHideFlags: 0
@@ -29700,6 +29712,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -297.09058
       objectReference: {fileID: 0}
+    - target: {fileID: 7302255823860069259, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
+      propertyPath: panelOptions
+      value: 
+      objectReference: {fileID: 733605654}
+    - target: {fileID: 7302255823860069259, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
+      propertyPath: panelControls
+      value: 
+      objectReference: {fileID: 829964968}
     - target: {fileID: 7302255824074019897, guid: 3325d7b3e76289b4ea8f6eb6e7141581, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -32368,7 +32388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917596761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: 1.91, z: 2.4}
+  m_LocalPosition: {x: 0.1, y: 2.5, z: 2.5}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:

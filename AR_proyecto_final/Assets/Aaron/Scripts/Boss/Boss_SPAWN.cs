@@ -36,6 +36,7 @@ public class Boss_SPAWN : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             Portal_Boss();
+            Ui_Manager.instance.missionsPanel.SetActive(false);
         }
         
         if (Activo == true)

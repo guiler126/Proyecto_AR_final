@@ -14,8 +14,10 @@ public class Ui_Manager : MonoBehaviour
     public Slider slider_health;
 
     public PoolingItemsEnum enemy;
+    public Boss_Controleler boss;
 
     public GameObject missionsPanel;
+    public GameObject bossPanel;
 
     [Header("----- Mejora List -----")]
     public List<StatsInfo> _statsInfoPlayer;
@@ -67,6 +69,14 @@ public class Ui_Manager : MonoBehaviour
         Upgrade_Manager_Enemy.instace.RefreshAllStats();
         GameManager.instance.DefeatedEnemies = 0;
         round_txt.text = $"{Sistema_Oleadas.Instance.waveNumber + 1}";
+        boss.gameObject.SetActive(false);
+        boss.gameObject.transform.position = new Vector3(0.1f, 2.5f, 2.5f);
+        bossPanel.SetActive(false);
+        missionsPanel.SetActive(true);
+        boss.fase = 1;
+        boss.HP = boss.MAX_HP;
+        boss.Health_bar.maxValue = boss.MAX_HP;
+        boss.Health_bar.value = boss.HP;
     }
     
     public void RestartRound()
@@ -83,6 +93,14 @@ public class Ui_Manager : MonoBehaviour
         LookAtMouse.instance.enabled = true;
         GameManager.instance.DefeatedEnemies = 0;
         round_txt.text = $"{Sistema_Oleadas.Instance.waveNumber + 1}";
+        boss.gameObject.SetActive(false);
+        boss.gameObject.transform.position = new Vector3(0.1f, 2.5f, 2.5f);
+        bossPanel.SetActive(false);
+        missionsPanel.SetActive(true);
+        boss.fase = 1;
+        boss.HP = boss.MAX_HP;
+        boss.Health_bar.maxValue = boss.MAX_HP;
+        boss.Health_bar.value = boss.HP;
     }
     
     public void Refresh_Mejora_List()
